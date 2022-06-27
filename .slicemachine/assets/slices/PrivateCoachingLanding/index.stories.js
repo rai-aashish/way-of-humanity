@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/PrivateCoachingLanding';
+
+export default {
+  title: 'slices/PrivateCoachingLanding'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"private_coaching_landing","items":[],"primary":{"title":[{"type":"heading2","text":"Drive wireless eyeballs","spans":[]}],"privateCoachingDescription":[{"type":"paragraph","text":"Consectetur ut nisi esse pariatur.","spans":[]}],"landingImage":{"dimensions":{"width":null,"height":null},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=null&h=null&fit=crop"},"coachDisplayPicture":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"},"coachName":"engage transparent functionalities","fee":"transition cross-platform web services","duration":"incentivize back-end partnerships","coachingMessage":[{"type":"paragraph","text":"Duis deserunt velit cillum enim reprehenderit sunt fugiat culpa veniam aliqua ipsum anim.","spans":[]}],"primaryLinkLabel":"recontextualize web-enabled bandwidth"},"id":"_Default"}} />
+_Default.storyName = 'Default'

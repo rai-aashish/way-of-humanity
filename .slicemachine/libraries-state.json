@@ -1,0 +1,158 @@
+{
+  "slices": {
+    "components": {
+      "home_page_landing": {
+        "library": "slices",
+        "id": "home_page_landing",
+        "name": "HomePageLanding",
+        "description": "HomePageLanding",
+        "model": {
+          "id": "home_page_landing",
+          "type": "SharedSlice",
+          "name": "HomePageLanding",
+          "description": "HomePageLanding",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HomePageLanding",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "home_page_landing",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Optimize visionary content",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Ea culpa anim occaecat ullamco proident ea fugiat aute do ex magna aliqua sit in voluptate. Cupidatat est aliqua aliquip occaecat elit do occaecat incididunt cupidatat ipsum non ex magna sint. Ea minim amet aliquip consequat enim ullamco.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/HomePageLanding/default/preview.png",
+            "width": 800,
+            "height": 218
+          }
+        }
+      },
+      "services_section": {
+        "library": "slices",
+        "id": "services_section",
+        "name": "ServicesSection",
+        "description": "ServicesSection",
+        "model": {
+          "id": "services_section",
+          "type": "SharedSlice",
+          "name": "ServicesSection",
+          "description": "ServicesSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ServicesSection",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "services_section",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Visualize cross-media niches",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Nulla consequat tempor exercitation cupidatat laboris id exercitation enim exercitation amet anim. Ut magna magna officia ipsum exercitation laborum duis est proident proident aliquip eiusmod. Officia nisi enim sunt enim ut nulla occaecat velit ad ullamco.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/ServicesSection/default/preview.png",
+            "width": 800,
+            "height": 218
+          }
+        }
+      }
+    }
+  }
+}

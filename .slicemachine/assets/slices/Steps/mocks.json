@@ -1,0 +1,82 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "steps",
+    "items": [
+      {
+        "sectionTitle": [
+          {
+            "type": "paragraph",
+            "text": "Dolore ad sint sunt aliquip duis ut voluptate elit elit commodo et quis qui ipsum commodo. Eu voluptate occaecat ex nulla eiusmod duis dolor. Laboris in ea eu quis fugiat voluptate est amet ad.",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Aliquip id reprehenderit minim sint aliqua minim magna sint consequat voluptate do culpa. Cupidatat commodo incididunt adipisicing amet ut ut dolore anim et incididunt magna.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "sectionTitle": [
+          {
+            "type": "paragraph",
+            "text": "Sit id consequat aute Lorem tempor laborum amet mollit occaecat ad irure. Adipisicing ut id culpa velit laboris voluptate nulla. Fugiat exercitation labore elit aliquip in.",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Dolor esse deserunt laboris. Ex id ad eu pariatur excepteur excepteur aliqua adipisicing commodo.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "sectionTitle": [
+          {
+            "type": "paragraph",
+            "text": "Culpa dolor mollit et commodo eiusmod minim esse ea eiusmod qui cillum magna. Veniam est id velit officia sit cillum aliqua esse et mollit sit. Aliqua ullamco enim anim consectetur veniam nulla et laborum cupidatat aute amet enim aliquip consectetur.",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Eu ipsum nostrud exercitation.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "sectionTitle": [
+          {
+            "type": "paragraph",
+            "text": "Laboris ex proident proident et do fugiat adipisicing commodo velit ex amet sit pariatur culpa.",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Adipisicing enim nulla tempor esse Lorem magna amet ut. Nulla consequat do exercitation sit culpa ex anim incididunt laboris velit voluptate aliqua enim sunt sit. Amet enim veniam veniam.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading3",
+          "text": "Harness magnetic vortals",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "highlights",
+    "items": [
+      {
+        "highlightTitle": "repurpose clicks-and-mortar initiatives",
+        "highlightDescription": [
+          {
+            "type": "paragraph",
+            "text": "Sint eiusmod occaecat culpa incididunt aute. Aliqua aliqua magna velit enim nostrud exercitation nostrud exercitation consequat eu aute. Ad sit dolore eiusmod ad labore pariatur labore deserunt.",
+            "spans": []
+          }
+        ],
+        "actionLabel": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "actionLink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "highlightTitle": "exploit extensible e-tailers",
+        "highlightDescription": [
+          {
+            "type": "paragraph",
+            "text": "Commodo cupidatat nisi voluptate nostrud sunt sint sit exercitation quis mollit excepteur aliqua ea.",
+            "spans": []
+          }
+        ],
+        "actionLabel": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "actionLink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "highlightTitle": "harness innovative partnerships",
+        "highlightDescription": [
+          {
+            "type": "paragraph",
+            "text": "Irure laborum consequat ut. Consequat ullamco aliqua pariatur non nostrud veniam culpa voluptate anim labore et. Adipisicing quis cillum ipsum ad elit sit reprehenderit tempor.",
+            "spans": []
+          }
+        ],
+        "actionLabel": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "actionLink": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "highlightTitle": "leverage transparent eyeballs",
+        "highlightDescription": [
+          {
+            "type": "paragraph",
+            "text": "Nostrud ullamco commodo Lorem elit Lorem velit commodo incididunt dolor laborum. Labore fugiat sunt quis ipsum.",
+            "spans": []
+          }
+        ],
+        "actionLabel": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "actionLink": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Harness seamless deliverables",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Veniam enim est pariatur consequat excepteur tempor. Sint officia nulla tempor aute sint consectetur consectetur enim elit in eu nulla voluptate.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

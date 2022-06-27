@@ -1,0 +1,25 @@
+{
+  "id": "b84fc88f-9467-4d28-b8c7-642a03e638d2",
+  "uid": "amet-natus-similique",
+  "type": "content-page",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "E-enable scalable technologies",
+        "spans": []
+      }
+    ],
+    "metaTitle": "implement visionary experiences",
+    "metaDescription": "aggregate distributed blockchains",
+    "metaImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
+    }
+  }
+}

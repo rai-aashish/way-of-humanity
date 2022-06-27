@@ -1,0 +1,16 @@
+{
+  "id": "3aa67ab1-64bd-4a8a-82fc-438d42e966ca",
+  "uid": "numquam-alias-laborum",
+  "type": "navigation-menu",
+  "data": {
+    "logo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+    }
+  }
+}

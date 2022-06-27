@@ -1,0 +1,51 @@
+{
+  "id": "home-page",
+  "label": "Home Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "main": {
+        "type": "Text",
+        "config": {
+          "label": "Main",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "home_page_landing": {
+              "type": "SharedSlice"
+            },
+            "services_section": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "slices1": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "home_page_landing": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

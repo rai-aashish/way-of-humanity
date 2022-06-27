@@ -1,0 +1,33 @@
+{
+  "id": "ecbe303c-9bb5-444c-9ac7-df7dc03641e8",
+  "uid": "earum-laboriosam-eveniet",
+  "type": "blog-page",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Enhance wireless mindshare",
+        "spans": []
+      }
+    ],
+    "subtitle": [
+      {
+        "type": "heading2",
+        "text": "Innovate out-of-the-box web-readiness",
+        "spans": []
+      }
+    ],
+    "searchPlaceholder": "streamline one-to-one ROI",
+    "metaTitle": "leverage value-added partnerships",
+    "metaDescription": "disintermediate killer communities",
+    "metaImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "5d80a455-111f-444b-86c1-01c11c5736f5",
+  "uid": "eveniet-cumque-temporibus",
+  "type": "article",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Matrix cutting-edge e-commerce",
+        "spans": []
+      }
+    ],
+    "thumbnail": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"
+    },
+    "videoLink": {
+      "title": "Introducing Slice Machine",
+      "author_name": "Prismic",
+      "author_url": "https://www.youtube.com/channel/UCJq6AEgtWeZt7ziQ-fLKOeA",
+      "type": "video",
+      "height": 113,
+      "width": 200,
+      "version": "1.0",
+      "provider_name": "YouTube",
+      "provider_url": "https://www.youtube.com/",
+      "thumbnail_height": 360,
+      "thumbnail_width": 480,
+      "thumbnail_url": "https://i.ytimg.com/vi/iewZXv94XGY/hqdefault.jpg",
+      "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/iewZXv94XGY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    },
+    "releaseDate": "2013-05-14",
+    "author": {
+      "link_type": "Web",
+      "url": "http://google.com"
+    }
+  }
+}

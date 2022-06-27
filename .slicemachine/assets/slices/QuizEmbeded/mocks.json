@@ -1,0 +1,22 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "quiz_embeded",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Ad deserunt eiusmod enim voluptate. Reprehenderit fugiat dolor ipsum ex do qui minim fugiat laborum officia enim nostrud nulla. Consequat proident amet eu aute adipisicing officia elit.",
+          "spans": []
+        }
+      ],
+      "buttonLabel": "maximize ubiquitous e-tailers",
+      "quiz": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      }
+    }
+  }
+]

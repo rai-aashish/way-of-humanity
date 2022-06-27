@@ -1,0 +1,38 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "private_coaching_benefits",
+    "items": [],
+    "primary": {
+      "firstListLabel": [
+        {
+          "type": "heading4",
+          "text": "Unleash B2B blockchains",
+          "spans": []
+        }
+      ],
+      "firstList": [
+        {
+          "type": "paragraph",
+          "text": "Eu proident ad nisi tempor sit et ad minim cillum enim culpa in reprehenderit consectetur do. Esse qui officia labore ea mollit fugiat nulla qui commodo adipisicing eiusmod.",
+          "spans": []
+        }
+      ],
+      "secondListLabel": [
+        {
+          "type": "heading4",
+          "text": "Transform vertical supply-chains",
+          "spans": []
+        }
+      ],
+      "secondList": [
+        {
+          "type": "paragraph",
+          "text": "Ullamco enim reprehenderit officia occaecat ex ullamco sint aute sint.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

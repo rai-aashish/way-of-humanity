@@ -1,0 +1,31 @@
+{
+  "id": "37eb13a6-a6e7-4a4e-95da-4d96255b025c",
+  "uid": "fugit-quibusdam-veritatis",
+  "type": "author",
+  "data": {
+    "firstName": "utilize transparent eyeballs",
+    "lastName": "utilize ubiquitous eyeballs",
+    "biographicalInfo": [
+      {
+        "type": "paragraph",
+        "text": "Qui enim tempor enim nostrud ut exercitation labore. Nisi culpa duis consectetur ut excepteur non elit incididunt officia eu.",
+        "spans": []
+      }
+    ],
+    "profilePicture": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+    },
+    "emailAddress": "example@gmail.com",
+    "facebookPageURL": "morph extensible infomediaries",
+    "twitterPageURL": "incentivize back-end supply-chains",
+    "linkedinPageURL": "engineer frictionless architectures",
+    "youtubeChannelURL": "revolutionize strategic platforms",
+    "instagramPageURL": "revolutionize leading-edge synergies"
+  }
+}

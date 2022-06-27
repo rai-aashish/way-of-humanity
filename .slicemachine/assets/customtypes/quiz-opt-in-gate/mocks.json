@@ -1,0 +1,30 @@
+{
+  "id": "74cd7901-75f1-47e0-aca0-8575356eba4d",
+  "uid": "a-molestias-est",
+  "type": "quiz-opt-in-gate",
+  "data": {
+    "title": [
+      {
+        "type": "heading2",
+        "text": "Drive e-business blockchains",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Ipsum duis occaecat ut. Ipsum reprehenderit veniam ea minim ea velit proident laboris voluptate amet deserunt est occaecat.",
+        "spans": []
+      }
+    ],
+    "emailPlaceholder": "empower ubiquitous channels",
+    "buttonLabel": "empower cross-media metrics",
+    "disclosure": [
+      {
+        "type": "paragraph",
+        "text": "Ut aliqua officia nisi minim occaecat reprehenderit qui.",
+        "spans": []
+      }
+    ]
+  }
+}

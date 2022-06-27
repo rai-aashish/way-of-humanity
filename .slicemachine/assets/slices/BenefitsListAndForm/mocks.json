@@ -1,0 +1,26 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "benefits_list_and_form",
+    "items": [],
+    "primary": {
+      "firstListLabel": "redefine one-to-one platforms",
+      "firstList": [
+        {
+          "type": "paragraph",
+          "text": "Deserunt irure ea minim ipsum nostrud sint velit tempor aliqua. Cillum non et occaecat ea Lorem mollit.",
+          "spans": []
+        }
+      ],
+      "secondListLabel": "synthesize 24/365 communities",
+      "secondList": [
+        {
+          "type": "paragraph",
+          "text": "Lorem id sit laboris aute adipisicing consequat proident consectetur est aute. Esse eu non labore ipsum fugiat cillum cillum sit magna aliqua adipisicing eiusmod elit pariatur.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

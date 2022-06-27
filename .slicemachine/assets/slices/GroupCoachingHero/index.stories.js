@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/GroupCoachingHero';
+
+export default {
+  title: 'slices/GroupCoachingHero'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"group_coaching_hero","items":[],"primary":{"title":[{"type":"heading2","text":"Reinvent impactful infomediaries","spans":[]}],"description":[{"type":"paragraph","text":"Deserunt ullamco laborum ipsum duis ut. Nulla commodo fugiat esse ex ex minim tempor commodo qui incididunt esse.","spans":[]}],"primaryLink":{"link_type":"Web","url":"https://slicemachine.dev"},"primaryLinkLabel":"disintermediate rich content","heroImage":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=900&h=500&fit=crop"}},"id":"_Default"}} />
+_Default.storyName = 'Default'

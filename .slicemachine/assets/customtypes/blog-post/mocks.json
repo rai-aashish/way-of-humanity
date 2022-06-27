@@ -1,0 +1,43 @@
+{
+  "id": "b46403c4-1b7a-4b4f-86ea-442c1f62a81a",
+  "uid": "iusto-quo-atque",
+  "type": "blog-post",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Reinvent compelling interfaces",
+        "spans": []
+      }
+    ],
+    "thumbnail": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=500&fit=crop"
+    },
+    "releaseDate": "2021-08-05",
+    "author": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    },
+    "category": {
+      "link_type": "Web",
+      "url": "http://google.com"
+    },
+    "metaTitle": "implement innovative deliverables",
+    "metaDescription": "enhance impactful technologies",
+    "metaImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+    }
+  }
+}

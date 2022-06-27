@@ -1,0 +1,68 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "devotional_book_download",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Brand user-centric e-commerce",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Nulla mollit duis amet sit voluptate et aute esse.",
+          "spans": []
+        }
+      ],
+      "bookImage": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+      },
+      "emailInputPlaceholder": "maximize customized web services",
+      "submitButtonLabel": "reinvent integrated technologies"
+    }
+  },
+  {
+    "variation": "sidebar",
+    "name": "sidebar",
+    "slice_type": "devotional_book_download",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Visualize e-business eyeballs",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Cupidatat fugiat nulla eu consectetur Lorem. Minim minim eu aute sunt nostrud velit ullamco. Irure mollit sit irure exercitation consectetur Lorem pariatur.",
+          "spans": []
+        }
+      ],
+      "bookImage": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+      },
+      "emailInputPlaceholder": "e-enable e-business interfaces",
+      "submitButtonLabel": "benchmark sticky web services"
+    }
+  }
+]

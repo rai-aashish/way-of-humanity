@@ -1,0 +1,19 @@
+{
+  "id": "d5cad207-30cc-4dc6-b294-4ff345cab08d",
+  "uid": "aut-velit-laborum",
+  "type": "guide",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Visualize killer users",
+        "spans": []
+      }
+    ],
+    "releaseDate": "2013-01-31",
+    "author": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    }
+  }
+}

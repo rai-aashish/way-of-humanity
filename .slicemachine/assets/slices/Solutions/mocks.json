@@ -1,0 +1,73 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "solutions",
+    "items": [
+      {
+        "solutionImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=900&h=500&fit=crop"
+        },
+        "solutionTitle": "orchestrate sticky action-items",
+        "solutionDescription": [
+          {
+            "type": "paragraph",
+            "text": "Dolor do eu sint nulla mollit reprehenderit aliqua. Et exercitation Lorem Lorem proident.",
+            "spans": []
+          }
+        ],
+        "solutionButtonLabel": "facilitate web-enabled paradigms",
+        "solutionButtonLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "solutionImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=500&fit=crop"
+        },
+        "solutionTitle": "envisioneer customized bandwidth",
+        "solutionDescription": [
+          {
+            "type": "paragraph",
+            "text": "Ad Lorem in qui officia duis adipisicing ex Lorem. Incididunt reprehenderit velit qui minim exercitation occaecat nostrud cillum eu aliquip sunt enim labore.",
+            "spans": []
+          }
+        ],
+        "solutionButtonLabel": "harness strategic networks",
+        "solutionButtonLink": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Disintermediate B2B action-items",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Mollit aliquip sit do laborum tempor sunt. Et ipsum nulla fugiat ex minim Lorem ea aliquip anim quis exercitation esse occaecat.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

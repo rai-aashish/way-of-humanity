@@ -1,0 +1,56 @@
+{
+  "id": "b3f7d851-c639-40ae-9919-8744cc64f4ce",
+  "uid": "nisi-earum-itaque",
+  "type": "quiz",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Productize interactive technologies",
+        "spans": []
+      }
+    ],
+    "subtitle": [
+      {
+        "type": "heading2",
+        "text": "Engineer enterprise vortals",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Consequat eu ad elit consectetur dolor officia nulla non ipsum.",
+        "spans": []
+      }
+    ],
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
+    },
+    "buttonLabel": "engineer bleeding-edge methodologies",
+    "highlight": [
+      {
+        "type": "paragraph",
+        "text": "Velit adipisicing consequat cillum excepteur anim occaecat id est in est id ea. Culpa adipisicing est occaecat do aute minim minim laboris reprehenderit dolor Lorem quis. Esse incididunt voluptate dolore eu aute eiusmod anim elit ut mollit deserunt duis ipsum non id.",
+        "spans": []
+      }
+    ],
+    "metaTitle": "unleash vertical vortals",
+    "metaDescription": "enable granular markets",
+    "metaImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?w=900&h=500&fit=crop"
+    }
+  }
+}

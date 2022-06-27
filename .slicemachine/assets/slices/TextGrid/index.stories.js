@@ -1,0 +1,76 @@
+import MyComponent from '../../../../slices/TextGrid';
+
+export default {
+  title: 'slices/TextGrid',
+};
+
+export const _Default = () => (
+  <MyComponent
+    slice={{
+      variation: 'default',
+      name: 'Default',
+      slice_type: 'text_grid',
+      items: [
+        {
+          title: [
+            {
+              type: 'heading2',
+              text: 'Repurpose cross-platform e-tailers',
+              spans: [],
+            },
+          ],
+          description: [
+            {
+              type: 'paragraph',
+              text: 'Aliqua veniam exercitation anim occaecat sit esse non adipisicing.',
+              spans: [],
+            },
+          ],
+        },
+        {
+          title: [
+            { type: 'heading2', text: 'E-enable rich synergies', spans: [] },
+          ],
+          description: [
+            {
+              type: 'paragraph',
+              text: 'Dolor enim est tempor id dolor dolor do adipisicing officia ullamco labore.',
+              spans: [],
+            },
+          ],
+        },
+        {
+          title: [
+            {
+              type: 'heading2',
+              text: 'Morph plug-and-play web services',
+              spans: [],
+            },
+          ],
+          description: [
+            {
+              type: 'paragraph',
+              text: 'Velit sit aliquip minim eu duis cupidatat occaecat tempor consectetur sit velit non exercitation pariatur.',
+              spans: [],
+            },
+          ],
+        },
+        {
+          title: [
+            { type: 'heading2', text: 'Enable B2C initiatives', spans: [] },
+          ],
+          description: [
+            {
+              type: 'paragraph',
+              text: 'Ipsum officia labore irure consequat cupidatat tempor occaecat veniam proident do est duis ea enim exercitation. Eu ut occaecat ut commodo.',
+              spans: [],
+            },
+          ],
+        },
+      ],
+      primary: {},
+      id: '_Default',
+    }}
+  />
+);
+_Default.storyName = 'Default';
