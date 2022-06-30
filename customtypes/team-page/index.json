@@ -1,0 +1,42 @@
+{
+  "id": "team-page",
+  "label": "Team Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "teamDescription": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Team Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading3,heading4,heading5,heading6,strong,list-item,o-list-item,rtl,em"
+        }
+      }
+    },
+    "SEO": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "metaDescription": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": ""
+        }
+      },
+      "keywords": {
+        "type": "Text",
+        "config": {
+          "label": "Keywords",
+          "placeholder": "keywords  eg: ndis,help disabled,.."
+        }
+      }
+    }
+  }
+}

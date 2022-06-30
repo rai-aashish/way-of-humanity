@@ -22,6 +22,9 @@
             },
             "services_section": {
               "type": "SharedSlice"
+            },
+            "brief_description_section": {
+              "type": "SharedSlice"
             }
           }
         }

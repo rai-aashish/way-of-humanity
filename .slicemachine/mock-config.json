@@ -134,7 +134,16 @@
     "panic-solution": {},
     "article-sidebar": {},
     "group-coaching-page": {},
-    "home-page": {}
+    "home-page": {},
+    "header": {},
+    "team-page": {
+      "teamDescription": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "Text": {
@@ -449,7 +458,49 @@
         }
       }
     },
-    "HomePageLanding": {},
-    "ServicesSection": {}
+    "HomePageLanding": {
+      "default": {
+        "items": {}
+      }
+    },
+    "ServicesSection": {
+      "default": {
+        "items": {
+          "serviceTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "primary": {
+          "sectionTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "BriefDescriptionSection": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "AlwaysForYouSection": {}
   }
 }

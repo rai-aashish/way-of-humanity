@@ -1,0 +1,43 @@
+{
+  "id": "e9b47809-375b-41e6-920a-c868b6ec535c",
+  "uid": "molestiae-ipsum-corrupti",
+  "type": "header",
+  "data": {
+    "brandLogo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
+    },
+    "ctaLabel": "generate scalable deliverables",
+    "navLinks": [
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "linkLabel": "architect end-to-end e-services"
+      },
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "linkLabel": "maximize transparent content"
+      }
+    ],
+    "contactNumber": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
+    },
+    "contactLabel": "monetize enterprise metrics",
+    "mapAddressLink": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
+    },
+    "mapAddressLabel": "enhance sticky mindshare"
+  }
+}

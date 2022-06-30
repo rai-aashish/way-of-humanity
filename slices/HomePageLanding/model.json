@@ -26,9 +26,51 @@
             "label": "Description",
             "placeholder": "A nice description of your feature"
           }
+        },
+        "landingImage": {
+          "type": "Image",
+          "config": {
+            "label": "Landing Image",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
-      "items": {},
+      "items": {
+        "buttonVariant": {
+          "type": "Select",
+          "config": {
+            "label": "Button Variant",
+            "placeholder": "Button variant",
+            "options": ["lite", "solid", "outline"],
+            "default_value": "lite"
+          }
+        },
+        "buttonSize": {
+          "type": "Select",
+          "config": {
+            "label": "Button Size",
+            "placeholder": "Button size",
+            "options": ["large", "medium"],
+            "default_value": "large"
+          }
+        },
+        "buttonLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Button Label",
+            "placeholder": ""
+          }
+        },
+        "linkTo": {
+          "type": "Link",
+          "config": {
+            "label": "Link To",
+            "placeholder": "Link to....",
+            "select": null
+          }
+        }
+      },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

@@ -1,0 +1,87 @@
+{
+  "id": "header",
+  "label": "Header",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "brandLogo": {
+        "type": "Image",
+        "config": {
+          "label": "Brand Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "ctaLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Cta Label",
+          "placeholder": "label of ask a questiion cta..."
+        }
+      },
+      "navLinks": {
+        "type": "Group",
+        "config": {
+          "label": "Nav Links",
+          "fields": {
+            "linkTo": {
+              "type": "Link",
+              "config": {
+                "label": "Link To",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "linkLabel": {
+              "type": "Text",
+              "config": {
+                "label": "Link Label",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "Contact details": {
+      "contactNumber": {
+        "type": "Link",
+        "config": {
+          "label": "Contact Number",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "contactLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Contact Label",
+          "placeholder": "label for contact us"
+        }
+      },
+      "mapAddressLink": {
+        "type": "Link",
+        "config": {
+          "label": "Map Address Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "mapAddressLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Map Address Label",
+          "placeholder": "label for map address"
+        }
+      }
+    }
+  }
+}

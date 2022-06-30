@@ -1,6 +1,148 @@
 {
   "slices": {
     "components": {
+      "always_for_you_section": {
+        "library": "slices",
+        "id": "always_for_you_section",
+        "name": "AlwaysForYouSection",
+        "description": "AlwaysForYouSection",
+        "model": {
+          "id": "always_for_you_section",
+          "type": "SharedSlice",
+          "name": "AlwaysForYouSection",
+          "description": "AlwaysForYouSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AlwaysForYouSection",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "always_for_you_section",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Incentivize enterprise architectures",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Aute labore cillum non consectetur cupidatat elit dolore.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "brief_description_section": {
+        "library": "slices",
+        "id": "brief_description_section",
+        "name": "BriefDescriptionSection",
+        "description": "BriefDescriptionSection",
+        "model": {
+          "id": "brief_description_section",
+          "type": "SharedSlice",
+          "name": "BriefDescriptionSection",
+          "description": "BriefDescriptionSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "BriefDescriptionSection",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "Title for brief description ..",
+                    "allowTargetBlank": true,
+                    "single": "heading2,heading3,heading1,strong,em"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "A nice description of organization",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,strong,em,list-item,o-list-item"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "brief_description_section",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Deploy vertical communities",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Aliquip occaecat ad et consequat irure aliquip aliqua Lorem incididunt tempor mollit sit reprehenderit. Minim commodo proident sint consequat excepteur esse ad minim duis magna.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "tsx"
+        },
+        "screenshotPaths": {}
+      },
       "home_page_landing": {
         "library": "slices",
         "id": "home_page_landing",
@@ -34,9 +176,58 @@
                     "label": "Description",
                     "placeholder": "A nice description of your feature"
                   }
+                },
+                "landingImage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Landing Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
                 }
               },
-              "items": {},
+              "items": {
+                "buttonVariant": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Button Variant",
+                    "placeholder": "Button variant",
+                    "options": [
+                      "lite",
+                      "solid",
+                      "outline"
+                    ],
+                    "default_value": "lite"
+                  }
+                },
+                "buttonSize": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Button Size",
+                    "placeholder": "Button size",
+                    "options": [
+                      "large",
+                      "medium"
+                    ],
+                    "default_value": "large"
+                  }
+                },
+                "buttonLabel": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button Label",
+                    "placeholder": ""
+                  }
+                },
+                "linkTo": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Link To",
+                    "placeholder": "Link to....",
+                    "select": null
+                  }
+                }
+              },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -46,36 +237,67 @@
             "variation": "default",
             "name": "Default",
             "slice_type": "home_page_landing",
-            "items": [],
+            "items": [
+              {
+                "buttonVariant": "lite",
+                "buttonSize": "large",
+                "buttonLabel": "optimize ubiquitous action-items",
+                "linkTo": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              },
+              {
+                "buttonVariant": "lite",
+                "buttonSize": "large",
+                "buttonLabel": "synergize sexy communities",
+                "linkTo": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              },
+              {
+                "buttonVariant": "lite",
+                "buttonSize": "medium",
+                "buttonLabel": "expedite next-generation channels",
+                "linkTo": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
             "primary": {
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Optimize visionary content",
+                  "text": "Whiteboard distributed models",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Ea culpa anim occaecat ullamco proident ea fugiat aute do ex magna aliqua sit in voluptate. Cupidatat est aliqua aliquip occaecat elit do occaecat incididunt cupidatat ipsum non ex magna sint. Ea minim amet aliquip consequat enim ullamco.",
+                  "text": "Proident dolor ut duis tempor incididunt incididunt veniam voluptate eiusmod mollit eu.",
                   "spans": []
                 }
-              ]
+              ],
+              "landingImage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+              }
             }
           }
         },
         "meta": {
           "fileName": "index",
-          "extension": "js"
+          "extension": "tsx"
         },
-        "screenshotPaths": {
-          "default": {
-            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/HomePageLanding/default/preview.png",
-            "width": 800,
-            "height": 218
-          }
-        }
+        "screenshotPaths": {}
       },
       "services_section": {
         "library": "slices",
@@ -95,24 +317,42 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "ServicesSection",
               "primary": {
-                "title": {
+                "sectionTitle": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
-                  }
-                },
-                "description": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your feature"
+                    "label": "Section Title",
+                    "placeholder": "Title for services section...",
+                    "allowTargetBlank": true,
+                    "single": "heading2,heading3,strong"
                   }
                 }
               },
-              "items": {},
+              "items": {
+                "thumbnail": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Thumbnail",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "serviceTitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Service Title",
+                    "placeholder": "Service title here...",
+                    "allowTargetBlank": true,
+                    "single": "heading4,heading5,strong"
+                  }
+                },
+                "serviceBrief": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Service Brief",
+                    "placeholder": ""
+                  }
+                }
+              },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -122,19 +362,127 @@
             "variation": "default",
             "name": "Default",
             "slice_type": "services_section",
-            "items": [],
+            "items": [
+              {
+                "thumbnail": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&h=500&fit=crop"
+                },
+                "serviceTitle": [
+                  {
+                    "type": "heading4",
+                    "text": "Repurpose virtual niches",
+                    "spans": []
+                  }
+                ],
+                "serviceBrief": "drive back-end e-tailers"
+              },
+              {
+                "thumbnail": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
+                },
+                "serviceTitle": [
+                  {
+                    "type": "heading4",
+                    "text": "Synthesize plug-and-play e-markets",
+                    "spans": []
+                  }
+                ],
+                "serviceBrief": "generate distributed blockchains"
+              },
+              {
+                "thumbnail": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=500&fit=crop"
+                },
+                "serviceTitle": [
+                  {
+                    "type": "heading4",
+                    "text": "Engineer efficient methodologies",
+                    "spans": []
+                  }
+                ],
+                "serviceBrief": "revolutionize 24/365 platforms"
+              },
+              {
+                "thumbnail": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
+                },
+                "serviceTitle": [
+                  {
+                    "type": "heading4",
+                    "text": "Synergize synergistic e-markets",
+                    "spans": []
+                  }
+                ],
+                "serviceBrief": "engineer efficient methodologies"
+              },
+              {
+                "thumbnail": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+                },
+                "serviceTitle": [
+                  {
+                    "type": "heading4",
+                    "text": "Repurpose cross-media channels",
+                    "spans": []
+                  }
+                ],
+                "serviceBrief": "grow cross-platform metrics"
+              },
+              {
+                "thumbnail": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=500&fit=crop"
+                },
+                "serviceTitle": [
+                  {
+                    "type": "heading4",
+                    "text": "Iterate proactive ROI",
+                    "spans": []
+                  }
+                ],
+                "serviceBrief": "synthesize efficient portals"
+              }
+            ],
             "primary": {
-              "title": [
+              "sectionTitle": [
                 {
-                  "type": "heading1",
-                  "text": "Visualize cross-media niches",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Nulla consequat tempor exercitation cupidatat laboris id exercitation enim exercitation amet anim. Ut magna magna officia ipsum exercitation laborum duis est proident proident aliquip eiusmod. Officia nisi enim sunt enim ut nulla occaecat velit ad ullamco.",
+                  "type": "heading2",
+                  "text": "Optimize ubiquitous schemas",
                   "spans": []
                 }
               ]
@@ -143,15 +491,9 @@
         },
         "meta": {
           "fileName": "index",
-          "extension": "js"
+          "extension": "tsx"
         },
-        "screenshotPaths": {
-          "default": {
-            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/ServicesSection/default/preview.png",
-            "width": 800,
-            "height": 218
-          }
-        }
+        "screenshotPaths": {}
       }
     }
   }

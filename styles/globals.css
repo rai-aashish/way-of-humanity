@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply font-content;
+    @apply text-content-body;
+    @apply text-b1;
+  }
+
   h1 {
     @apply text-h1;
   }

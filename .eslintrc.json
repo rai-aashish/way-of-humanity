@@ -1,7 +1,8 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "indent": ["error", 2, { "SwitchCase": 1 }],
-    "no-unused-vars": "error"
+    "indent": ["error", 2, { "SwitchCase": 1, "ignoredNodes": ["ConditionalExpression"] }],
+    "no-unused-vars": "error",
+    "multiline-ternary": ["error", "always-multiline"]
   }
 }

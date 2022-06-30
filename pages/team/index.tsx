@@ -1,37 +1,30 @@
 import { NextPage, GetStaticProps } from 'next';
-import { PrismicDocument } from '@prismicio/types';
-import { SliceZone } from '@prismicio/react';
-import { createClient } from 'prismicio';
 import Layout from 'components/Layout';
+import { createClient } from 'prismicio';
+import { PrismicDocument } from '@prismicio/types';
+import Container from 'components/common/Container';
 
-import { components } from 'slices';
-
-interface PageProps {
-  homePage: PrismicDocument;
+interface TeamProps {
   header: PrismicDocument;
 }
 
-const Home: NextPage<PageProps> = ({ homePage, header }) => {
-  console.log(homePage);
-
+const Team: NextPage<TeamProps> = ({ header }) => {
   return (
     <Layout header={header}>
-      {/* @ts-ignore */}
-      <SliceZone slices={homePage.data.slices} components={components} />
+      <Container>our team</Container>
     </Layout>
   );
 };
 
-export default Home;
+export default Team;
 
-//fetch data
+//fetch serverside data
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   const client = createClient({ previewData });
-  let homePage, header;
+  let header;
 
   try {
     header = await client.getSingle('header');
-    homePage = await client.getSingle('home-page');
   } catch (error: any) {
     if (error.message === 'No documents were returned') {
       return { notFound: true };
@@ -42,7 +35,7 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
 
   //re-generate the page after 60 seconds of request
   return {
-    props: { homePage, header },
+    props: { header },
     revalidate: 60,
   };
 };

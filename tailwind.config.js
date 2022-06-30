@@ -95,6 +95,10 @@ module.exports = {
         c1: ['0.813rem', '1.3'], //13px
         c2: ['0.75rem', '1.3'], //12px
       },
+      zIndex: {
+        toast: '1000',
+        tooltip: '1100',
+      },
       aspectRatio: {
         '1/1': '1/1',
         '3/2': '3/2',
@@ -108,6 +112,8 @@ module.exports = {
         '3xl': '1600px',
       },
       spacing: {
+        13: '3.25rem', //52px
+        14: '3.5rem', //56px
         15: '3.75rem', //60px
         17: '4.25rem', //68px
         18: '4.5rem', //72px
@@ -120,6 +126,8 @@ module.exports = {
         39: '9.75rem', //156px
         41: '10.25rem', //164px
         43: '10.75rem', //172px
+        65: '16.25rem', //260px,
+        66: '16.5rem', //266px
         'gutter-lg': '1.875rem', //30px
         'gutter-md': '1.25rem', //20px
         'gutter-sm': '1.25rem', //20px

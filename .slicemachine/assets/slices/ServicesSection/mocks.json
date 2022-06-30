@@ -3,19 +3,127 @@
     "variation": "default",
     "name": "Default",
     "slice_type": "services_section",
-    "items": [],
+    "items": [
+      {
+        "thumbnail": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&h=500&fit=crop"
+        },
+        "serviceTitle": [
+          {
+            "type": "heading4",
+            "text": "Repurpose virtual niches",
+            "spans": []
+          }
+        ],
+        "serviceBrief": "drive back-end e-tailers"
+      },
+      {
+        "thumbnail": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
+        },
+        "serviceTitle": [
+          {
+            "type": "heading4",
+            "text": "Synthesize plug-and-play e-markets",
+            "spans": []
+          }
+        ],
+        "serviceBrief": "generate distributed blockchains"
+      },
+      {
+        "thumbnail": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=500&fit=crop"
+        },
+        "serviceTitle": [
+          {
+            "type": "heading4",
+            "text": "Engineer efficient methodologies",
+            "spans": []
+          }
+        ],
+        "serviceBrief": "revolutionize 24/365 platforms"
+      },
+      {
+        "thumbnail": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
+        },
+        "serviceTitle": [
+          {
+            "type": "heading4",
+            "text": "Synergize synergistic e-markets",
+            "spans": []
+          }
+        ],
+        "serviceBrief": "engineer efficient methodologies"
+      },
+      {
+        "thumbnail": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+        },
+        "serviceTitle": [
+          {
+            "type": "heading4",
+            "text": "Repurpose cross-media channels",
+            "spans": []
+          }
+        ],
+        "serviceBrief": "grow cross-platform metrics"
+      },
+      {
+        "thumbnail": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=500&fit=crop"
+        },
+        "serviceTitle": [
+          {
+            "type": "heading4",
+            "text": "Iterate proactive ROI",
+            "spans": []
+          }
+        ],
+        "serviceBrief": "synthesize efficient portals"
+      }
+    ],
     "primary": {
-      "title": [
+      "sectionTitle": [
         {
-          "type": "heading1",
-          "text": "Visualize cross-media niches",
-          "spans": []
-        }
-      ],
-      "description": [
-        {
-          "type": "paragraph",
-          "text": "Nulla consequat tempor exercitation cupidatat laboris id exercitation enim exercitation amet anim. Ut magna magna officia ipsum exercitation laborum duis est proident proident aliquip eiusmod. Officia nisi enim sunt enim ut nulla occaecat velit ad ullamco.",
+          "type": "heading2",
+          "text": "Optimize ubiquitous schemas",
           "spans": []
         }
       ]

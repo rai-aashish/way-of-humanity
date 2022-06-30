@@ -11,24 +11,42 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "ServicesSection",
       "primary": {
-        "title": {
+        "sectionTitle": {
           "type": "StructuredText",
           "config": {
-            "single": "heading1",
-            "label": "Title",
-            "placeholder": "This is where it all begins..."
-          }
-        },
-        "description": {
-          "type": "StructuredText",
-          "config": {
-            "single": "paragraph",
-            "label": "Description",
-            "placeholder": "A nice description of your feature"
+            "label": "Section Title",
+            "placeholder": "Title for services section...",
+            "allowTargetBlank": true,
+            "single": "heading2,heading3,strong"
           }
         }
       },
-      "items": {},
+      "items": {
+        "thumbnail": {
+          "type": "Image",
+          "config": {
+            "label": "Thumbnail",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "serviceTitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Service Title",
+            "placeholder": "Service title here...",
+            "allowTargetBlank": true,
+            "single": "heading4,heading5,strong"
+          }
+        },
+        "serviceBrief": {
+          "type": "Text",
+          "config": {
+            "label": "Service Brief",
+            "placeholder": ""
+          }
+        }
+      },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
