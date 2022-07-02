@@ -1,26 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from './common/Container';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PhoneIcon, LocationMarkerIcon } from '@heroicons/react/solid';
+import { PhoneIcon, LocationMarkerIcon, MenuIcon } from '@heroicons/react/solid';
 import { PrismicDocument, KeyTextField, LinkField } from '@prismicio/types';
 import { PrismicLink } from '@prismicio/react';
 import * as prismicH from '@prismicio/helpers';
 import { linkResolver } from 'prismicio';
 import { useRouter } from 'next/router';
+import MobileNavMenu from './MobileNavMenu';
 
 type HeaderProps = {
   header: PrismicDocument;
 };
 
 const Header: React.FC<HeaderProps> = ({ header }) => {
-  console.log(header);
+  const [showMobileNavMenu, setShowMobileNavMenu] = useState<boolean>(false);
+
+  //handlers
+  const toggleMobileNav = () => setShowMobileNavMenu((pre) => !pre);
+
+  //effect hook
+  useEffect(() => {
+    const resizeListener = () => {
+      const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      if (width < 768) setShowMobileNavMenu(false);
+    };
+    // set resize listener
+    window.addEventListener('resize', resizeListener);
+
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener('resize', resizeListener);
+    };
+  }, []);
 
   return (
     <>
       {/* //? contact bar */}
       <div className="bg-[#FDEDCD] text-[#C15D00] text-b1 py-3 border-b border-b-[rgba(237,121,13,0.3)]">
-        <Container className="flex justify-between">
+        <Container className="flex justify-between gap-x-10 gap-y-3 flex-wrap">
           {/* //? contact us */}
           <PrismicLink field={header.data.contactNumber}>
             <span className="flex gap-x-2 items-center">
@@ -54,14 +74,29 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
           </div>
 
           {/* //? nav bar */}
-          <NavBar navLinks={header.data?.navLinks} />
+          <NavBar navLinks={header.data?.navLinks} className={'hidden lg:flex'} />
+          <div className="flex gap-x-6 items-center">
+            <Link href={(prismicH.asLink(header.data?.ctaLinkTo, linkResolver) as string) || '#'}>
+              <a className="hidden md:inline-block rounded-2xl bg-accent-600 text-backdrop-white-100 px-4 py-2 duration-300 ease-in-out hover:bg-accent-800">
+                {header.data?.ctaLabel}
+              </a>
+            </Link>
 
-          <Link href="/contact-us">
-            <a className="rounded-2xl bg-accent-600 text-backdrop-white-100 px-4 py-2 duration-300 ease-in-out hover:bg-accent-800">
-              {header.data?.ctaLabel}
-            </a>
-          </Link>
+            <span
+              className="lg:hidden p-1 rounded ease duration-200 cursor-pointer hover:bg-accent-light-blue"
+              onClick={toggleMobileNav}
+            >
+              <MenuIcon className="fill-icon-default w-9 h-9 p-1" />
+            </span>
+          </div>
         </Container>
+
+        <MobileNavMenu
+          show={showMobileNavMenu}
+          navLinks={header.data?.navLinks}
+          ctaLinkLabel={header.data?.ctaLabel}
+          ctaLinkUrl={prismicH.asLink(header.data?.ctaLinkTo, linkResolver) as string}
+        />
       </header>
     </>
   );
@@ -69,18 +104,19 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
 
 //?? navbar component
 interface NavBarProps {
+  className?: string;
   navLinks: {
     linkLabel: KeyTextField;
     linkTo: LinkField;
   }[];
 }
-const NavBar: React.FC<NavBarProps> = ({ navLinks }) => {
+const NavBar: React.FC<NavBarProps> = ({ navLinks, className }) => {
   const router = useRouter();
 
   const activeClass = 'text-accent-800 after:scale-x-100';
 
   return (
-    <nav className="flex gap-x-5 items-center justify-between">
+    <nav className={`gap-x-5 items-center justify-between ${className}`}>
       {navLinks.map(({ linkTo, linkLabel }, index) => {
         const href = prismicH.asLink(linkTo, linkResolver);
         return (
