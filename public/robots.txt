@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://scrupulosity.com/sitemap.xml
+Sitemap: https://wayofhumanity.com.au/sitemap.xml

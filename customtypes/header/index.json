@@ -13,6 +13,14 @@
           "thumbnails": []
         }
       },
+      "ctaLinkTo": {
+        "type": "Link",
+        "config": {
+          "label": "Cta Link To",
+          "placeholder": "call to action link to..",
+          "select": null
+        }
+      },
       "ctaLabel": {
         "type": "Text",
         "config": {

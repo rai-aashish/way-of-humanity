@@ -40,7 +40,7 @@ module.exports = {
         content: {
           heading: '#003E75',
           subtitle: '#2F4C78',
-          body: '#172240',
+          body: '#2A385E',
           placeholder: '#767E92',
           disabled: '#B0B0BA',
         },

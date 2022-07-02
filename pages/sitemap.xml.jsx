@@ -5,7 +5,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 const SitemapIndex = () => null;
 
 const Sitemap = ({ pages }) => {
-  const origin = process.env.NEXT_PUBLIC_BASE_URL || 'https://scrupulosity.com';
+  const origin = process.env.NEXT_PUBLIC_BASE_URL || 'https://wayofhumanity.com.au';
 
   return (
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

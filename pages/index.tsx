@@ -3,7 +3,7 @@ import { PrismicDocument } from '@prismicio/types';
 import { SliceZone } from '@prismicio/react';
 import { createClient } from 'prismicio';
 import Layout from 'components/Layout';
-
+import MetaTags from 'components/MetaTags';
 import { components } from 'slices';
 
 interface PageProps {
@@ -16,6 +16,12 @@ const Home: NextPage<PageProps> = ({ homePage, header }) => {
 
   return (
     <Layout header={header}>
+      <MetaTags
+        title={homePage.data?.title}
+        description={homePage.data?.description}
+        keywords={homePage.data?.keywords}
+        revisitAfter={homePage.data?.revisitAfter}
+      />
       {/* @ts-ignore */}
       <SliceZone slices={homePage.data.slices} components={components} />
     </Layout>

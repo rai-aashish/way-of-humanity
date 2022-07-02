@@ -5,13 +5,6 @@
   "status": true,
   "json": {
     "Main": {
-      "main": {
-        "type": "Text",
-        "config": {
-          "label": "Main",
-          "placeholder": ""
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
@@ -35,7 +28,28 @@
         "type": "Text",
         "config": {
           "label": "Title",
-          "placeholder": ""
+          "placeholder": "Title for page"
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": "Description of page"
+        }
+      },
+      "keywords": {
+        "type": "Text",
+        "config": {
+          "label": "Keywords",
+          "placeholder": "eg: keyword1, keyword 2, keyword 3"
+        }
+      },
+      "revisitAfter": {
+        "type": "Text",
+        "config": {
+          "label": "Revisit After",
+          "placeholder": "optional (default is 3days)"
         }
       },
       "slices1": {

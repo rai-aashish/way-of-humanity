@@ -1,6 +1,6 @@
 {
-  "id": "e9b47809-375b-41e6-920a-c868b6ec535c",
-  "uid": "molestiae-ipsum-corrupti",
+  "id": "cb85c0fc-e0b3-43d3-9b60-f39e0ddf3c98",
+  "uid": "ipsa-modi-eligendi",
   "type": "header",
   "data": {
     "brandLogo": {
@@ -10,34 +10,66 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
     },
-    "ctaLabel": "generate scalable deliverables",
+    "ctaLinkTo": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
+    },
+    "ctaLabel": "brand seamless eyeballs",
     "navLinks": [
       {
         "linkTo": {
           "link_type": "Web",
-          "url": "https://prismic.io"
+          "url": "http://twitter.com"
         },
-        "linkLabel": "architect end-to-end e-services"
+        "linkLabel": "facilitate dot-com convergence"
+      },
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "linkLabel": "synthesize B2B initiatives"
       },
       {
         "linkTo": {
           "link_type": "Web",
           "url": "https://prismic.io"
         },
-        "linkLabel": "maximize transparent content"
+        "linkLabel": "iterate rich interfaces"
+      },
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "linkLabel": "scale collaborative ROI"
+      },
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "linkLabel": "grow real-time schemas"
+      },
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "linkLabel": "matrix cross-platform e-tailers"
       }
     ],
     "contactNumber": {
       "link_type": "Web",
-      "url": "http://twitter.com"
+      "url": "https://slicemachine.dev"
     },
-    "contactLabel": "monetize enterprise metrics",
+    "contactLabel": "reinvent web-enabled synergies",
     "mapAddressLink": {
       "link_type": "Web",
-      "url": "https://prismic.io"
+      "url": "https://slicemachine.dev"
     },
-    "mapAddressLabel": "enhance sticky mindshare"
+    "mapAddressLabel": "deliver virtual channels"
   }
 }

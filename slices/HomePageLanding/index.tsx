@@ -25,16 +25,21 @@ interface HomePageLandingProps {
 
 const HomePageLanding: React.FC<HomePageLandingProps> = ({ slice }) => (
   <section>
-    <Container grid>
-      <div className="col-span-5 relative flex flex-col justify-center">
+    <Container noPaddingX grid className="lg:px-5">
+      <div className="relative px-5 md:px-0 row-start-2 lg:row-start-1 col-span-full md:col-start-2 md:col-span-10 lg:col-start-1 lg:col-span-5 flex flex-col justify-center my-8 md:my-12 lg:my-0">
         <div>
-          <PrismicRichText field={slice.primary.title} />
+          <PrismicRichText
+            field={slice.primary.title}
+            components={{
+              heading1: ({ children }) => <h1 className="text-h2 md:text-h1">{children}</h1>,
+            }}
+          />
         </div>
-        <div className="mt-8 font-cursive text-3xl text-content-heading">
+        <div className="my-6 md:my-7 lg:my-8 font-cursive text-3xl text-content-heading">
           <PrismicRichText field={slice.primary.description} />
         </div>
 
-        <div className="mt-10 flex gap-6">
+        <div className="flex gap-6 items-center justify-center lg:justify-start">
           {slice.items.map((link, index) => (
             <Button
               key={index}
@@ -52,7 +57,7 @@ const HomePageLanding: React.FC<HomePageLandingProps> = ({ slice }) => (
         <LandingCurves className="absolute right-0 top-0 opacity-40 -z-10" />
       </div>
 
-      <div className="col-span-7 relative aspect-4/3">
+      <div className="col-span-full md:col-start-2 md:col-span-10 lg:col-start-6 lg:col-span-7 relative aspect-4/3">
         <Image
           src={slice.primary.landingImage.url as string}
           alt={slice.primary.landingImage.alt as string}

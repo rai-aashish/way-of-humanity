@@ -10,6 +10,8 @@ export function linkResolver(doc) {
   switch (doc.type) {
     case 'home-page':
       return '/';
+    case 'contact-us-page':
+      return '/contact-us';
     case 'team-page':
       return `/team`;
     case '/about-page':
