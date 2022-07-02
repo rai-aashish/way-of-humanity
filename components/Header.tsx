@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Container from './common/Container';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PhoneIcon, LocationMarkerIcon, MenuIcon } from '@heroicons/react/solid';
+import { PhoneIcon, LocationMarkerIcon } from '@heroicons/react/solid';
 import { PrismicDocument, KeyTextField, LinkField } from '@prismicio/types';
 import { PrismicLink } from '@prismicio/react';
 import * as prismicH from '@prismicio/helpers';
@@ -82,12 +82,27 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
               </a>
             </Link>
 
-            <span
-              className="lg:hidden p-1 rounded ease duration-200 cursor-pointer hover:bg-accent-light-blue"
+            {/* //? hamburger menu */}
+            <div
+              className="flex flex-col gap-y-[6px] lg:hidden px-2 py-3 rounded ease duration-200 cursor-pointer opacity-70 hover:opacity-100 hover:bg-accent-50"
               onClick={toggleMobileNav}
             >
-              <MenuIcon className="fill-icon-default w-9 h-9 p-1" />
-            </span>
+              <div
+                className={`w-8 h-[4px] rounded bg-icon-default  duration-300 ease-out ${
+                  showMobileNavMenu ? 'rotate-[45deg] translate-y-[10px]' : ''
+                }`}
+              ></div>
+              <div
+                className={`origin-left ease-out duration-300 ${
+                  showMobileNavMenu ? 'scale-x-0 opacity-100' : ''
+                } w-8 h-[4px] rounded bg-icon-default`}
+              ></div>
+              <div
+                className={`w-8 h-[4px] rounded bg-icon-default  duration-300 ease-out  ${
+                  showMobileNavMenu ? '-rotate-[45deg] -translate-y-[10px]' : ''
+                } `}
+              ></div>
+            </div>
           </div>
         </Container>
 
