@@ -86,6 +86,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
             <div
               className="flex flex-col gap-y-[6px] lg:hidden px-2 py-3 rounded ease duration-200 cursor-pointer opacity-70 hover:opacity-100 hover:bg-accent-50"
               onClick={toggleMobileNav}
+              aria-label="menu"
             >
               <div
                 className={`w-8 h-[4px] rounded bg-icon-default  duration-300 ease-out ${
@@ -131,13 +132,13 @@ const NavBar: React.FC<NavBarProps> = ({ navLinks, className }) => {
   const activeClass = 'text-accent-800 after:scale-x-100';
 
   return (
-    <nav className={`gap-x-5 items-center justify-between ${className}`}>
+    <nav className={`gap-x-6 items-center justify-between ${className}`} aria-label="primary">
       {navLinks.map(({ linkTo, linkLabel }, index) => {
         const href = prismicH.asLink(linkTo, linkResolver);
         return (
           <Link key={index} href={href || '#'}>
             <a
-              className={`relative font-bold after:absolute after:duration-300 after:ease-in-out after:w-full after:mt-1 after:h-[0.15rem] after:bg-accent-800 after:top-full after:left-0 text-b2 hover:text-accent-800 hover:after:scale-x-100  ${
+              className={`relative text-h6 after:absolute after:duration-300 after:ease-in-out after:w-full after:mt-1 after:h-[0.15rem] after:bg-accent-800 after:top-full after:left-0 hover:text-accent-800 hover:after:scale-x-100  ${
                 router.asPath === href ? activeClass : 'after:scale-x-0 text-content-body'
               }`}
             >
