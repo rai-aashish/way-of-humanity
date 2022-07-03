@@ -1,11 +1,32 @@
 {
-  "id": "a58d26d6-77e9-439c-9f9c-643ffbf50201",
-  "uid": "et-voluptatem-quo",
+  "id": "1d4707eb-39b3-4304-99c3-912d4c53950a",
+  "uid": "dolorum-totam-facilis",
   "type": "footer",
   "data": {
-    "contactAndSocialMedia": {
+    "header": {
       "link_type": "Web",
-      "url": "http://twitter.com"
-    }
+      "url": "https://prismic.io"
+    },
+    "ndisImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+    },
+    "quickLinkLabel": "disintermediate efficient users",
+    "contactLabel": "aggregate viral paradigms",
+    "mapLabel": "syndicate visionary markets",
+    "iframeMapUrl": "streamline cross-media vortals",
+    "copyrightLabel": "synthesize turn-key synergies",
+    "developerCredit": [
+      {
+        "type": "paragraph",
+        "text": "Tempor ipsum in nulla excepteur ad consectetur ex dolore nisi aute ullamco. Est sit culpa laborum dolore.",
+        "spans": []
+      }
+    ]
   }
 }

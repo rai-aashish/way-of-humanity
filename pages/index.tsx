@@ -9,13 +9,15 @@ import { components } from 'slices';
 interface PageProps {
   homePage: PrismicDocument;
   header: PrismicDocument;
+  footer: PrismicDocument;
 }
 
-const Home: NextPage<PageProps> = ({ homePage, header }) => {
-  console.log(homePage);
+const Home: NextPage<PageProps> = ({ homePage, header, footer }) => {
+  console.log(header);
+  console.log(footer);
 
   return (
-    <Layout header={header}>
+    <Layout header={header} footer={footer}>
       <MetaTags
         title={homePage.data?.title}
         description={homePage.data?.description}
@@ -33,10 +35,11 @@ export default Home;
 //fetch data
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   const client = createClient({ previewData });
-  let homePage, header;
+  let homePage, header, footer;
 
   try {
     header = await client.getSingle('header');
+    footer = await client.getSingle('footer');
     homePage = await client.getSingle('home-page');
   } catch (error: any) {
     if (error.message === 'No documents were returned') {
@@ -48,7 +51,7 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
 
   //re-generate the page after 60 seconds of request
   return {
-    props: { homePage, header },
+    props: { homePage, header, footer },
     revalidate: 60,
   };
 };

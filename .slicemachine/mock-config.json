@@ -65,7 +65,14 @@
     },
     "home": {},
     "navigation-menu": {},
-    "footer": {},
+    "footer": {
+      "developerCredit": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
     "quiz-opt-in-gate": {
       "title": {
         "config": {
@@ -135,7 +142,9 @@
     "article-sidebar": {},
     "group-coaching-page": {},
     "home-page": {},
-    "header": {},
+    "header": {
+      "socialNetwork": {}
+    },
     "team-page": {
       "teamDescription": {
         "config": {

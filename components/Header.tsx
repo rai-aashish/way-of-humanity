@@ -140,7 +140,7 @@ const NavBar: React.FC<NavBarProps> = ({ navLinks, className }) => {
         return (
           <Link key={index} href={href || '#'}>
             <a
-              className={`relative text-h6 after:absolute after:duration-300 after:ease-in-out after:w-full after:mt-1 after:h-[0.15rem] after:bg-accent-800 after:top-full after:left-0 hover:text-accent-800 hover:after:scale-x-100  ${
+              className={`relative text-h6 after:absolute after:duration-300 after:ease-in-out after:w-full after:mt-1 after:h-[0.15rem] after:bg-accent-700 after:top-full after:left-0 hover:text-accent-800 hover:after:scale-x-100  ${
                 router.asPath === href ? activeClass : 'after:scale-x-0 text-content-body'
               }`}
             >

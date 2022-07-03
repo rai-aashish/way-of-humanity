@@ -1,6 +1,6 @@
 {
-  "id": "cb85c0fc-e0b3-43d3-9b60-f39e0ddf3c98",
-  "uid": "ipsa-modi-eligendi",
+  "id": "5debac69-d79c-48da-92cc-c05ba27205a9",
+  "uid": "nostrum-ipsam-id",
   "type": "header",
   "data": {
     "brandLogo": {
@@ -10,66 +10,119 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
     },
     "ctaLinkTo": {
       "link_type": "Web",
-      "url": "http://twitter.com"
+      "url": "https://slicemachine.dev"
     },
-    "ctaLabel": "brand seamless eyeballs",
+    "ctaLabel": "extend out-of-the-box platforms",
     "navLinks": [
       {
         "linkTo": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "http://google.com"
         },
-        "linkLabel": "facilitate dot-com convergence"
+        "linkLabel": "whiteboard intuitive solutions"
       },
       {
         "linkTo": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "http://google.com"
         },
-        "linkLabel": "synthesize B2B initiatives"
+        "linkLabel": "enable frictionless e-tailers"
       },
       {
         "linkTo": {
           "link_type": "Web",
           "url": "https://prismic.io"
         },
-        "linkLabel": "iterate rich interfaces"
+        "linkLabel": "incentivize user-centric eyeballs"
       },
       {
         "linkTo": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "http://google.com"
         },
-        "linkLabel": "scale collaborative ROI"
-      },
-      {
-        "linkTo": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "linkLabel": "grow real-time schemas"
-      },
-      {
-        "linkTo": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "linkLabel": "matrix cross-platform e-tailers"
+        "linkLabel": "embrace leading-edge niches"
       }
     ],
     "contactNumber": {
       "link_type": "Web",
-      "url": "https://slicemachine.dev"
+      "url": "http://google.com"
     },
-    "contactLabel": "reinvent web-enabled synergies",
+    "contactLabel": "streamline intuitive deliverables",
     "mapAddressLink": {
       "link_type": "Web",
-      "url": "https://slicemachine.dev"
+      "url": "http://twitter.com"
     },
-    "mapAddressLabel": "deliver virtual channels"
+    "mapAddressLabel": "innovate frictionless networks",
+    "emailAddress": "empower sexy e-commerce",
+    "socialNetwork": [
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "linkLabel": "exploit real-time methodologies",
+        "linkIcon": {
+          "dimensions": {
+            "width": 60,
+            "height": 60
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=60&h=60&fit=crop"
+        }
+      },
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "linkLabel": "benchmark revolutionary models",
+        "linkIcon": {
+          "dimensions": {
+            "width": 60,
+            "height": 60
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=60&h=60&fit=crop"
+        }
+      },
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "linkLabel": "brand open-source networks",
+        "linkIcon": {
+          "dimensions": {
+            "width": 60,
+            "height": 60
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=60&h=60&fit=crop"
+        }
+      },
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "linkLabel": "whiteboard integrated systems",
+        "linkIcon": {
+          "dimensions": {
+            "width": 60,
+            "height": 60
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=60&h=60&fit=crop"
+        }
+      }
+    ]
   }
 }
