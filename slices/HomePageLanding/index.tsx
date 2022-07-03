@@ -24,7 +24,7 @@ interface HomePageLandingProps {
 }
 
 const HomePageLanding: React.FC<HomePageLandingProps> = ({ slice }) => (
-  <section>
+  <section aria-label="landing">
     <Container noPaddingX grid className="lg:px-5">
       <div className="relative px-5 md:px-0 row-start-2 lg:row-start-1 col-span-full md:col-start-2 md:col-span-10 lg:col-start-1 lg:col-span-5 flex flex-col justify-center my-8 md:my-12 lg:my-0">
         <div>
@@ -59,6 +59,7 @@ const HomePageLanding: React.FC<HomePageLandingProps> = ({ slice }) => (
 
       <div className="col-span-full md:col-start-2 md:col-span-10 lg:col-start-6 lg:col-span-7 relative aspect-4/3">
         <Image
+          priority={true}
           src={slice.primary.landingImage.url as string}
           alt={slice.primary.landingImage.alt as string}
           layout="fill"

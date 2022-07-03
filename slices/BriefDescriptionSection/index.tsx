@@ -14,24 +14,29 @@ interface BriefDescriptionSectionProps {
 }
 
 const BriefDescriptionSection: React.FC<BriefDescriptionSectionProps> = ({ slice }) => (
-  <section>
-    <Backdrop className="py-22 relative">
+  <section aria-label="brief description">
+    <Backdrop className="py-15 lg:py-22 relative">
       <Container grid className="text-center">
-        <div className="col-start-3 col-span-8 mb-11">
-          <PrismicRichText field={slice.primary.title} />
+        <div className="col-start-1 col-span-4 md:col-start-2 md:col-span-10 mb-9 md:mb-10 lg:mb-20">
+          <PrismicRichText
+            field={slice.primary.title}
+            components={{
+              heading2: ({ children }) => <h2 className="text-h3 md:text-h2">{children}</h2>,
+            }}
+          />
         </div>
-        <div className="col-start-2 col-span-10">
+        <div className="col-span-4 md:col-start-2 md:col-span-10">
           <PrismicRichText
             field={slice.primary.description}
             components={{
-              paragraph: ({ children }) => <p className="mb-5 last:mt-0">{children}</p>,
+              paragraph: ({ children }) => <p className="mb-4 lg:mb-5 last:mt-0">{children}</p>,
             }}
           />
         </div>
       </Container>
 
       {/* //? svg */}
-      <SvgGraphics className="absolute -bottom-8 -right-8 opacity-90" />
+      <SvgGraphics className="absolute -bottom-8 -right-8 opacity-70 -z-10" />
     </Backdrop>
   </section>
 );

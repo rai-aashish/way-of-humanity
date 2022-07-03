@@ -2,14 +2,25 @@
 
 import AlwaysForYouSection from './AlwaysForYouSection';
 import BriefDescriptionSection from './BriefDescriptionSection';
+import ContactUs from './ContactUs';
 import HomePageLanding from './HomePageLanding';
+import OurSpeciality from './OurSpeciality';
 import ServicesSection from './ServicesSection';
 
-export { AlwaysForYouSection, BriefDescriptionSection, HomePageLanding, ServicesSection };
+export {
+	AlwaysForYouSection,
+	BriefDescriptionSection,
+	ContactUs,
+	HomePageLanding,
+	OurSpeciality,
+	ServicesSection,
+};
 
 export const components = {
-  always_for_you_section: AlwaysForYouSection,
-  brief_description_section: BriefDescriptionSection,
-  home_page_landing: HomePageLanding,
-  services_section: ServicesSection,
+	always_for_you_section: AlwaysForYouSection,
+	brief_description_section: BriefDescriptionSection,
+	contact_us: ContactUs,
+	home_page_landing: HomePageLanding,
+	our_speciality: OurSpeciality,
+	services_section: ServicesSection,
 };

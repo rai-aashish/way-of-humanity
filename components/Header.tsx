@@ -83,10 +83,12 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
             </Link>
 
             {/* //? hamburger menu */}
-            <div
+            <button
               className="flex flex-col gap-y-[6px] lg:hidden px-2 py-3 rounded ease duration-200 cursor-pointer opacity-70 hover:opacity-100 hover:bg-accent-50"
               onClick={toggleMobileNav}
-              aria-label="menu"
+              role="navigation"
+              aria-label="Main menu"
+              aria-expanded={showMobileNavMenu ? 'true' : 'false'}
             >
               <div
                 className={`w-8 h-[4px] rounded bg-icon-default  duration-300 ease-out ${
@@ -103,7 +105,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
                   showMobileNavMenu ? '-rotate-[45deg] -translate-y-[10px]' : ''
                 } `}
               ></div>
-            </div>
+            </button>
           </div>
         </Container>
 

@@ -1,14 +1,10 @@
 /** @type {import('next').NextConfig} */
-const redirects = require('./redirects');
+
 const nextConfig = {
   images: {
-    domains: ['images.prismic.io', 'images.unsplash.com', 'scrupulosity-com.cdn.prismic.io'],
+    domains: ['images.prismic.io', 'images.unsplash.com', 'wayofhumanity.cdn.prismic.io'],
   },
   reactStrictMode: true,
-  async redirects() {
-    return redirects;
-  },
-
   build: {
     transpile: ['gsap'],
   },
