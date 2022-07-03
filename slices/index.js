@@ -6,6 +6,7 @@ import ContactUs from './ContactUs';
 import HomePageLanding from './HomePageLanding';
 import OurSpeciality from './OurSpeciality';
 import ServicesSection from './ServicesSection';
+import Testimonials from './Testimonials';
 
 export {
 	AlwaysForYouSection,
@@ -14,6 +15,7 @@ export {
 	HomePageLanding,
 	OurSpeciality,
 	ServicesSection,
+	Testimonials,
 };
 
 export const components = {
@@ -23,4 +25,5 @@ export const components = {
 	home_page_landing: HomePageLanding,
 	our_speciality: OurSpeciality,
 	services_section: ServicesSection,
+	testimonials: Testimonials,
 };

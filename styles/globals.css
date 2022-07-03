@@ -39,3 +39,15 @@
     @apply font-heading;
   }
 }
+
+/*custom selection */
+::-moz-selection {
+  /* Code for Firefox */
+  color: #0194d8;
+  background: #fff;
+}
+
+::selection {
+  color: #fff;
+  background: #0194d8;
+}

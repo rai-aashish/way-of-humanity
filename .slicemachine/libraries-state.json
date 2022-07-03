@@ -450,7 +450,13 @@
           "fileName": "index",
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/slices/HomePageLanding/default/preview.png",
+            "width": 2424,
+            "height": 996
+          }
+        }
       },
       "our_speciality": {
         "library": "slices",
@@ -753,6 +759,132 @@
           "extension": "tsx"
         },
         "screenshotPaths": {}
+      },
+      "testimonials": {
+        "library": "slices",
+        "id": "testimonials",
+        "name": "Testimonials",
+        "description": "Testimonials",
+        "model": {
+          "id": "testimonials",
+          "type": "SharedSlice",
+          "name": "Testimonials",
+          "description": "Testimonials",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Testimonials",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "testimonial section Title",
+                    "allowTargetBlank": true,
+                    "single": "heading2,strong"
+                  }
+                }
+              },
+              "items": {
+                "personImage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Person Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "personName": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Person Name",
+                    "placeholder": ""
+                  }
+                },
+                "statement": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Statement",
+                    "placeholder": "Statement of person..",
+                    "allowTargetBlank": true,
+                    "single": "em,strong"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "testimonials",
+            "items": [
+              {
+                "personImage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+                },
+                "personName": "streamline integrated models",
+                "statement": [
+                  {
+                    "type": "paragraph",
+                    "text": "In enim commodo eu consequat do anim minim proident magna magna incididunt cillum enim nisi duis. Incididunt aliquip commodo in est pariatur ea.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "personImage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
+                },
+                "personName": "incubate efficient action-items",
+                "statement": [
+                  {
+                    "type": "paragraph",
+                    "text": "Enim ut consequat esse.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Incubate intuitive schemas",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "tsx"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/Testimonials/default/preview.png",
+            "width": 800,
+            "height": 79
+          }
+        }
       }
     }
   }

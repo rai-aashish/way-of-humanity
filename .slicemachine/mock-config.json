@@ -249,7 +249,7 @@
           }
         },
         "items": {
-          "testimonial": {
+          "statement": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1
