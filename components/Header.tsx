@@ -134,7 +134,7 @@ const NavBar: React.FC<NavBarProps> = ({ navLinks, className }) => {
   const activeClass = 'text-accent-800 after:scale-x-100';
 
   return (
-    <nav className={`gap-x-6 items-center justify-between ${className}`} aria-label="primary">
+    <nav className={`gap-x-6 items-center justify-between ${className}`} role="navigation" aria-label="primary">
       {navLinks.map(({ linkTo, linkLabel }, index) => {
         const href = prismicH.asLink(linkTo, linkResolver);
         return (
@@ -152,4 +152,5 @@ const NavBar: React.FC<NavBarProps> = ({ navLinks, className }) => {
     </nav>
   );
 };
+
 export default Header;
