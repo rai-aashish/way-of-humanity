@@ -15,7 +15,7 @@ interface BriefDescriptionSectionProps {
 
 const BriefDescriptionSection: React.FC<BriefDescriptionSectionProps> = ({ slice }) => (
   <section aria-label="brief description">
-    <Backdrop className="py-15 lg:py-22 relative">
+    <Backdrop className="py-15 lg:py-22 relative overflow-hidden">
       <Container grid className="text-center">
         <div className="col-start-1 col-span-4 md:col-start-2 md:col-span-10 mb-9 md:mb-10 lg:mb-20">
           <PrismicRichText

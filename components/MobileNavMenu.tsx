@@ -27,7 +27,7 @@ const MobileNavMenu: React.FunctionComponent<MobileNavMenuProps> = ({ show, navL
       leave="transition duration-300 ease-out delay-300"
       enterFrom="opacity-0"
       leaveTo="opacity-0"
-      className="absolute z-50 top-full w-screen h-screen bg-backdrop-black-60 bg-opacity-60 backdrop-blur-xl"
+      className="overflow-hidden absolute z-50 top-full w-screen h-screen bg-backdrop-black-60 bg-opacity-60 backdrop-blur-xl"
     >
       <Transition.Child
         as={React.Fragment}

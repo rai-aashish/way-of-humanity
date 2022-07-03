@@ -18,7 +18,7 @@ interface AlwaysForYouSectioProps {
 }
 const AlwaysForYouSection: React.FC<AlwaysForYouSectioProps> = ({ slice }) => (
   <section aria-label="always for you my-7">
-    <Backdrop className="py-10 md:py-12 lg:py-19">
+    <Backdrop className="py-10 md:py-12 lg:py-19 overflow-hidden">
       <Container grid className="gap-y-8 md:gap-y-9">
         {/* //? typography */}
         <div className="col-span-full md:col-start-2 md:col-span-8 lg:col-start-1 lg:col-span-5">
