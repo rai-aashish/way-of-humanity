@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           {/* //? favicon configs */}
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

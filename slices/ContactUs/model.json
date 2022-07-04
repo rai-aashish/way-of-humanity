@@ -1,0 +1,58 @@
+{
+  "id": "contact_us",
+  "type": "SharedSlice",
+  "name": "ContactUs",
+  "description": "ContactUs",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ContactUs",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "Title for contact us",
+            "allowTargetBlank": true,
+            "single": "heading2,heading3,strong,em"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "paragraph to motivate users"
+          }
+        },
+        "ctaLinkTo": {
+          "type": "Link",
+          "config": {
+            "label": "Cta Link To",
+            "placeholder": "CTA Link To",
+            "select": null
+          }
+        },
+        "ctaLinkLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Cta Link Label",
+            "placeholder": ""
+          }
+        },
+        "backgroundImage": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

@@ -22,21 +22,39 @@
                 "title": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "heading1",
                     "label": "Title",
-                    "placeholder": "This is where it all begins..."
+                    "placeholder": "always for you title....",
+                    "allowTargetBlank": true,
+                    "single": "heading2,heading3"
                   }
                 },
                 "description": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "paragraph",
                     "label": "Description",
-                    "placeholder": "A nice description of your feature"
+                    "placeholder": "A nice description of your feature",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,strong,em"
+                  }
+                },
+                "featureImage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Feature Image",
+                    "constraint": {},
+                    "thumbnails": []
                   }
                 }
               },
-              "items": {},
+              "items": {
+                "service": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Service",
+                    "placeholder": "service title here.."
+                  }
+                }
+              },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -46,22 +64,44 @@
             "variation": "default",
             "name": "Default",
             "slice_type": "always_for_you_section",
-            "items": [],
+            "items": [
+              {
+                "service": "cultivate innovative e-business"
+              },
+              {
+                "service": "mesh open-source infomediaries"
+              },
+              {
+                "service": "incentivize visionary convergence"
+              },
+              {
+                "service": "enable rich schemas"
+              }
+            ],
             "primary": {
               "title": [
                 {
-                  "type": "heading1",
-                  "text": "Incentivize enterprise architectures",
+                  "type": "heading2",
+                  "text": "Morph collaborative technologies",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Aute labore cillum non consectetur cupidatat elit dolore.",
+                  "text": "Ad dolore consectetur consequat duis esse reprehenderit commodo ex aute aliquip exercitation. Nostrud quis est sunt est id id ut.",
                   "spans": []
                 }
-              ]
+              ],
+              "featureImage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
+              }
             }
           }
         },
@@ -69,7 +109,13 @@
           "fileName": "index",
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/slices/AlwaysForYouSection/default/preview.png",
+            "width": 2742,
+            "height": 972
+          }
+        }
       },
       "brief_description_section": {
         "library": "slices",
@@ -95,7 +141,7 @@
                     "label": "Title",
                     "placeholder": "Title for brief description ..",
                     "allowTargetBlank": true,
-                    "single": "heading2,heading3,heading1,strong,em"
+                    "single": "heading2,heading3,strong,em"
                   }
                 },
                 "description": {
@@ -123,14 +169,14 @@
               "title": [
                 {
                   "type": "heading2",
-                  "text": "Deploy vertical communities",
+                  "text": "Enable bricks-and-clicks metrics",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Aliquip occaecat ad et consequat irure aliquip aliqua Lorem incididunt tempor mollit sit reprehenderit. Minim commodo proident sint consequat excepteur esse ad minim duis magna.",
+                  "text": "Irure culpa et excepteur ea laboris minim duis consectetur id sint aliqua aute qui. Eiusmod eu consectetur nisi sint nostrud aliqua officia. Do nostrud enim deserunt et.",
                   "spans": []
                 }
               ]
@@ -142,6 +188,113 @@
           "extension": "tsx"
         },
         "screenshotPaths": {}
+      },
+      "contact_us": {
+        "library": "slices",
+        "id": "contact_us",
+        "name": "ContactUs",
+        "description": "ContactUs",
+        "model": {
+          "id": "contact_us",
+          "type": "SharedSlice",
+          "name": "ContactUs",
+          "description": "ContactUs",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ContactUs",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "Title for contact us",
+                    "allowTargetBlank": true,
+                    "single": "heading2,heading3,strong,em"
+                  }
+                },
+                "description": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "paragraph to motivate users"
+                  }
+                },
+                "ctaLinkTo": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Cta Link To",
+                    "placeholder": "CTA Link To",
+                    "select": null
+                  }
+                },
+                "ctaLinkLabel": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Cta Link Label",
+                    "placeholder": ""
+                  }
+                },
+                "backgroundImage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Background Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "contact_us",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Monetize ubiquitous blockchains",
+                  "spans": []
+                }
+              ],
+              "description": "transition bleeding-edge channels",
+              "ctaLinkTo": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              },
+              "ctaLinkLabel": "cultivate web-enabled functionalities",
+              "backgroundImage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "tsx"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/ContactUs/default/preview.png",
+            "width": 800,
+            "height": 26
+          }
+        }
       },
       "home_page_landing": {
         "library": "slices",
@@ -297,7 +450,119 @@
           "fileName": "index",
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/slices/HomePageLanding/default/preview.png",
+            "width": 2424,
+            "height": 996
+          }
+        }
+      },
+      "our_speciality": {
+        "library": "slices",
+        "id": "our_speciality",
+        "name": "OurSpeciality",
+        "description": "OurSpeciality",
+        "model": {
+          "id": "our_speciality",
+          "type": "SharedSlice",
+          "name": "OurSpeciality",
+          "description": "OurSpeciality",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "OurSpeciality",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "Title for our special features",
+                    "allowTargetBlank": true,
+                    "single": "heading2,heading3,strong"
+                  }
+                }
+              },
+              "items": {
+                "featureTitle": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Feature Title",
+                    "placeholder": "Title for feature"
+                  }
+                },
+                "featureIcon": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Feature Icon",
+                    "constraint": {
+                      "width": 68,
+                      "height": 68
+                    },
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "our_speciality",
+            "items": [
+              {
+                "featureTitle": "utilize world-class supply-chains",
+                "featureIcon": {
+                  "dimensions": {
+                    "width": 68,
+                    "height": 68
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=68&h=68&fit=crop"
+                }
+              },
+              {
+                "featureTitle": "empower scalable action-items",
+                "featureIcon": {
+                  "dimensions": {
+                    "width": 68,
+                    "height": 68
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=68&h=68&fit=crop"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Repurpose B2C e-tailers",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "tsx"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/OurSpeciality/default/preview.png",
+            "width": 800,
+            "height": 109
+          }
+        }
       },
       "services_section": {
         "library": "slices",
@@ -494,6 +759,132 @@
           "extension": "tsx"
         },
         "screenshotPaths": {}
+      },
+      "testimonials": {
+        "library": "slices",
+        "id": "testimonials",
+        "name": "Testimonials",
+        "description": "Testimonials",
+        "model": {
+          "id": "testimonials",
+          "type": "SharedSlice",
+          "name": "Testimonials",
+          "description": "Testimonials",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Testimonials",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "testimonial section Title",
+                    "allowTargetBlank": true,
+                    "single": "heading2,strong"
+                  }
+                }
+              },
+              "items": {
+                "personImage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Person Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "personName": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Person Name",
+                    "placeholder": ""
+                  }
+                },
+                "statement": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Statement",
+                    "placeholder": "Statement of person..",
+                    "allowTargetBlank": true,
+                    "single": "em,strong"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "testimonials",
+            "items": [
+              {
+                "personImage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+                },
+                "personName": "streamline integrated models",
+                "statement": [
+                  {
+                    "type": "paragraph",
+                    "text": "In enim commodo eu consequat do anim minim proident magna magna incididunt cillum enim nisi duis. Incididunt aliquip commodo in est pariatur ea.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "personImage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
+                },
+                "personName": "incubate efficient action-items",
+                "statement": [
+                  {
+                    "type": "paragraph",
+                    "text": "Enim ut consequat esse.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Incubate intuitive schemas",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "tsx"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/Testimonials/default/preview.png",
+            "width": 800,
+            "height": 79
+          }
+        }
       }
     }
   }

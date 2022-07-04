@@ -65,7 +65,14 @@
     },
     "home": {},
     "navigation-menu": {},
-    "footer": {},
+    "footer": {
+      "developerCredit": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
     "quiz-opt-in-gate": {
       "title": {
         "config": {
@@ -135,7 +142,9 @@
     "article-sidebar": {},
     "group-coaching-page": {},
     "home-page": {},
-    "header": {},
+    "header": {
+      "socialNetwork": {}
+    },
     "team-page": {
       "teamDescription": {
         "config": {
@@ -144,7 +153,15 @@
         }
       }
     },
-    "contact-us-page": {}
+    "contact-us-page": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "service": {}
   },
   "slices": {
     "Text": {
@@ -249,7 +266,7 @@
           }
         },
         "items": {
-          "testimonial": {
+          "statement": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1
@@ -502,6 +519,49 @@
         }
       }
     },
-    "AlwaysForYouSection": {}
+    "AlwaysForYouSection": {
+      "default": {
+        "items": {},
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "OurSpeciality": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "ContactUs": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
   }
 }

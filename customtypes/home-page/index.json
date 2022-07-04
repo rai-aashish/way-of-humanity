@@ -18,6 +18,18 @@
             },
             "brief_description_section": {
               "type": "SharedSlice"
+            },
+            "always_for_you_section": {
+              "type": "SharedSlice"
+            },
+            "our_speciality": {
+              "type": "SharedSlice"
+            },
+            "contact_us": {
+              "type": "SharedSlice"
+            },
+            "testimonials": {
+              "type": "SharedSlice"
             }
           }
         }

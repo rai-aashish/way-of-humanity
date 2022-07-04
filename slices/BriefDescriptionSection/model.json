@@ -17,7 +17,7 @@
             "label": "Title",
             "placeholder": "Title for brief description ..",
             "allowTargetBlank": true,
-            "single": "heading2,heading3,heading1,strong,em"
+            "single": "heading2,heading3,strong,em"
           }
         },
         "description": {

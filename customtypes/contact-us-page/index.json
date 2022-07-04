@@ -6,10 +6,104 @@
   "json": {
     "Main": {
       "title": {
-        "type": "Text",
+        "type": "StructuredText",
         "config": {
           "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2,heading3,strong,em"
+        }
+      },
+      "forWhomLabel": {
+        "type": "Text",
+        "config": {
+          "label": "For Whom Label",
+          "placeholder": "label for whom.."
+        }
+      },
+      "fullNameLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Full Name Label",
+          "placeholder": "full name label"
+        }
+      },
+      "servicesLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Services Label",
           "placeholder": ""
+        }
+      },
+      "services": {
+        "type": "Group",
+        "config": {
+          "label": "Services",
+          "fields": {
+            "serviceName": {
+              "type": "Text",
+              "config": {
+                "label": "Service Name",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "phoneNumberLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Phone Number Label",
+          "placeholder": "phone number label"
+        }
+      },
+      "emailLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Email Label",
+          "placeholder": "label for email address."
+        }
+      },
+      "streetLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Street Label",
+          "placeholder": ""
+        }
+      },
+      "suburbLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Suburb Label",
+          "placeholder": "label for suburb"
+        }
+      },
+      "postalCodeLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Postal Code Label",
+          "placeholder": "label for posta;l code"
+        }
+      },
+      "messageLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Message Label",
+          "placeholder": ""
+        }
+      },
+      "submitButtonLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Submit Button Label",
+          "placeholder": "label for submit button"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
         }
       }
     }

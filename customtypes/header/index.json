@@ -89,6 +89,47 @@
           "label": "Map Address Label",
           "placeholder": "label for map address"
         }
+      },
+      "emailAddress": {
+        "type": "Text",
+        "config": {
+          "label": "Email Address",
+          "placeholder": ""
+        }
+      },
+      "socialNetwork": {
+        "type": "Group",
+        "config": {
+          "label": "Social Network",
+          "fields": {
+            "linkTo": {
+              "type": "Link",
+              "config": {
+                "label": "Link To",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "linkLabel": {
+              "type": "Text",
+              "config": {
+                "label": "Link Label",
+                "placeholder": ""
+              }
+            },
+            "linkIcon": {
+              "type": "Image",
+              "config": {
+                "label": "Link Icon",
+                "constraint": {
+                  "width": 60,
+                  "height": 60
+                },
+                "thumbnails": []
+              }
+            }
+          }
+        }
       }
     }
   }

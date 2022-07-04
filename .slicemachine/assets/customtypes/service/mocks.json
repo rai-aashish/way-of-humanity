@@ -1,0 +1,18 @@
+{
+  "id": "3425c332-6dca-49ba-a64f-d7dd8fe1c8df",
+  "uid": "aut-libero-debitis",
+  "type": "service",
+  "data": {
+    "serviceName": "orchestrate cross-media technologies",
+    "serviceExcerpt": "harness seamless web-readiness",
+    "thumbnail": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
+    }
+  }
+}

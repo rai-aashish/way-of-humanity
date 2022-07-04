@@ -1,0 +1,72 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "header": {
+        "type": "Link",
+        "config": {
+          "label": "Header",
+          "select": "document",
+          "customtypes": [
+            "header"
+          ]
+        }
+      },
+      "ndisImage": {
+        "type": "Image",
+        "config": {
+          "label": "Ndis Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "quickLinkLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Quick Link Label",
+          "placeholder": "label for Quick Links"
+        }
+      },
+      "contactLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Contact Label",
+          "placeholder": "label for cotact info"
+        }
+      },
+      "mapLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Map Label",
+          "placeholder": "label for map"
+        }
+      },
+      "iframeMapUrl": {
+        "type": "Text",
+        "config": {
+          "label": "Iframe Map Url",
+          "placeholder": "please put google map iframe Url"
+        }
+      },
+      "copyrightLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Copyright Label",
+          "placeholder": "company copyright label"
+        }
+      },
+      "developerCredit": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Developer Credit",
+          "placeholder": "developers credit",
+          "allowTargetBlank": true,
+          "single": "strong,em,hyperlink"
+        }
+      }
+    }
+  }
+}
