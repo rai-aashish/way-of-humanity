@@ -7,6 +7,9 @@ import Button from 'components/common/Button';
 import Container from 'components/common/Container';
 import { PrismicRichText } from '@prismicio/react';
 import InputField from 'components/common/InputField';
+import axios from 'axios';
+//@ts-ignore
+import Recaptcha from "react-google-recaptcha"
 
 interface ContactUsProps {
   header: PrismicDocument;
@@ -32,13 +35,40 @@ interface ContactUsProps {
 
 const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) => {
   console.log(contactUsPage);
-  const [forWhom, setForWhom] = useState<string>('');
+  const [formData, setFormData] = useState({_for:"", name:"", services:"", phoneNumber:"", email:"", street:"", suburb:"", postCode:"", message : ""});
+  const [isHuman, setIsHuman] = useState(false) 
 
   //form submit handler
-  const handleSubmitForm: React.FormEventHandler<HTMLFormElement> = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmitForm: React.FormEventHandler<HTMLFormElement> = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert(forWhom);
+
+    if(!formData._for || !formData.name || !formData.services || !formData.phoneNumber || !formData.email || !formData.street || !formData.suburb || !formData.postCode )
+     {
+       alert("Please fill up the form completely");
+        return
+      }
+    if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formData.email))){
+      alert("Invalid email")
+      return
+    }
+    if(!isHuman)
+      return 
+
+    let postForm = await axios.post("/api/contact-us",formData)
+
+    console.log(postForm);
+    
   };
+
+  const handleInputChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+    setFormData((pre) => {
+      return {...pre,[event.target.name]: event.target.value}
+    })
+  }
+
+  const handleRecaptcha = () => {
+    setIsHuman(true)
+  }
   return (
     <Layout header={header} footer={footer}>
       <Container grid>
@@ -58,25 +88,107 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
                 required
                 label={contactUsPage.data.forWhomLabel}
                 type="text"
-                name="relation"
-                value={forWhom}
-                onChange={(e) => setForWhom(() => e.target.value)}
+                name="_for"
+                value={formData._for}
+                onChange={handleInputChange}
               />
             </FormField>
 
             <FormField>
-              <label htmlFor="fullName">{contactUsPage.data.fullNameLabel}</label>
-              <input type="text" name="fullName" />
+               <InputField
+                required
+                label={contactUsPage.data.fullNameLabel}
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+              />
             </FormField>
 
             <FormField>
-              <label htmlFor="services">{contactUsPage.data.servicesLabel}</label>
-              <input type="text" name="services" />
+               <InputField
+                required
+                label={contactUsPage.data.servicesLabel}
+                type="text"
+                name="services"
+                value={formData.services}
+                onChange={handleInputChange}
+              />
             </FormField>
+
+            <FormField>
+               <InputField
+                required
+                label={contactUsPage.data.phoneNumberLabel}
+                type="number"
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={handleInputChange}
+              />
+            </FormField>
+
+            <FormField>
+               <InputField
+                required
+                label={contactUsPage.data.emailLabel}
+                type="text"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+              />
+            </FormField>
+
+            <FormField>
+               <InputField
+                required
+                label={contactUsPage.data.streetLabel}
+                type="text"
+                name="street"
+                value={formData.street}
+                onChange={handleInputChange}
+              />
+            </FormField>
+
+            <FormField>
+               <InputField
+                required
+                label={contactUsPage.data.suburbLabel}
+                type="text"
+                name="suburb"
+                value={formData.suburb}
+                onChange={handleInputChange}
+              />
+            </FormField>
+
+            <FormField>
+               <InputField
+                required
+                label={contactUsPage.data.postalCodeLabel}
+                type="text"
+                name="postCode"
+                value={formData.postCode}
+                onChange={handleInputChange}
+              />
+            </FormField>
+
+            <FormField>
+               <InputField
+                label={contactUsPage.data.messageLabel}
+                type="text"
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+              />
+            </FormField>
+
+            <Recaptcha
+            sitekey = {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            onChange={handleRecaptcha}
+            />
 
             {/* //? submit */}
             <div className="col-span-full">
-              <Button variant="solid" size="large">
+              <Button disabled={!isHuman} variant="solid" size="large">
                 {contactUsPage.data.submitButtonLabel}
               </Button>
             </div>
