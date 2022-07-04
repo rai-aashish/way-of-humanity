@@ -2,7 +2,7 @@ import * as React from 'react';
 
 interface InputFieldProps {
   isError?: boolean;
-  helperText?: boolean;
+  helperText?: string;
   name?: string;
   value?: string | number;
   label?: string | null;
@@ -14,7 +14,7 @@ interface InputFieldProps {
 const InputField: React.FunctionComponent<InputFieldProps> = ({
   isError,
   label,
-  type,
+  type = 'text',
   helperText,
   name,
   required,
@@ -33,14 +33,16 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
         </label>
       )}
       <input
-        className={`border${isError ? 'border-error-base' : ''} `}
+        className={`w-full border border-stroke-default rounded px-5 py-3 ${
+          isError ? 'border-error-base' : ''
+        } outline-none focus:bg-accent-light-blue focus:border-accent-800 hover:border-accent-600`}
         name={name}
         onChange={onChangeHandler}
         value={value}
         type={type}
       />
-      {helperText && (
-        <small className={` ${isError ? 'text-error-base' : 'text-content-placeholder'}`}>{helperText}</small>
+      {helperText && helperText !== '' && (
+        <small className={`block ${isError ? 'text-error-base' : 'text-content-placeholder'}`}>{helperText}</small>
       )}
     </div>
   );
