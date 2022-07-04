@@ -32,8 +32,16 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
           {label} {required && <span className="text-error-base font-bold">*</span>}:
         </label>
       )}
-      <input className={`border`} name={name} onChange={onChangeHandler} value={value} type={type} />
-      <small></small>
+      <input
+        className={`border${isError ? 'border-error-base' : ''} `}
+        name={name}
+        onChange={onChangeHandler}
+        value={value}
+        type={type}
+      />
+      {helperText && (
+        <small className={` ${isError ? 'text-error-base' : 'text-content-placeholder'}`}>{helperText}</small>
+      )}
     </div>
   );
 };
