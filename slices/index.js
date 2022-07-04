@@ -9,21 +9,21 @@ import ServicesSection from './ServicesSection';
 import Testimonials from './Testimonials';
 
 export {
-	AlwaysForYouSection,
-	BriefDescriptionSection,
-	ContactUs,
-	HomePageLanding,
-	OurSpeciality,
-	ServicesSection,
-	Testimonials,
+  AlwaysForYouSection,
+  BriefDescriptionSection,
+  ContactUs,
+  HomePageLanding,
+  OurSpeciality,
+  ServicesSection,
+  Testimonials,
 };
 
 export const components = {
-	always_for_you_section: AlwaysForYouSection,
-	brief_description_section: BriefDescriptionSection,
-	contact_us: ContactUs,
-	home_page_landing: HomePageLanding,
-	our_speciality: OurSpeciality,
-	services_section: ServicesSection,
-	testimonials: Testimonials,
+  always_for_you_section: AlwaysForYouSection,
+  brief_description_section: BriefDescriptionSection,
+  contact_us: ContactUs,
+  home_page_landing: HomePageLanding,
+  our_speciality: OurSpeciality,
+  services_section: ServicesSection,
+  testimonials: Testimonials,
 };

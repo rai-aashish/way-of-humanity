@@ -1,13 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import mailgun from "mailgun-js"
+import mailgun from 'mailgun-js';
 
 export default function handler(req, res) {
+  //Details received from the form
+  const { _for, services, name, phoneNumber, email, street, suburb, postCode, message } = req.body;
 
-    //Details received from the form 
-    const { _for, services, name, phoneNumber, email, street, suburb, postCode, message } = req.body
-
-    //Mail Body being composed with the data being provided by the user through form 
-    const emailText = `<!DOCTYPE html>
+  //Mail Body being composed with the data being provided by the user through form
+  const emailText = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -121,25 +120,28 @@ export default function handler(req, res) {
         </table>
     </div>
 </body>
-</html>`
+</html>`;
 
-    //Creating the auth object
-    const mailGun = () => mailgun({
-        apiKey: process.env.MAILGUN_API_KEY,
-        domain: process.env.MAILGUN_DOMAIN
-    })
+  //Creating the auth object
+  const mailGun = () =>
+    mailgun({
+      apiKey: process.env.MAILGUN_API_KEY,
+      domain: process.env.MAILGUN_DOMAIN,
+    });
 
-    //sending the email
-    mailGun().messages().send({
-        from: "Interested Person <jhon@mg.yourdomain.com>", // sender address
+  //sending the email
+  mailGun()
+    .messages()
+    .send(
+      {
+        from: 'Interested Person <jhon@mg.yourdomain.com>', // sender address
         to: `${email}`, //email address of the receiver
-        subject: "WoH Service Registration", // Subject line
-        html: emailText // html body
-    },
-        (error, body) => {
-            if (error)
-                res.status(500).send({ message: "Error occured while sending the email." })
-            else
-                res.status(200).send({ message: "Email was successfully send." })
-        })
+        subject: 'WoH Service Registration', // Subject line
+        html: emailText, // html body
+      },
+      (error, body) => {
+        if (error) res.status(500).send({ message: 'Error occured while sending the email.' });
+        else res.status(200).send({ message: 'Email was successfully send.' });
+      },
+    );
 }
