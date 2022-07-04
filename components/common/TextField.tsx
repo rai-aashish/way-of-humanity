@@ -1,20 +1,19 @@
 import * as React from 'react';
 
-interface InputFieldProps {
+interface TextFieldProps {
   isError?: boolean;
   helperText?: string;
   name?: string;
   value?: string | number;
   label?: string | null;
   required?: boolean;
-  type?: 'text' | 'number';
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  textField?: boolean;
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-const InputField: React.FunctionComponent<InputFieldProps> = ({
+const TextField: React.FunctionComponent<TextFieldProps> = ({
   isError,
   label,
-  type = 'text',
   helperText,
   name,
   required,
@@ -22,7 +21,9 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
   onChange,
 }) => {
   //handlers
-  const onChangeHandler: React.ChangeEventHandler<HTMLInputElement> = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeHandler: React.ChangeEventHandler<HTMLTextAreaElement> = (
+    e: React.ChangeEvent<HTMLTextAreaElement>,
+  ) => {
     if (onChange) onChange(e);
   };
   return (
@@ -32,14 +33,12 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
           {label} {required && <span className="text-error-base font-bold">*</span>}:
         </label>
       )}
-      <input
-        className={`w-full border border-stroke-default rounded px-5 py-3 ${
-          isError ? 'border-error-base' : ''
-        } outline-none focus:bg-accent-light-blue focus:border-accent-800 hover:border-accent-600`}
-        name={name}
-        onChange={onChangeHandler}
+      <textarea
         value={value}
-        type={type}
+        onChange={onChangeHandler}
+        className={`w-full border border-stroke-default rounded px-5 py-3 min-w-[100px] ${
+          isError ? 'border-error-base' : ''
+        } outline-none focus:bg-accent-light-blue focus:border-accent-800`}
       />
       {helperText && helperText !== '' && (
         <small className={`block ${isError ? 'text-error-base' : 'text-content-placeholder'}`}>{helperText}</small>
@@ -48,4 +47,4 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
   );
 };
 
-export default InputField;
+export default TextField;
