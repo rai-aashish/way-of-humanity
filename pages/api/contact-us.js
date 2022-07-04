@@ -4,7 +4,7 @@ import mailgun from "mailgun-js"
 export default function handler(req, res) {
 
     //Details received from the form 
-    const { _for, services, name, phoneNumber, email, street, suburb, postCode } = req.body
+    const { _for, services, name, phoneNumber, email, street, suburb, postCode, message } = req.body
 
     //Mail Body being composed with the data being provided by the user through form 
     const emailText = `<!DOCTYPE html>
@@ -69,49 +69,54 @@ export default function handler(req, res) {
         <h1>New Client Request</h1>
         <table>
             <tr>
-                <td>#</td>
-                <td>Items</td>
-                <td>Details</td>
+                <td><p>#</p></td>
+                <td><p>Items</p></td>
+                <td><p>Details</p></td>
             </tr>
             <tr>
-                <td>1.</td>
-                <td>Name of the requester</td>
-                <td>${name}</td>
+                <td><p>1.</p></td>
+                <td><p>Name of the requester</p></td>
+                <td><p>${name}</p></td>
             </tr>
             <tr>
-                <td>2.</td>
-                <td>For whome is this request for?</td>
-                <td>${_for}</td>
+                <td><p>2.</p></td>
+                <td><p>For whome is this request for?</p></td>
+                <td><p>${_for}</p></td>
             </tr>
             <tr>
-                <td>3.</td>
-                <td>Services</td>
-                <td>${services}</td>
+                <td><p>3.</p></td>
+                <td><p>Services</p></td>
+                <td><p>${services}</p></td>
             </tr>
             <tr>
-                <td>4.</td>
-                <td>Phone Number</td>
-                <td>${phoneNumber}</td>
+                <td><p>4.</p></td>
+                <td><p>Phone Number</p></td>
+                <td><p>${phoneNumber}</p></td>
             </tr>
             <tr>
-                <td>5.</td>
-                <td>Email address</td>
-                <td>${email}</td>
+                <td><p>5.</p></td>
+                <td><p>Email address</p></td>
+                <td><p>${email}</p></td>
             </tr>
             <tr>
-                <td>6.</td>
-                <td>Street</td>
-                <td>${street}</td>
+                <td><p>6.</p></td>
+                <td><p>Street</p></td>
+                <td><p>${street}</p></td>
             </tr>
             <tr>
-                <td>7.</td>
-                <td>Suburb</td>
-                <td>${phoneNumber}</td>
+                <td><p>7.</p></td>
+                <td><p>Suburb</p></td>
+                <td><p>${suburb}</p></td>
             </tr>
             <tr>
-                <td>8.</td>
-                <td>Postcode</td>
-                <td>${postCode}</td>
+                <td><p>8.</p></td>
+                <td><p>Postcode</p></td>
+                <td><p>${postCode}</p></td>
+            </tr>
+             <tr>
+                <td><p>10.</p></td>
+                <td><p>Message</p></td>
+                <td><p>${message}</p></td>
             </tr>
         </table>
     </div>
