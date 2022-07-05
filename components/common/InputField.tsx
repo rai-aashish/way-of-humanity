@@ -37,6 +37,7 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
           isError ? 'border-error-base' : ''
         } outline-none focus:bg-accent-light-blue focus:border-accent-800 hover:border-accent-600`}
         name={name}
+        id={name}
         onChange={onChangeHandler}
         value={value}
         type={type}
