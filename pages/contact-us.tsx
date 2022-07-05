@@ -12,6 +12,7 @@ import axios from 'axios';
 import Recaptcha from 'react-google-recaptcha';
 import TextField from '../components/common/TextField';
 import ContactUsSuccessModal from 'components/dialogue boxes/ContactUsSuccessModal';
+import MetaTags from 'components/MetaTags';
 
 interface ContactUsProps {
   header: PrismicDocument;
@@ -31,6 +32,10 @@ interface ContactUsProps {
       submitButtonLabel: KeyTextField;
       suburbLabel: KeyTextField;
       title: RichTextField;
+      metaTitle: KeyTextField;
+      metaDescription: KeyTextField;
+      metaTags: KeyTextField;
+      metaKeywords: KeyTextField;
     };
   };
 }
@@ -204,6 +209,11 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
 
   return (
     <Layout header={header} footer={footer}>
+      <MetaTags
+        title={contactUsPage.data.metaTitle as string}
+        description={contactUsPage.data.metaDescription as string}
+        keywords={contactUsPage.data.metaKeywords as string}
+      />
       <Container grid className="pb-15">
         <div className="col-span-full text-center mb-12">
           <PrismicRichText
