@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
   return (
     <>
       {/* //? contact bar */}
-      <div className="bg-[#FDEDCD] text-[#C15D00] text-b1 py-3 border-b border-b-[rgba(237,121,13,0.3)]">
+      <div className="bg-[#FDEDCD] text-[#C15D00] text-b1 py-3 border-b border-b-[rgba(237,121,13,0.1)]">
         <Container className="flex justify-between gap-x-10 gap-y-3 flex-wrap">
           {/* //? contact us */}
           <PrismicLink field={header.data.contactNumber}>
