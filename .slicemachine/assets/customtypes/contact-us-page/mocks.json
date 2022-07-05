@@ -1,35 +1,41 @@
 {
-  "id": "278defa5-9274-4649-9a4f-badad516ef81",
-  "uid": "sequi-commodi-qui",
+  "id": "a4ca7221-3bc8-4b87-a6f9-dbb5c8f634db",
+  "uid": "dicta-error-ad",
   "type": "contact-us-page",
   "data": {
     "title": [
       {
         "type": "heading2",
-        "text": "Facilitate holistic bandwidth",
+        "text": "Syndicate world-class technologies",
         "spans": []
       }
     ],
-    "forWhomLabel": "repurpose open-source relationships",
-    "fullNameLabel": "e-enable bricks-and-clicks initiatives",
-    "servicesLabel": "innovate open-source architectures",
-    "phoneNumberLabel": "expedite killer ROI",
-    "emailLabel": "deliver ubiquitous convergence",
-    "streetLabel": "recontextualize visionary e-services",
-    "suburbLabel": "evolve customized niches",
-    "postalCodeLabel": "grow robust functionalities",
-    "messageLabel": "integrate out-of-the-box paradigms",
-    "submitButtonLabel": "reinvent distributed deliverables",
+    "forWhomLabel": "enable out-of-the-box e-tailers",
+    "fullNameLabel": "expedite end-to-end deliverables",
+    "servicesLabel": "e-enable compelling ROI",
+    "phoneNumberLabel": "generate cutting-edge portals",
+    "emailLabel": "engage cross-platform markets",
+    "streetLabel": "facilitate virtual infomediaries",
+    "suburbLabel": "iterate seamless e-business",
+    "postalCodeLabel": "whiteboard cross-platform bandwidth",
+    "messageLabel": "engineer one-to-one convergence",
+    "submitButtonLabel": "empower cross-platform synergies",
     "services": [
       {
-        "serviceName": "facilitate best-of-breed portals"
+        "serviceName": "reinvent seamless applications"
       },
       {
-        "serviceName": "repurpose intuitive experiences"
+        "serviceName": "brand interactive blockchains"
       },
       {
-        "serviceName": "innovate next-generation infrastructures"
+        "serviceName": "synthesize clicks-and-mortar networks"
+      },
+      {
+        "serviceName": "synthesize cross-media e-tailers"
       }
-    ]
+    ],
+    "metaTitle": "aggregate interactive solutions",
+    "metaDescription": "maximize sticky functionalities",
+    "metaTags": "harness visionary users"
   }
 }

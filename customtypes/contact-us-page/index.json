@@ -106,6 +106,29 @@
           "choices": {}
         }
       }
+    },
+    "SEO": {
+      "metaTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "meta title for page"
+        }
+      },
+      "metaDescription": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "meta description"
+        }
+      },
+      "metaTags": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Tags",
+          "placeholder": "keyword1,keyword2,keyword3"
+        }
+      }
     }
   }
 }
