@@ -26,9 +26,9 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
             </h5>
             <ul className="ml-3">
               {header.data.navLinks.map((navLink: { linkLabel: KeyTextField; linkTo: LinkField }, index: number) => (
-                <li key={index} className="mb-1 last:mb-0">
+                <li key={index}>
                   <Link href={(PrismicH.asLink(navLink.linkTo, linkResolver) as string) || '#'}>
-                    <a className="hover:text-accent-100">{navLink.linkLabel}</a>
+                    <a className="inline-block py-2  mb-2 hover:text-accent-100">{navLink.linkLabel}</a>
                   </Link>
                 </li>
               ))}
@@ -46,12 +46,12 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
             <ul className="ml-3">
               <li>
                 <Link href={PrismicH.asLink(header.data.contactNumber, linkResolver) as string}>
-                  <a className="hover:text-accent-600"> {header.data.contactLabel}</a>
+                  <a className="inline-block py-2 mb-2 hover:text-accent-600"> {header.data.contactLabel}</a>
                 </Link>
               </li>
               <li>
                 <Link href={`mailto:${header.data.emailAddress}`}>
-                  <a className="hover:text-accent-600"> {header.data.emailAddress}</a>
+                  <a className="inline-block py-2 mb-2 hover:text-accent-600"> {header.data.emailAddress}</a>
                 </Link>
               </li>
             </ul>
@@ -80,7 +80,7 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
               </span>
             </h5>
             <Link href={PrismicH.asLink(header.data.mapAddressLink, linkResolver) as string}>
-              <a className="mb-4 block hover:text-accent-600" target="_blank" rel="noreferrer">
+              <a className="inline-block py-2 mb-2  hover:text-accent-600" target="_blank" rel="noreferrer">
                 {header.data.mapAddressLabel}
               </a>
             </Link>

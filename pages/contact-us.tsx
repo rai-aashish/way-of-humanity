@@ -215,7 +215,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
         keywords={contactUsPage.data.metaKeywords as string}
       />
       <Container grid className="pb-15">
-        <div className="col-span-full text-center mb-12">
+        <div className="col-span-full text-center mb-12 mt-10 md:mt-12">
           <PrismicRichText
             field={contactUsPage.data.title}
             components={{
