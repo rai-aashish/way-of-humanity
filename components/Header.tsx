@@ -59,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
         </Container>
       </div>
       {/* //? main header */}
-      <header className="sticky z-50 top-0 bg-backdrop-white-100 backdrop-blur-xl bg-opacity-80">
+      <header className="sticky z-50 top-0 bg-backdrop-white-100 backdrop-blur-xl bg-opacity-80 overflow-x-clip">
         <Container className="py-3 flex items-center justify-between">
           <div className="relative w-28 h-18">
             <Link href="/">
@@ -109,6 +109,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
           </div>
         </Container>
 
+        {/* //? mobile navigation */}
         <MobileNavMenu
           show={showMobileNavMenu}
           navLinks={header.data?.navLinks}
