@@ -8,14 +8,12 @@ interface SelectProps {
   label?: string | null;
   required?: boolean;
   options: { relation: string }[];
-  type?: 'text' | 'number';
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 const Select: React.FunctionComponent<SelectProps> = ({
   isError,
   label,
-  type = 'text',
   helperText,
   name,
   required,
