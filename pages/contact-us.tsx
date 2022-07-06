@@ -13,6 +13,8 @@ import Recaptcha from 'react-google-recaptcha';
 import TextField from '../components/common/TextField';
 import ContactUsSuccessModal from 'components/dialogue boxes/ContactUsSuccessModal';
 import MetaTags from 'components/MetaTags';
+import Select from 'components/common/Select';
+import MultiSelect from 'components/common/MultiSelect';
 
 interface ContactUsProps {
   header: PrismicDocument;
@@ -21,12 +23,13 @@ interface ContactUsProps {
     data: {
       emailLabel: KeyTextField;
       forWhomLabel: KeyTextField;
+      forWhom: { relation: KeyTextField }[];
       fullNameLabel: KeyTextField;
       messageLabel: KeyTextField;
       phoneNumberLabel: KeyTextField;
       postalCodeLabel: KeyTextField;
       servicesLabel: KeyTextField;
-      services: { serviceName: KeyTextField }[];
+      services: { value: KeyTextField }[];
       slices: any[];
       streetLabel: KeyTextField;
       submitButtonLabel: KeyTextField;
@@ -40,10 +43,20 @@ interface ContactUsProps {
   };
 }
 
-const INITIAL_FORM_STATE = {
+const INITIAL_FORM_STATE: {
+  _for: string;
+  name: string;
+  services: string[];
+  phoneNumber: string;
+  email: string;
+  street: string;
+  suburb: string;
+  postCode: string;
+  message: string;
+} = {
   _for: '',
   name: '',
-  services: '',
+  services: [],
   phoneNumber: '',
   email: '',
   street: '',
@@ -52,6 +65,8 @@ const INITIAL_FORM_STATE = {
   message: '',
 };
 const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) => {
+  console.log(contactUsPage);
+
   const [formData, setFormData] = useState(INITIAL_FORM_STATE);
   const [formError, setFormError] = useState({
     _for: '',
@@ -71,6 +86,8 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
   //form submit handler
   const handleSubmitForm: React.FormEventHandler<HTMLFormElement> = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    console.log(formData);
 
     if (!validateForm()) return;
 
@@ -179,7 +196,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
       !formData.phoneNumber === null ||
       formData.postCode === '' ||
       !formData.postCode === null ||
-      formData.services === '' ||
+      formData.services.length === 0 ||
       !formData.services === null ||
       formData.street === '' ||
       !formData.street === null ||
@@ -207,6 +224,24 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
     setIsHuman(true);
   };
 
+  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setFormData((pre) => {
+      return { ...pre, [event.target.name]: event.target.value };
+    });
+  };
+
+  const onServicesSelect = (value: string) => {
+    let updatedServices = formData.services;
+    if (!formData.services.includes(value)) {
+      updatedServices = [...formData.services, value];
+    } else {
+      updatedServices = updatedServices.filter((service) => service != value);
+    }
+
+    setFormData((pre) => {
+      return { ...pre, services: updatedServices };
+    });
+  };
   return (
     <Layout header={header} footer={footer}>
       <MetaTags
@@ -227,15 +262,13 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
         <form className="w-full col-span-full lg:col-start-2 lg:col-span-10" onSubmit={handleSubmitForm}>
           <Container grid className="gap-y-5" noPaddingX>
             <FormField>
-              <InputField
-                required
-                label={contactUsPage.data.forWhomLabel}
-                type="text"
-                name="_for"
+              <Select
                 isError={formError._for !== ''}
-                helperText={formError._for}
-                value={formData._for}
-                onChange={handleInputChange}
+                onChange={handleSelectChange}
+                required
+                name="_for"
+                label={contactUsPage.data.forWhomLabel}
+                options={contactUsPage.data.forWhom as []}
               />
             </FormField>
 
@@ -253,15 +286,14 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
             </FormField>
 
             <FormField>
-              <InputField
-                required
-                label={contactUsPage.data.servicesLabel}
-                type="text"
-                name="services"
-                isError={formError.services !== ''}
+              <MultiSelect
+                itemsName="services"
+                isError={formData.services.length === 0}
                 helperText={formError.services}
-                value={formData.services}
-                onChange={handleInputChange}
+                label={contactUsPage.data.servicesLabel}
+                options={contactUsPage.data.services as []}
+                onOptionSelect={onServicesSelect}
+                values={formData.services as []}
               />
             </FormField>
 
