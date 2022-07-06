@@ -21,6 +21,21 @@
           "placeholder": "label for whom.."
         }
       },
+      "forWhom": {
+        "type": "Group",
+        "config": {
+          "label": "For Whom",
+          "fields": {
+            "relation": {
+              "type": "Text",
+              "config": {
+                "label": "Relation",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
       "fullNameLabel": {
         "type": "Text",
         "config": {
@@ -40,11 +55,11 @@
         "config": {
           "label": "Services",
           "fields": {
-            "serviceName": {
+            "value": {
               "type": "Text",
               "config": {
                 "label": "Service Name",
-                "placeholder": ""
+                "placeholder": "Service NameName of service"
               }
             }
           }
@@ -104,6 +119,29 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {}
+        }
+      }
+    },
+    "SEO": {
+      "metaTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "meta title for page"
+        }
+      },
+      "metaDescription": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "meta description"
+        }
+      },
+      "metaTags": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Tags",
+          "placeholder": "keyword1,keyword2,keyword3"
         }
       }
     }

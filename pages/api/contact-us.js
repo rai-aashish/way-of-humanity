@@ -1,29 +1,25 @@
 import mailgun from 'mailgun-js';
-import absoluteUrl from 'next-absolute-url'
-
+import absoluteUrl from 'next-absolute-url';
 
 export default function handler(req, res) {
+  //Grabbing the the origin of the request method
+  const { origin } = absoluteUrl(req);
 
-    //Grabbing the the origin of the request method 
-    const { origin } = absoluteUrl(req)
+  //If the request is not from our own frontend site
+  if (origin !== process.env.BASE_URL) return res.status(401).send({ message: 'Unauthorized.' });
 
-    //If the request is not from our own frontend site 
-    if (origin !== process.env.BASE_URL)
-        return res.status(401).send({ message: 'Unauthorized.' });
+  //Grabbing the request method
+  const requestingMethod = req.method;
 
-    //Grabbing the request method 
-    const requestingMethod = req.method
+  //To handle the request methods correspondingly
+  switch (requestingMethod) {
+    //For post method ie whenever a user submits its message
+    case 'POST':
+      //Details received from the form
+      const { _for, services, name, phoneNumber, email, street, suburb, postCode, message } = req.body;
 
-
-    //To handle the request methods correspondingly
-    switch (requestingMethod) {
-        //For post method ie whenever a user submits its message
-        case "POST":
-            //Details received from the form
-            const { _for, services, name, phoneNumber, email, street, suburb, postCode, message } = req.body;
-
-            //Mail Body being composed with the data being provided by the user through form
-            const emailText = `<!DOCTYPE html>
+      //Mail Body being composed with the data being provided by the user through form
+      const emailText = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -102,7 +98,7 @@ export default function handler(req, res) {
             <tr>
                 <td><p>3.</p></td>
                 <td><p>Services</p></td>
-                <td><ol>${services.map((service) => <li>service</li>)}</ol></td>
+                <td><ol>${services.map((service) => '<li>' + service + '</li>')}</ol></td>
             </tr>
             <tr>
                 <td><p>4.</p></td>
@@ -139,35 +135,33 @@ export default function handler(req, res) {
 </body>
                                 </html>`;
 
-            //Creating the auth object
-            const mailGun = () =>
-                mailgun({
-                    apiKey: process.env.MAILGUN_API_KEY,
-                    domain: process.env.MAILGUN_DOMAIN,
-                });
+      //Creating the auth object
+      const mailGun = () =>
+        mailgun({
+          apiKey: process.env.MAILGUN_API_KEY,
+          domain: process.env.MAILGUN_DOMAIN,
+        });
 
-            //sending the email
-            mailGun()
-                .messages()
-                .send(
-                    {
-                        from: 'Interested Person <jhon@mg.yourdomain.com>', // sender address
-                        to: `toupeshupreti@gmail.com`, //email address of the receiver
-                        subject: 'WoH Service Registration', // Subject line
-                        html: emailText, // html body
-                    },
-                    (error, body) => {
-                        if (error)
-                            return res.status(500).send({ message: 'Error occured while sending submittng your message.' });
-                        else {
-                            return res.status(200).send({ message: 'Your message has been submitted successfully.' })
-                        }
-                    },
-                );
-            break;
+      //sending the email
+      mailGun()
+        .messages()
+        .send(
+          {
+            from: 'Interested Person <jhon@mg.yourdomain.com>', // sender address
+            to: `toupeshupreti@gmail.com`, //email address of the receiver
+            subject: 'WoH Service Registration', // Subject line
+            html: emailText, // html body
+          },
+          (error, body) => {
+            if (error) return res.status(500).send({ message: 'Error occured while sending submittng your message.' });
+            else {
+              return res.status(200).send({ message: 'Your message has been submitted successfully.' });
+            }
+          },
+        );
+      break;
 
-        default:
-            break;
-    }
-
+    default:
+      break;
+  }
 }

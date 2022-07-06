@@ -26,6 +26,8 @@ const Testimonials: React.FC<TestimonialsProps> = ({ slice }) => (
         interval={4000}
         infiniteLoop
         autoPlay
+        showThumbs={false}
+        swipeable={false}
       >
         {slice.items.map((testimonial, index) => (
           <TestimonailCard

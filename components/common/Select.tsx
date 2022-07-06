@@ -1,28 +1,27 @@
 import * as React from 'react';
 
-interface InputFieldProps {
+interface SelectProps {
   isError?: boolean;
   helperText?: string;
   name?: string;
   value?: string | number;
   label?: string | null;
   required?: boolean;
-  type?: 'text' | 'number';
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  options: { relation: string }[];
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
-const InputField: React.FunctionComponent<InputFieldProps> = ({
+const Select: React.FunctionComponent<SelectProps> = ({
   isError,
   label,
-  type = 'text',
   helperText,
   name,
   required,
+  options,
   value,
   onChange,
 }) => {
-  //handlers
-  const onChangeHandler: React.ChangeEventHandler<HTMLInputElement> = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeHandler: React.ChangeEventHandler<HTMLSelectElement> = (e: React.ChangeEvent<HTMLSelectElement>) => {
     if (onChange) onChange(e);
   };
   return (
@@ -32,16 +31,21 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
           {label} {required && <span className="text-error-base font-bold">*</span>}:
         </label>
       )}
-      <input
+      <select
         className={`w-full border border-stroke-default rounded px-4 py-3 ${
           isError ? 'border-error-base' : ''
         } outline-none focus:bg-accent-light-blue focus:border-accent-800 hover:border-accent-600`}
         name={name}
         id={name}
         onChange={onChangeHandler}
-        value={value}
-        type={type}
-      />
+      >
+        {options.map(({ relation }, index) => (
+          <option key={index} value={relation as string}>
+            {relation}
+          </option>
+        ))}
+      </select>
+
       {helperText && helperText !== '' && (
         <small className={`block ${isError ? 'text-error-base' : 'text-content-placeholder'}`}>{helperText}</small>
       )}
@@ -49,4 +53,4 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
   );
 };
 
-export default InputField;
+export default Select;

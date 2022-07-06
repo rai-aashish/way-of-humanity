@@ -1,35 +1,49 @@
 {
-  "id": "278defa5-9274-4649-9a4f-badad516ef81",
-  "uid": "sequi-commodi-qui",
+  "id": "4fc77a3d-291e-4f27-8e1a-8a326ab23bd9",
+  "uid": "laborum-et-dolores",
   "type": "contact-us-page",
   "data": {
     "title": [
       {
         "type": "heading2",
-        "text": "Facilitate holistic bandwidth",
+        "text": "Expedite wireless experiences",
         "spans": []
       }
     ],
-    "forWhomLabel": "repurpose open-source relationships",
-    "fullNameLabel": "e-enable bricks-and-clicks initiatives",
-    "servicesLabel": "innovate open-source architectures",
-    "phoneNumberLabel": "expedite killer ROI",
-    "emailLabel": "deliver ubiquitous convergence",
-    "streetLabel": "recontextualize visionary e-services",
-    "suburbLabel": "evolve customized niches",
-    "postalCodeLabel": "grow robust functionalities",
-    "messageLabel": "integrate out-of-the-box paradigms",
-    "submitButtonLabel": "reinvent distributed deliverables",
+    "forWhomLabel": "syndicate visionary partnerships",
+    "fullNameLabel": "visualize cross-media e-tailers",
+    "servicesLabel": "syndicate enterprise markets",
+    "phoneNumberLabel": "leverage cross-platform e-commerce",
+    "emailLabel": "integrate next-generation experiences",
+    "streetLabel": "benchmark wireless initiatives",
+    "suburbLabel": "iterate out-of-the-box portals",
+    "postalCodeLabel": "deploy mission-critical initiatives",
+    "messageLabel": "harness value-added e-business",
+    "submitButtonLabel": "implement back-end solutions",
+    "forWhom": [
+      {
+        "relation": "facilitate mission-critical e-commerce"
+      },
+      {
+        "relation": "disintermediate transparent niches"
+      },
+      {
+        "relation": "scale transparent synergies"
+      }
+    ],
     "services": [
       {
-        "serviceName": "facilitate best-of-breed portals"
+        "value": "orchestrate killer synergies"
       },
       {
-        "serviceName": "repurpose intuitive experiences"
+        "value": "envisioneer intuitive web-readiness"
       },
       {
-        "serviceName": "innovate next-generation infrastructures"
+        "value": "facilitate rich convergence"
       }
-    ]
+    ],
+    "metaTitle": "disintermediate extensible markets",
+    "metaDescription": "deploy end-to-end content",
+    "metaTags": "expedite front-end methodologies"
   }
 }
