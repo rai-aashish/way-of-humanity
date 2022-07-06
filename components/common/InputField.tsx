@@ -33,7 +33,7 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
         </label>
       )}
       <input
-        className={`w-full border border-stroke-default rounded px-5 py-3 ${
+        className={`w-full border border-stroke-default rounded px-4 py-3 ${
           isError ? 'border-error-base' : ''
         } outline-none focus:bg-accent-light-blue focus:border-accent-800 hover:border-accent-600`}
         name={name}

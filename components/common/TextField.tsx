@@ -36,7 +36,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
       <textarea
         value={value}
         onChange={onChangeHandler}
-        className={`w-full border border-stroke-default rounded px-5 py-3 min-w-[100px] ${
+        className={`w-full border border-stroke-default rounded px-4 py-3 min-w-[100px] ${
           isError ? 'border-error-base' : ''
         } outline-none focus:bg-accent-light-blue focus:border-accent-800`}
       />
