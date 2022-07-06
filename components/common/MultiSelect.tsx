@@ -41,7 +41,9 @@ const MultiSelect: React.FunctionComponent<MultiSelectProps> = ({
       )}
 
       <div
-        className="group flex gap-x-4 justify-between items-center relative border border-stroke-default hover:border-accent-700 py-3 px-4 rounded"
+        className={`group flex gap-x-4 justify-between items-center relative border border-stroke-default hover:border-accent-700 py-3 px-4 rounded  ${
+          isError ? 'border-error-base' : ''
+        }`}
         onClick={toggleShowSelectedServices}
       >
         <div className="">
@@ -102,7 +104,7 @@ const AllSeceltedItems: React.FC<{
               const isServiceSelected = values.includes(value);
               return (
                 <li
-                  className={`flex  gap-5 justify-between items-center border-b border-stroke-divider px-4 py-3 ${
+                  className={`flex hover:text-accent-800 gap-5 justify-between items-center border-b border-stroke-divider px-4 py-3 ${
                     isServiceSelected ? 'bg-success-light' : 'bg-backdrop-white-100'
                   }`}
                   key={index}
