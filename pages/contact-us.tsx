@@ -135,6 +135,16 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
       });
     }
 
+    if (formData.services.length === 0)
+      setFormError((pre) => {
+        return { ...pre, services: 'Please select at least one service' };
+      });
+    else {
+      setFormError((pre) => {
+        return { ...pre, phoneNumber: '' };
+      });
+    }
+
     if (formData.phoneNumber === '' || !formData.phoneNumber === null)
       setFormError((pre) => {
         return { ...pre, phoneNumber: 'This field is required' };
@@ -287,6 +297,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
 
             <FormField>
               <MultiSelect
+                required
                 itemsName="services"
                 isError={formData.services.length === 0}
                 helperText={formError.services}
