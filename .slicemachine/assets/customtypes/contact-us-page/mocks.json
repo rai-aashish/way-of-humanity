@@ -1,41 +1,49 @@
 {
-  "id": "a4ca7221-3bc8-4b87-a6f9-dbb5c8f634db",
-  "uid": "dicta-error-ad",
+  "id": "4fc77a3d-291e-4f27-8e1a-8a326ab23bd9",
+  "uid": "laborum-et-dolores",
   "type": "contact-us-page",
   "data": {
     "title": [
       {
         "type": "heading2",
-        "text": "Syndicate world-class technologies",
+        "text": "Expedite wireless experiences",
         "spans": []
       }
     ],
-    "forWhomLabel": "enable out-of-the-box e-tailers",
-    "fullNameLabel": "expedite end-to-end deliverables",
-    "servicesLabel": "e-enable compelling ROI",
-    "phoneNumberLabel": "generate cutting-edge portals",
-    "emailLabel": "engage cross-platform markets",
-    "streetLabel": "facilitate virtual infomediaries",
-    "suburbLabel": "iterate seamless e-business",
-    "postalCodeLabel": "whiteboard cross-platform bandwidth",
-    "messageLabel": "engineer one-to-one convergence",
-    "submitButtonLabel": "empower cross-platform synergies",
-    "services": [
+    "forWhomLabel": "syndicate visionary partnerships",
+    "fullNameLabel": "visualize cross-media e-tailers",
+    "servicesLabel": "syndicate enterprise markets",
+    "phoneNumberLabel": "leverage cross-platform e-commerce",
+    "emailLabel": "integrate next-generation experiences",
+    "streetLabel": "benchmark wireless initiatives",
+    "suburbLabel": "iterate out-of-the-box portals",
+    "postalCodeLabel": "deploy mission-critical initiatives",
+    "messageLabel": "harness value-added e-business",
+    "submitButtonLabel": "implement back-end solutions",
+    "forWhom": [
       {
-        "serviceName": "reinvent seamless applications"
+        "relation": "facilitate mission-critical e-commerce"
       },
       {
-        "serviceName": "brand interactive blockchains"
+        "relation": "disintermediate transparent niches"
       },
       {
-        "serviceName": "synthesize clicks-and-mortar networks"
-      },
-      {
-        "serviceName": "synthesize cross-media e-tailers"
+        "relation": "scale transparent synergies"
       }
     ],
-    "metaTitle": "aggregate interactive solutions",
-    "metaDescription": "maximize sticky functionalities",
-    "metaTags": "harness visionary users"
+    "services": [
+      {
+        "value": "orchestrate killer synergies"
+      },
+      {
+        "value": "envisioneer intuitive web-readiness"
+      },
+      {
+        "value": "facilitate rich convergence"
+      }
+    ],
+    "metaTitle": "disintermediate extensible markets",
+    "metaDescription": "deploy end-to-end content",
+    "metaTags": "expedite front-end methodologies"
   }
 }
