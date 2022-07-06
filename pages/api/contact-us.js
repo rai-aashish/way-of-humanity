@@ -102,7 +102,7 @@ export default function handler(req, res) {
             <tr>
                 <td><p>3.</p></td>
                 <td><p>Services</p></td>
-                <td><p>${services}</p></td>
+                <td><ol>${services.map((service) => <li>service</li>)}</ol></td>
             </tr>
             <tr>
                 <td><p>4.</p></td>
