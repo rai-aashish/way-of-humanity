@@ -160,7 +160,25 @@
           "blocks": 1
         }
       },
-      "services": {}
+      "services": {},
+      "successMessage": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "errorMessage": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "waitingMessage": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
     },
     "service": {}
   },

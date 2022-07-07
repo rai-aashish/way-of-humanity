@@ -1,49 +1,70 @@
 {
-  "id": "4fc77a3d-291e-4f27-8e1a-8a326ab23bd9",
-  "uid": "laborum-et-dolores",
+  "id": "70588618-206b-4f48-9314-d9a6b197b8b8",
+  "uid": "dolorum-aut-sit",
   "type": "contact-us-page",
   "data": {
     "title": [
       {
         "type": "heading2",
-        "text": "Expedite wireless experiences",
+        "text": "Visualize vertical eyeballs",
         "spans": []
       }
     ],
-    "forWhomLabel": "syndicate visionary partnerships",
-    "fullNameLabel": "visualize cross-media e-tailers",
-    "servicesLabel": "syndicate enterprise markets",
-    "phoneNumberLabel": "leverage cross-platform e-commerce",
-    "emailLabel": "integrate next-generation experiences",
-    "streetLabel": "benchmark wireless initiatives",
-    "suburbLabel": "iterate out-of-the-box portals",
-    "postalCodeLabel": "deploy mission-critical initiatives",
-    "messageLabel": "harness value-added e-business",
-    "submitButtonLabel": "implement back-end solutions",
+    "forWhomLabel": "envisioneer efficient mindshare",
+    "fullNameLabel": "seize wireless users",
+    "servicesLabel": "incentivize user-centric web services",
+    "phoneNumberLabel": "unleash innovative architectures",
+    "emailLabel": "evolve value-added portals",
+    "streetLabel": "unleash turn-key systems",
+    "suburbLabel": "target distributed e-markets",
+    "postalCodeLabel": "envisioneer sexy infrastructures",
+    "messageLabel": "transition sexy architectures",
+    "submitButtonLabel": "seize world-class e-tailers",
     "forWhom": [
       {
-        "relation": "facilitate mission-critical e-commerce"
+        "relation": "engage bricks-and-clicks applications"
       },
       {
-        "relation": "disintermediate transparent niches"
+        "relation": "implement synergistic niches"
       },
       {
-        "relation": "scale transparent synergies"
+        "relation": "visualize user-centric e-tailers"
       }
     ],
     "services": [
       {
-        "value": "orchestrate killer synergies"
+        "value": "facilitate holistic e-services"
       },
       {
-        "value": "envisioneer intuitive web-readiness"
+        "value": "matrix scalable methodologies"
       },
       {
-        "value": "facilitate rich convergence"
+        "value": "brand back-end bandwidth"
       }
     ],
-    "metaTitle": "disintermediate extensible markets",
-    "metaDescription": "deploy end-to-end content",
-    "metaTags": "expedite front-end methodologies"
+    "metaTitle": "disintermediate bricks-and-clicks bandwidth",
+    "metaDescription": "empower efficient convergence",
+    "metaTags": "reinvent leading-edge supply-chains",
+    "successMessage": [
+      {
+        "type": "paragraph",
+        "text": "Qui officia ut incididunt do ut elit aliqua esse voluptate velit et incididunt consequat voluptate dolore. Officia dolore veniam adipisicing amet nulla nulla excepteur.",
+        "spans": []
+      }
+    ],
+    "errorMessage": [
+      {
+        "type": "paragraph",
+        "text": "Do mollit et commodo ipsum velit culpa do ullamco quis quis veniam aute eiusmod anim esse.",
+        "spans": []
+      }
+    ],
+    "waitingMessage": [
+      {
+        "type": "paragraph",
+        "text": "Ut et exercitation id cillum. Proident nulla nostrud velit proident consectetur duis aliqua aliquip.",
+        "spans": []
+      }
+    ]
   }
 }
