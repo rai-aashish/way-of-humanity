@@ -34,6 +34,9 @@ interface ContactUsProps {
       streetLabel: KeyTextField;
       submitButtonLabel: KeyTextField;
       suburbLabel: KeyTextField;
+      successMessage: RichTextField;
+      errorMessage: RichTextField;
+      waitingMessage: RichTextField;
       title: RichTextField;
       metaTitle: KeyTextField;
       metaDescription: KeyTextField;
@@ -43,7 +46,7 @@ interface ContactUsProps {
   };
 }
 
-const INITIAL_FORM_STATE: {
+export interface FormData {
   _for: string;
   name: string;
   services: string[];
@@ -53,7 +56,8 @@ const INITIAL_FORM_STATE: {
   suburb: string;
   postCode: string;
   message: string;
-} = {
+}
+const INITIAL_FORM_STATE: FormData = {
   _for: '',
   name: '',
   services: [],
@@ -67,7 +71,7 @@ const INITIAL_FORM_STATE: {
 const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) => {
   console.log(contactUsPage);
 
-  const [formData, setFormData] = useState(INITIAL_FORM_STATE);
+  const [formData, setFormData] = useState<FormData>(INITIAL_FORM_STATE);
   const [formError, setFormError] = useState({
     _for: '',
     name: '',
@@ -81,7 +85,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
   });
 
   const [isHuman, setIsHuman] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
+  const [formState, setFormState] = useState<'initial' | 'submitting' | 'success' | 'error'>('initial');
 
   //form submit handler
   const handleSubmitForm: React.FormEventHandler<HTMLFormElement> = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -92,13 +96,14 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
     if (!validateForm()) return;
 
     if (!isHuman) return;
-
+    setFormState(() => 'submitting');
     let response = await axios.post('/api/contact-us', formData);
 
     if (response.statusText === 'OK') {
       resetForm();
-      setShowSuccess(() => true);
-      console.log(response.data);
+      setFormState(() => 'success');
+    } else {
+      setFormState(() => 'error');
     }
   };
 
@@ -221,7 +226,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
     setFormData(() => INITIAL_FORM_STATE);
   };
 
-  const hideSuccessModal = () => setShowSuccess(() => false);
+  const hideSuccessModal = () => setFormState(() => 'initial');
 
   //? handlers
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -392,7 +397,13 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
           </Container>
         </form>
       </Container>
-      {showSuccess && <ContactUsSuccessModal hide={hideSuccessModal} />}
+      <ContactUsSuccessModal
+        successMessage={contactUsPage.data.successMessage}
+        errorMessage={contactUsPage.data.errorMessage}
+        waitingMessage={contactUsPage.data.waitingMessage}
+        formState={formState}
+        hide={hideSuccessModal}
+      />
     </Layout>
   );
 };
