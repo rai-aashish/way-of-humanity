@@ -1,23 +1,21 @@
 import mailgun from 'mailgun-js';
+import { NextApiRequest, NextApiResponse } from 'next';
 import absoluteUrl from 'next-absolute-url';
+import { FormData } from 'pages/contact-us';
 
-export default function handler(req, res) {
-  //Grabbing the the origin of the request method
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  //? Grabbing the the origin of the request method
   const { origin } = absoluteUrl(req);
 
-  //If the request is not from our own frontend site
+  //? If the request is not from our own frontend site
   if (origin !== process.env.BASE_URL) return res.status(401).send({ message: 'Unauthorized.' });
 
-  //Grabbing the request method
-  const requestingMethod = req.method;
-
-  //To handle the request methods correspondingly
-  switch (requestingMethod) {
+  //? To handle the request methods correspondingly
+  switch (req.method) {
     //For post method ie whenever a user submits its message
     case 'POST':
       //Details received from the form
-      const { _for, services, name, phoneNumber, email, street, suburb, postCode, message } = req.body;
-
+      const { _for, services, name, phoneNumber, email, street, suburb, postCode, message }: FormData = req.body;
       //Mail Body being composed with the data being provided by the user through form
       const emailText = `<!DOCTYPE html>
 <html lang="en">
@@ -138,8 +136,8 @@ export default function handler(req, res) {
       //Creating the auth object
       const mailGun = () =>
         mailgun({
-          apiKey: process.env.MAILGUN_API_KEY,
-          domain: process.env.MAILGUN_DOMAIN,
+          apiKey: process.env.MAILGUN_API_KEY as string,
+          domain: process.env.MAILGUN_DOMAIN as string,
         });
 
       //sending the email
@@ -153,7 +151,7 @@ export default function handler(req, res) {
             html: emailText, // html body
           },
           (error, body) => {
-            if (error) return res.status(500).send({ message: 'Error occured while sending submittng your message.' });
+            if (error) return res.status(500).send({ message: 'Error occured while sending your message.' });
             else {
               return res.status(200).send({ message: 'Your message has been submitted successfully.' });
             }
