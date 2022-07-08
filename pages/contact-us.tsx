@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Layout from 'components/Layout';
 import { NextPage, GetStaticProps } from 'next';
 import { createClient } from 'prismicio';
@@ -10,12 +10,11 @@ import InputField from 'components/common/InputField';
 import axios from 'axios';
 //@ts-ignore
 import Recaptcha from 'react-google-recaptcha';
-import TextField from '../components/common/TextField';
+import TextAreaField from '../components/common/TextAreaField';
 import ContactUsSuccessModal from 'components/dialogue boxes/ContactUsSuccessModal';
 import MetaTags from 'components/MetaTags';
-import Select from 'components/common/Select';
 import MultiSelect from 'components/common/MultiSelect';
-
+import Select from 'components/common/Select';
 interface ContactUsProps {
   header: PrismicDocument;
   footer: PrismicDocument;
@@ -57,20 +56,23 @@ export interface FormData {
   postCode: string;
   message: string;
 }
-const INITIAL_FORM_STATE: FormData = {
-  _for: '',
-  name: '',
-  services: [],
-  phoneNumber: '',
-  email: '',
-  street: '',
-  suburb: '',
-  postCode: '',
-  message: '',
-};
+
 const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) => {
   console.log(contactUsPage);
+  const reCaptchaRef = useRef<any>(null);
+  const INITIAL_FORM_STATE: FormData = {
+    _for: contactUsPage.data.forWhom[0].relation as string,
+    name: '',
+    services: [],
+    phoneNumber: '',
+    email: '',
+    street: '',
+    suburb: '',
+    postCode: '',
+    message: '',
+  };
 
+  const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
   const [formData, setFormData] = useState<FormData>(INITIAL_FORM_STATE);
   const [formError, setFormError] = useState({
     _for: '',
@@ -84,27 +86,34 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
     message: '',
   });
 
-  const [isHuman, setIsHuman] = useState(false);
   const [formState, setFormState] = useState<'initial' | 'submitting' | 'success' | 'error'>('initial');
 
-  //form submit handler
+  //? form submit handler
   const handleSubmitForm: React.FormEventHandler<HTMLFormElement> = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     console.log(formData);
+    setIsFormSubmitted(true);
 
     if (!validateForm()) return;
 
-    if (!isHuman) return;
+    // ? verify reCaptcha
+    const token = reCaptchaRef.current.getValue();
+    const reCaptchaResponse = await axios.post('/api/reCaptcha/verify', { token });
+
+    if (!reCaptchaResponse.data?.human) return;
+
+    // ? start submitting form
     setFormState(() => 'submitting');
     let response = await axios.post('/api/contact-us', formData);
-
     if (response.statusText === 'OK') {
       resetForm();
       setFormState(() => 'success');
     } else {
       setFormState(() => 'error');
     }
+    // ? reset reCaptcha
+    reCaptchaRef.current.reset();
   };
 
   //? helper functions
@@ -224,6 +233,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
 
   const resetForm = () => {
     setFormData(() => INITIAL_FORM_STATE);
+    setIsFormSubmitted(() => false);
   };
 
   const hideSuccessModal = () => setFormState(() => 'initial');
@@ -235,13 +245,19 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
     });
   };
 
-  const handleRecaptcha = () => {
-    setIsHuman(true);
+  const handleRecaptcha = (value: any) => {
+    console.log('here:', value);
   };
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setFormData((pre) => {
       return { ...pre, [event.target.name]: event.target.value };
+    });
+  };
+
+  const handleOptionSelect = (value: string) => {
+    setFormData((pre) => {
+      return { ...pre, _for: value };
     });
   };
 
@@ -278,10 +294,11 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
           <Container grid className="gap-y-5" noPaddingX>
             <FormField>
               <Select
-                isError={formError._for !== ''}
-                onChange={handleSelectChange}
+                isError={isFormSubmitted && formError._for !== ''}
+                onOptionSelect={handleOptionSelect}
                 required
                 name="_for"
+                value={formData._for}
                 label={contactUsPage.data.forWhomLabel}
                 options={contactUsPage.data.forWhom as []}
               />
@@ -293,7 +310,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
                 label={contactUsPage.data.fullNameLabel}
                 type="text"
                 name="name"
-                isError={formError.name !== ''}
+                isError={isFormSubmitted && formError.name !== ''}
                 helperText={formError.name}
                 value={formData.name}
                 onChange={handleInputChange}
@@ -304,7 +321,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
               <MultiSelect
                 required
                 itemsName="services"
-                isError={formData.services.length === 0}
+                isError={isFormSubmitted && formData.services.length === 0}
                 helperText={formError.services}
                 label={contactUsPage.data.servicesLabel}
                 options={contactUsPage.data.services as []}
@@ -319,7 +336,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
                 label={contactUsPage.data.phoneNumberLabel}
                 type="number"
                 name="phoneNumber"
-                isError={formError.phoneNumber !== ''}
+                isError={isFormSubmitted && formError.phoneNumber !== ''}
                 helperText={formError.phoneNumber}
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
@@ -332,7 +349,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
                 label={contactUsPage.data.emailLabel}
                 type="text"
                 name="email"
-                isError={formError.email !== ''}
+                isError={isFormSubmitted && formError.email !== ''}
                 helperText={formError.email}
                 value={formData.email}
                 onChange={handleInputChange}
@@ -345,7 +362,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
                 label={contactUsPage.data.streetLabel}
                 type="text"
                 name="street"
-                isError={formError.street !== ''}
+                isError={isFormSubmitted && formError.street !== ''}
                 helperText={formError.street}
                 value={formData.street}
                 onChange={handleInputChange}
@@ -358,7 +375,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
                 label={contactUsPage.data.suburbLabel}
                 type="text"
                 name="suburb"
-                isError={formError.suburb !== ''}
+                isError={isFormSubmitted && formError.suburb !== ''}
                 helperText={formError.suburb}
                 value={formData.suburb}
                 onChange={handleInputChange}
@@ -371,15 +388,15 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
                 label={contactUsPage.data.postalCodeLabel}
                 type="text"
                 name="postCode"
-                isError={formError.postCode !== ''}
+                isError={isFormSubmitted && formError.postCode !== ''}
                 helperText={formError.postCode}
                 value={formData.postCode}
                 onChange={handleInputChange}
               />
             </FormField>
-
             <FormField>
-              <TextField
+              <TextAreaField
+                maxChars={500}
                 label={contactUsPage.data.messageLabel}
                 name="message"
                 value={formData.message}
@@ -389,8 +406,12 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
 
             {/* //? submit */}
             <div className="col-span-full md:col-start-5 md:col-span-4 grid place-items-center gap-7">
-              <Recaptcha sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} onChange={handleRecaptcha} />
-              <Button disabled={!isHuman} variant="solid" size="large" className="w-full">
+              <Recaptcha
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                onChange={handleRecaptcha}
+                ref={reCaptchaRef}
+              />
+              <Button variant="solid" size="large" className="w-full">
                 {contactUsPage.data.submitButtonLabel}
               </Button>
             </div>
