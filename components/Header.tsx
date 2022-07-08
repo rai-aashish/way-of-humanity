@@ -62,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
       <header className="sticky z-50 top-0 bg-backdrop-white-100 backdrop-blur-xl bg-opacity-80 overflow-x-clip">
         <Container className="py-3 flex items-center justify-between">
           <div className="relative w-28 h-18">
-            <Link href="/">
+            <Link href="/" passHref>
               <a>
                 <Image
                   src={header.data?.brandLogo?.url as string}
@@ -86,9 +86,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
             <button
               className="flex flex-col gap-y-[6px] lg:hidden px-2 py-3 rounded ease duration-200 cursor-pointer opacity-70 hover:opacity-100 hover:bg-accent-50"
               onClick={toggleMobileNav}
-              role="navigation"
               aria-label="Main menu"
-              aria-expanded={showMobileNavMenu ? 'true' : 'false'}
             >
               <div
                 className={`w-8 h-[4px] rounded bg-icon-default  duration-300 ease-out ${

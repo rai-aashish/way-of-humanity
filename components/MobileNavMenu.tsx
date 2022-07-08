@@ -30,37 +30,41 @@ const MobileNavMenu: React.FunctionComponent<MobileNavMenuProps> = ({ show, navL
       className="overflow-hidden` absolute z-50 top-full w-screen h-screen bg-backdrop-black-60 bg-opacity-60 backdrop-blur-xl"
     >
       <Transition.Child
-        as={React.Fragment}
+        as="div"
         enter="transition duration-500 ease-out"
         leave="transition duration-500 ease-out"
         enterFrom="translate-x-full opacity-0"
         leaveTo="translate-x-full opacity-0"
+        className="w-full md:max-w-[30rem] rounded-bl-xl  p-10 absolute top-0 right-0  bg-backdrop-white-100 backdrop-blur-xlshadow-sm "
       >
-        <div className="w-full md:max-w-[30rem] rounded-bl-xl  p-10 absolute top-0 right-0  bg-backdrop-white-100 backdrop-blur-xlshadow-sm ">
-          <nav className="flex flex-col gap-y-6 items-center justify-between" aria-label="primary">
-            {navLinks.map(({ linkTo, linkLabel }, index) => {
-              const href = prismicH.asLink(linkTo, linkResolver);
-              return (
-                <Link key={index} href={href || '#'}>
-                  <span
-                    className={`text-h5 mobile-nav-link hover:after:scale-x-100 hover:before:scale-x-100 after:bg-accent-700 before:bg-accent-700 cursor-pointer relative inline-block px-3 py-1  text-accent-700
+        <nav
+          className="flex flex-col gap-y-6 items-center justify-between"
+          aria-label="primary"
+          role="navigation"
+          aria-expanded={show ? 'true' : 'false'}
+        >
+          {navLinks.map(({ linkTo, linkLabel }, index) => {
+            const href = prismicH.asLink(linkTo, linkResolver);
+            return (
+              <Link key={index} href={href || '#'} passHref>
+                <span
+                  className={`text-h5 mobile-nav-link hover:after:scale-x-100 hover:before:scale-x-100 after:bg-accent-700 before:bg-accent-700 cursor-pointer relative inline-block px-3 py-1  text-accent-700
                  ${router.asPath === href ? 'active' : ''}
                 `}
-                  >
-                    <a>{linkLabel}</a>
-                  </span>
-                </Link>
-              );
-            })}
+                >
+                  <a>{linkLabel}</a>
+                </span>
+              </Link>
+            );
+          })}
 
-            {/* //?cta link */}
-            <Link href={ctaLinkUrl || '#'}>
-              <a className="md:hidden rounded-2xl bg-accent-600 text-backdrop-white-100 px-4 py-2 duration-300 ease-in-out hover:bg-accent-800">
-                {ctaLinkLabel}
-              </a>
-            </Link>
-          </nav>
-        </div>
+          {/* //?cta link */}
+          <Link href={ctaLinkUrl || '#'}>
+            <a className="md:hidden rounded-2xl bg-accent-600 text-backdrop-white-100 px-4 py-2 duration-300 ease-in-out hover:bg-accent-800">
+              {ctaLinkLabel}
+            </a>
+          </Link>
+        </nav>
       </Transition.Child>
 
       {/* //? styles */}

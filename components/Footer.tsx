@@ -58,7 +58,7 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
             <div className="flex gap-5 mt-4 ml-3">
               {header.data.socialNetwork.map((socialLink: any, index: any) => (
                 <span key={index} className="inline-block cursor-pointer">
-                  <Link href={PrismicH.asLink(socialLink.linkTo, linkResolver) as string}>
+                  <Link href={PrismicH.asLink(socialLink.linkTo, linkResolver) as string} passHref>
                     <span className="inline-block relative w-12 h-12  grayscale duration-200 ease hover:grayscale-0">
                       <Image
                         layout="fill"
