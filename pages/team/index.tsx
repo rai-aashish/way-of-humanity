@@ -4,6 +4,7 @@ import { createClient } from 'prismicio';
 import { PrismicDocument } from '@prismicio/types';
 import { SliceZone } from '@prismicio/react';
 import { components } from 'slices';
+import MetaTags from 'components/MetaTags';
 
 interface TeamProps {
   header: PrismicDocument;
@@ -16,6 +17,12 @@ const Team: NextPage<TeamProps> = ({ header, footer, teamPage }) => {
 
   return (
     <Layout header={header} footer={footer}>
+      <MetaTags
+        title={teamPage.data?.title}
+        description={teamPage.data?.metaDescription}
+        keywords={teamPage.data?.keywords}
+        revisitAfter={teamPage.data?.revisitAfter ?? 3}
+      />
       {/* //@ts-ignore */}
       <SliceZone slices={teamPage.data.slices} components={components} />
     </Layout>

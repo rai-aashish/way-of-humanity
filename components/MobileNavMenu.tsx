@@ -41,14 +41,14 @@ const MobileNavMenu: React.FunctionComponent<MobileNavMenuProps> = ({ show, navL
           {navLinks.map(({ linkTo, linkLabel }, index) => {
             const href = prismicH.asLink(linkTo, linkResolver);
             return (
-              <Link key={index} href={href || '#'} passHref>
-                <span
+              <Link key={index} href={href || '#'}>
+                <a
                   className={`text-h5 mobile-nav-link hover:after:scale-x-100 hover:before:scale-x-100 after:bg-accent-700 before:bg-accent-700 cursor-pointer relative inline-block px-3 py-1  text-accent-700
                  ${router.asPath === href ? 'active' : ''}
                 `}
                 >
-                  <a>{linkLabel}</a>
-                </span>
+                  {linkLabel}
+                </a>
               </Link>
             );
           })}
