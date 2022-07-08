@@ -19,11 +19,9 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
         <Container grid className="gap-y-8">
           {/* //? Quick links */}
           <div className="col-span-4 md:col-start-2 md:col-span-4  lg:col-span-2">
-            <h5 className="text-backdrop-white-60 mb-4">
-              <span className="inline-block pb-1 border-b-2 border-b-backdrop-white-40">
-                {footer.data.quickLinkLabel ?? 'Quick Links'}
-              </span>
-            </h5>
+            <div className="text-backdrop-white-60 mb-4 pb-1 border-b-2 border-b-backdrop-white-40">
+              {footer.data.quickLinkLabel ?? 'Quick Links'}
+            </div>
             <ul className="ml-3">
               {header.data.navLinks.map((navLink: { linkLabel: KeyTextField; linkTo: LinkField }, index: number) => (
                 <li key={index}>
@@ -37,11 +35,9 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
 
           {/* //?Contact Info */}
           <div className="col-span-4 md:col-start-7 md:col-span-5 lg:col-span-3">
-            <h5 className="text-backdrop-white-60 mb-4">
-              <span className="inline-block pb-1 border-b-2 border-b-backdrop-white-40">
-                {footer.data.contactLabel ?? 'Contact info'}
-              </span>
-            </h5>
+            <div className="text-backdrop-white-60 mb-4 pb-1 border-b-2 border-b-backdrop-white-40">
+              {footer.data.contactLabel ?? 'Contact info'}
+            </div>
 
             <ul className="ml-3">
               <li>
@@ -74,11 +70,9 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
 
           {/* //? map */}
           <div className="col-span-4 md:col-start-2 md:col-span-7 lg:col-span-4">
-            <h5 className="text-backdrop-white-60 mb-4">
-              <span className="inline-block pb-1 border-b-2 border-b-backdrop-white-40">
-                {footer.data.mapLabel ?? 'Map'}
-              </span>
-            </h5>
+            <div className="text-backdrop-white-60 mb-4 pb-1 border-b-2 border-b-backdrop-white-40">
+              {footer.data.mapLabel ?? 'Map'}
+            </div>
             <Link href={PrismicH.asLink(header.data.mapAddressLink, linkResolver) as string}>
               <a className="inline-block py-2 mb-2  hover:text-accent-600" target="_blank" rel="noreferrer">
                 {header.data.mapAddressLabel}
