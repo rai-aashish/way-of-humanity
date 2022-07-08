@@ -2,17 +2,22 @@ import { NextPage, GetStaticProps } from 'next';
 import Layout from 'components/Layout';
 import { createClient } from 'prismicio';
 import { PrismicDocument } from '@prismicio/types';
-import Container from 'components/common/Container';
+import { SliceZone } from '@prismicio/react';
+import { components } from 'slices';
 
 interface TeamProps {
   header: PrismicDocument;
   footer: PrismicDocument;
+  teamPage: PrismicDocument;
 }
 
-const Team: NextPage<TeamProps> = ({ header, footer }) => {
+const Team: NextPage<TeamProps> = ({ header, footer, teamPage }) => {
+  console.log(teamPage);
+
   return (
     <Layout header={header} footer={footer}>
-      <Container>our team</Container>
+      {/* //@ts-ignore */}
+      <SliceZone slices={teamPage.data.slices} components={components} />
     </Layout>
   );
 };
@@ -22,11 +27,12 @@ export default Team;
 //fetch serverside data
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   const client = createClient({ previewData });
-  let header, footer;
+  let header, footer, teamPage;
 
   try {
     header = await client.getSingle('header');
     footer = await client.getSingle('footer');
+    teamPage = await client.getSingle('team-page');
   } catch (error: any) {
     if (error.message === 'No documents were returned') {
       return { notFound: true };
@@ -37,7 +43,7 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
 
   //re-generate the page after 60 seconds of request
   return {
-    props: { header, footer },
+    props: { header, footer, teamPage },
     revalidate: 60,
   };
 };
