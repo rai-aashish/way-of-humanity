@@ -1,0 +1,60 @@
+{
+  "id": "team_cards",
+  "type": "SharedSlice",
+  "name": "TeamCards",
+  "description": "TeamCards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TeamCards",
+      "primary": {
+        "sectionTitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Section Title",
+            "placeholder": "title for the teams section",
+            "allowTargetBlank": true,
+            "single": "heading2,heading3,strong"
+          }
+        }
+      },
+      "items": {
+        "memberName": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Member Name",
+            "placeholder": "Name of member",
+            "allowTargetBlank": true,
+            "single": "heading4,heading5,strong"
+          }
+        },
+        "memberDesignation": {
+          "type": "Text",
+          "config": {
+            "label": "Member Designation",
+            "placeholder": "Designation of member"
+          }
+        },
+        "briefDescription": {
+          "type": "Text",
+          "config": {
+            "label": "Brief Description",
+            "placeholder": "short description of member"
+          }
+        },
+        "displayPicture": {
+          "type": "Image",
+          "config": {
+            "label": "Display Picture",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

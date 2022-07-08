@@ -1,0 +1,49 @@
+{
+  "id": "about-us-page",
+  "label": "About Us Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "mainHeading": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Main Heading",
+          "placeholder": "main heading",
+          "allowTargetBlank": true,
+          "single": "heading2,heading3,heading4,strong,em"
+        }
+      }
+    },
+    "SEO": {
+      "metaTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "title for the page"
+        }
+      },
+      "metaDescription": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "description about the company"
+        }
+      },
+      "keywords": {
+        "type": "Text",
+        "config": {
+          "label": "Keywords",
+          "placeholder": "keyword1,keyword2,keyword3"
+        }
+      },
+      "revisitAfter": {
+        "type": "Number",
+        "config": {
+          "label": "Revisit After",
+          "placeholder": "interval for crawlers (defaults 3)"
+        }
+      }
+    }
+  }
+}
