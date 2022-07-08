@@ -20,6 +20,7 @@ module.exports = {
           disabled: '#DBDBDB',
           black: {
             100: '#000000',
+            90: '#1c1c1b',
             80: 'rgba(0, 0, 0, 0.8)',
             60: 'rgba(0, 0, 0, 0.6)',
             40: 'rgba(0, 0, 0, 0.4)',
