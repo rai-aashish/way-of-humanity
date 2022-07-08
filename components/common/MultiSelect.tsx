@@ -1,4 +1,5 @@
-import { ChevronDownIcon, MinusCircleIcon, PlusCircleIcon, XCircleIcon, XIcon } from '@heroicons/react/solid';
+import { Transition } from '@headlessui/react';
+import { ChevronDownIcon, MinusCircleIcon, PlusCircleIcon } from '@heroicons/react/solid';
 import React, { useState } from 'react';
 
 interface MultiSelectProps {
@@ -65,38 +66,56 @@ const MultiSelect: React.FunctionComponent<MultiSelectProps> = ({
       )}
 
       {/* //? All services section */}
-      {showSelectedServices && (
-        <AllSeceltedItems
-          itemsName={itemsName}
-          options={options}
-          serviceSelectHandler={serviceSelectHandler}
-          toggleShow={toggleShowSelectedServices}
-          values={values as []}
-        />
-      )}
+      <AllSeceltedItems
+        show={showSelectedServices}
+        itemsName={itemsName}
+        options={options}
+        serviceSelectHandler={serviceSelectHandler}
+        toggleShow={toggleShowSelectedServices}
+        values={values as []}
+      />
     </div>
   );
 };
 
 const AllSeceltedItems: React.FC<{
   values: string[];
+  show: boolean;
   itemsName: string;
   options: { value: string }[];
   toggleShow: () => void;
   serviceSelectHandler: (value: string) => void;
-}> = ({ values, options, itemsName, serviceSelectHandler, toggleShow }) => {
+}> = ({ values, show, options, itemsName, serviceSelectHandler, toggleShow }) => {
   return (
-    <div className="fixed z-50 inset-0 bg-backdrop-black-60 grid place-items-center px-5">
-      <div className="relative  w-full max-w-[500px]  rounded-xl overflow-hidden bg-backdrop-white-100 pb-6">
+    <Transition
+      show={show}
+      as="div"
+      className="fixed z-50 inset-0 bg-backdrop-black-60 grid place-items-center p-5"
+      enterFrom="opacity-0"
+      enter="duration-300 ease"
+      leave="delay-300 duration-300 ease"
+      leaveTo="opacity-0"
+    >
+      <Transition.Child
+        as="div"
+        enterFrom="opacity-0 translate-y-20"
+        enter="delay-300 duration-300 ease"
+        leave="duration-300 ease"
+        leaveTo="opacity-0 -translate-y-20"
+        className="relative  w-full max-w-[500px] max-h-screen rounded-xl overflow-hidden bg-backdrop-white-100 pb-6"
+      >
         {/* //? status menu */}
         <div className="bg-backdrop-white-100 flex items-center gap-x-10 justify-between p-4 border-b border-stroke-divider">
           <span className="flex-grow text-center">
             <strong className="text-lg">{values.length}</strong> {itemsName} selected
           </span>
-          <XIcon
-            className="hover:bg-backdrop-disabled p-1 rounded-md cursor-pointer opacity-70 hover:opacity-100 w-10 h-10"
+          <button
+            type="button"
+            className="text-content-placeholder duration-300 hover:bg-success-base cursor-pointer rounded hover:text-white px-3 py-2"
             onClick={toggleShow}
-          />
+          >
+            DONE
+          </button>
         </div>
         <div className="h-full max-h-[500px] overflow-auto">
           <ul>
@@ -127,8 +146,8 @@ const AllSeceltedItems: React.FC<{
             })}
           </ul>
         </div>
-      </div>
-    </div>
+      </Transition.Child>
+    </Transition>
   );
 };
 
