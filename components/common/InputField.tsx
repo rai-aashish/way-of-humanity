@@ -21,10 +21,6 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
   value,
   onChange,
 }) => {
-  //handlers
-  const onChangeHandler: React.ChangeEventHandler<HTMLInputElement> = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (onChange) onChange(e);
-  };
   return (
     <div>
       {label && (
@@ -38,7 +34,7 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
         } outline-none focus:bg-accent-light-blue focus:border-accent-800 hover:border-accent-600 focus:shadow-xl`}
         name={name}
         id={name}
-        onChange={onChangeHandler}
+        onChange={onChange}
         value={value}
         type={type}
       />
