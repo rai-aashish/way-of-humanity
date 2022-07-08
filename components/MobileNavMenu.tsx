@@ -37,12 +37,7 @@ const MobileNavMenu: React.FunctionComponent<MobileNavMenuProps> = ({ show, navL
         leaveTo="translate-x-full opacity-0"
         className="w-full md:max-w-[30rem] rounded-bl-xl  p-10 absolute top-0 right-0  bg-backdrop-white-100 backdrop-blur-xlshadow-sm "
       >
-        <nav
-          className="flex flex-col gap-y-6 items-center justify-between"
-          aria-label="primary"
-          role="navigation"
-          aria-expanded={show ? 'true' : 'false'}
-        >
+        <nav className="flex flex-col gap-y-6 items-center justify-between" aria-label="primary" role="navigation">
           {navLinks.map(({ linkTo, linkLabel }, index) => {
             const href = prismicH.asLink(linkTo, linkResolver);
             return (
