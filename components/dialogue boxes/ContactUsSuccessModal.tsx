@@ -22,9 +22,11 @@ const ContactUsSuccessModal: React.FunctionComponent<ContactUsSuccessModalProps>
 }) => {
   return (
     <Transition
-      show={formState !== 'initial'}
       as="div"
       className="bg-backdrop-black-40 fixed z-50 inset-0 px-5 grid place-items-center"
+      show={formState !== 'initial'}
+      enterFrom="opacity-0"
+      enter="duration-300 ease"
     >
       <div className="w-full max-w-[400px] h-full  max-h-[400px] bg-backdrop-white-100 rounded p-5">
         {formState !== 'submitting' && (
