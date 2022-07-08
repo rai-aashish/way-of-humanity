@@ -5,8 +5,8 @@ const nextConfig = {
     domains: ['images.prismic.io', 'images.unsplash.com', 'wayofhumanity.cdn.prismic.io'],
   },
   reactStrictMode: true,
-  build: {
-    transpile: ['gsap'],
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
 };
 
