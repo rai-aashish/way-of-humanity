@@ -145,14 +145,7 @@
     "header": {
       "socialNetwork": {}
     },
-    "team-page": {
-      "teamDescription": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
-      }
-    },
+    "team-page": {},
     "contact-us-page": {
       "title": {
         "config": {
@@ -160,9 +153,35 @@
           "blocks": 1
         }
       },
-      "services": {}
+      "services": {},
+      "successMessage": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "errorMessage": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "waitingMessage": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
     },
-    "service": {}
+    "service": {},
+    "about-us-page": {
+      "mainHeading": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "Text": {
@@ -556,6 +575,26 @@
       "default": {
         "primary": {
           "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "TeamCards": {
+      "default": {
+        "items": {
+          "memberName": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "primary": {
+          "sectionTitle": {
             "config": {
               "patternType": "HEADING",
               "blocks": 1

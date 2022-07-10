@@ -19,6 +19,6 @@
       "@/layout/*": ["src/components/layout/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/sitemap.xml.jsx", "pages/api/contact-us.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/sitemap.xml.jsx", "pages/api/contact-us.ts"],
   "exclude": ["node_modules"]
 }

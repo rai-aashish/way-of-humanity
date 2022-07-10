@@ -15,20 +15,18 @@ interface FooterProps {
 const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
   return (
     <div>
-      <footer className="bg-backdrop-black-80 text-backdrop-white-60 pt-16">
+      <footer className="bg-backdrop-black-90 text-backdrop-white-60 pt-16">
         <Container grid className="gap-y-8">
           {/* //? Quick links */}
           <div className="col-span-4 md:col-start-2 md:col-span-4  lg:col-span-2">
-            <h5 className="text-backdrop-white-60 mb-4">
-              <span className="inline-block pb-1 border-b-2 border-b-backdrop-white-40">
-                {footer.data.quickLinkLabel ?? 'Quick Links'}
-              </span>
-            </h5>
+            <div className="text-backdrop-white-60 mb-4 pb-1 border-b-2 border-b-backdrop-white-40">
+              {footer.data.quickLinkLabel ?? 'Quick Links'}
+            </div>
             <ul className="ml-3">
               {header.data.navLinks.map((navLink: { linkLabel: KeyTextField; linkTo: LinkField }, index: number) => (
                 <li key={index}>
                   <Link href={(PrismicH.asLink(navLink.linkTo, linkResolver) as string) || '#'}>
-                    <a className="inline-block py-2  mb-2 hover:text-accent-100">{navLink.linkLabel}</a>
+                    <a className="inline-block py-2  mb-2 hover:text-accent-600">{navLink.linkLabel}</a>
                   </Link>
                 </li>
               ))}
@@ -37,11 +35,9 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
 
           {/* //?Contact Info */}
           <div className="col-span-4 md:col-start-7 md:col-span-5 lg:col-span-3">
-            <h5 className="text-backdrop-white-60 mb-4">
-              <span className="inline-block pb-1 border-b-2 border-b-backdrop-white-40">
-                {footer.data.contactLabel ?? 'Contact info'}
-              </span>
-            </h5>
+            <div className="text-backdrop-white-60 mb-4 pb-1 border-b-2 border-b-backdrop-white-40">
+              {footer.data.contactLabel ?? 'Contact info'}
+            </div>
 
             <ul className="ml-3">
               <li>
@@ -59,13 +55,13 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
               {header.data.socialNetwork.map((socialLink: any, index: any) => (
                 <span key={index} className="inline-block cursor-pointer">
                   <Link href={PrismicH.asLink(socialLink.linkTo, linkResolver) as string}>
-                    <span className="inline-block relative w-12 h-12  grayscale duration-200 ease hover:grayscale-0">
+                    <a className="inline-block relative w-12 h-12  grayscale duration-200 ease hover:grayscale-0">
                       <Image
                         layout="fill"
                         src={socialLink.linkIcon.url as string}
                         alt={socialLink.linkIcon.alt as string}
                       />
-                    </span>
+                    </a>
                   </Link>
                 </span>
               ))}
@@ -74,11 +70,9 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
 
           {/* //? map */}
           <div className="col-span-4 md:col-start-2 md:col-span-7 lg:col-span-4">
-            <h5 className="text-backdrop-white-60 mb-4">
-              <span className="inline-block pb-1 border-b-2 border-b-backdrop-white-40">
-                {footer.data.mapLabel ?? 'Map'}
-              </span>
-            </h5>
+            <div className="text-backdrop-white-60 mb-4 pb-1 border-b-2 border-b-backdrop-white-40">
+              {footer.data.mapLabel ?? 'Map'}
+            </div>
             <Link href={PrismicH.asLink(header.data.mapAddressLink, linkResolver) as string}>
               <a className="inline-block py-2 mb-2  hover:text-accent-600" target="_blank" rel="noreferrer">
                 {header.data.mapAddressLabel}
@@ -86,6 +80,7 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
             </Link>
             <div className="rounded-xl overflow-hidden opacity-70 hover:opacity-90">
               <iframe
+                title="google map for Way of Humanity"
                 className="w-full aspect-16/9"
                 src={footer.data.iframeMapUrl}
                 frameBorder={0}
@@ -107,12 +102,12 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
             </div>
           </div>
         </Container>
-        <div className="mt-10 px-5 text-center bg-backdrop-white-20 py-3">
+        <div className="mt-10 px-5 text-center bg-backdrop-black-80 py-3">
           {footer.data.copyrightLabel ?? 'Way of Humanity'}
         </div>
 
         {footer.data.developerCredit && (
-          <div className="py-3 px-5 text-center bg-black text-gray-600">
+          <div className="py-3 px-5 text-center bg-black text-gray-500">
             <PrismicRichText
               field={footer.data.developerCredit}
               components={{

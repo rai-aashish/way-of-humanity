@@ -38,7 +38,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ slice }) => (
       </div>
     </Container>
 
-    <Container grid className="gap-y-10">
+    <Container grid className="gap-y-15">
       {slice.items.map((service, index) => (
         <ServiceCard
           key={index}

@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-interface TextFieldProps {
+interface TextAreaFieldProps {
   isError?: boolean;
+  maxChars?: number;
   helperText?: string;
   name?: string;
   value?: string | number;
@@ -11,34 +12,32 @@ interface TextFieldProps {
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-const TextField: React.FunctionComponent<TextFieldProps> = ({
+const TextAreaField: React.FunctionComponent<TextAreaFieldProps> = ({
   isError,
   label,
   helperText,
   name,
   required,
   value,
+  maxChars,
   onChange,
 }) => {
-  //handlers
-  const onChangeHandler: React.ChangeEventHandler<HTMLTextAreaElement> = (
-    e: React.ChangeEvent<HTMLTextAreaElement>,
-  ) => {
-    if (onChange) onChange(e);
-  };
   return (
     <div>
       {label && (
         <label htmlFor={name} className="block">
-          {label} {required && <span className="text-error-base font-bold">*</span>}:
+          {label} {required && <span className="text-error-base font-bold">*</span>}{' '}
+          <small className="text-content-placeholder">(max:{maxChars}chars)</small>:
         </label>
       )}
       <textarea
+        name={name}
+        maxLength={maxChars ?? 255}
         value={value}
-        onChange={onChangeHandler}
+        onChange={onChange}
         className={`w-full border border-stroke-default rounded px-4 py-3 min-w-[100px] ${
           isError ? 'border-error-base' : ''
-        } outline-none focus:bg-accent-light-blue focus:border-accent-800`}
+        } outline-none focus:bg-accent-light-blue focus:border-accent-800 focus:shadow-xl`}
       />
       {helperText && helperText !== '' && (
         <small className={`block ${isError ? 'text-error-base' : 'text-content-placeholder'}`}>{helperText}</small>
@@ -47,4 +46,4 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   );
 };
 
-export default TextField;
+export default TextAreaField;

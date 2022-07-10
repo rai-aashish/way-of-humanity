@@ -5,13 +5,15 @@
   "status": true,
   "json": {
     "Main": {
-      "teamDescription": {
-        "type": "StructuredText",
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
         "config": {
-          "label": "Team Description",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "paragraph,heading3,heading4,heading5,heading6,strong,list-item,o-list-item,rtl,em"
+          "choices": {
+            "team_cards": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     },

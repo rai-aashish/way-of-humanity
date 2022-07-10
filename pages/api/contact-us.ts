@@ -1,12 +1,23 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import mailgun from 'mailgun-js';
+import { NextApiRequest, NextApiResponse } from 'next';
+import absoluteUrl from 'next-absolute-url';
+import { FormData } from 'pages/contact-us';
 
-export default function handler(req, res) {
-  //Details received from the form
-  const { _for, services, name, phoneNumber, email, street, suburb, postCode, message } = req.body;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  //? Grabbing the the origin of the request method
+  const { origin } = absoluteUrl(req);
 
-  //Mail Body being composed with the data being provided by the user through form
-  const emailText = `<!DOCTYPE html>
+  //? If the request is not from our own frontend site
+  if (origin !== process.env.BASE_URL) return res.status(401).send({ message: 'Unauthorized.' });
+
+  //? To handle the request methods correspondingly
+  switch (req.method) {
+    //For post method ie whenever a user submits its message
+    case 'POST':
+      //Details received from the form
+      const { _for, services, name, phoneNumber, email, street, suburb, postCode, message }: FormData = req.body;
+      //Mail Body being composed with the data being provided by the user through form
+      const emailText = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -85,7 +96,7 @@ export default function handler(req, res) {
             <tr>
                 <td><p>3.</p></td>
                 <td><p>Services</p></td>
-                <td><p>${services}</p></td>
+                <td><ol>${services.map((service) => '<li>' + service + '</li>')}</ol></td>
             </tr>
             <tr>
                 <td><p>4.</p></td>
@@ -120,30 +131,35 @@ export default function handler(req, res) {
         </table>
     </div>
 </body>
-</html>`;
+                                </html>`;
 
-  //Creating the auth object
-  const mailGun = () =>
-    mailgun({
-      apiKey: process.env.MAILGUN_API_KEY,
-      domain: process.env.MAILGUN_DOMAIN,
-    });
+      //Creating the auth object
+      const mailGun = () =>
+        mailgun({
+          apiKey: process.env.MAILGUN_API_KEY as string,
+          domain: process.env.MAILGUN_DOMAIN as string,
+        });
 
-  //sending the email
-  mailGun()
-    .messages()
-    .send(
-      {
-        from: 'Interested Person <jhon@mg.yourdomain.com>', // sender address
-        to: `toupeshupreti@gmail.com`, //email address of the receiver
-        subject: 'WoH Service Registration', // Subject line
-        html: emailText, // html body
-      },
-      (error, body) => {
-        if (error) return res.status(500).send({ message: 'Error occured while sending the email.' });
-        else {
-          return res.status(200).send({ message: 'Email was successfully send.' });
-        }
-      },
-    );
+      //sending the email
+      mailGun()
+        .messages()
+        .send(
+          {
+            from: 'Interested Person <jhon@mg.yourdomain.com>', // sender address
+            to: `toupeshupreti@gmail.com`, //email address of the receiver
+            subject: 'WoH Service Registration', // Subject line
+            html: emailText, // html body
+          },
+          (error, body) => {
+            if (error) return res.status(500).send({ message: 'Error occured while sending your message.' });
+            else {
+              return res.status(200).send({ message: 'Your message has been submitted successfully.' });
+            }
+          },
+        );
+      break;
+
+    default:
+      break;
+  }
 }

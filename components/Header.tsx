@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
   return (
     <>
       {/* //? contact bar */}
-      <div className="bg-[#FDEDCD] text-[#C15D00] text-b1 py-3 border-b border-b-[rgba(237,121,13,0.1)]">
+      <div className="bg-[#ffebdb] text-[#782200] text-b1 py-3 border-b border-b-[rgba(133,60,0,0.3)]">
         <Container className="flex justify-between gap-x-10 gap-y-3 flex-wrap">
           {/* //? contact us */}
           <PrismicLink field={header.data.contactNumber}>
@@ -62,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
       <header className="sticky z-50 top-0 bg-backdrop-white-100 backdrop-blur-xl bg-opacity-80 overflow-x-clip">
         <Container className="py-3 flex items-center justify-between">
           <div className="relative w-28 h-18">
-            <Link href="/">
+            <Link href="/" passHref>
               <a>
                 <Image
                   src={header.data?.brandLogo?.url as string}
@@ -86,7 +86,6 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
             <button
               className="flex flex-col gap-y-[6px] lg:hidden px-2 py-3 rounded ease duration-200 cursor-pointer opacity-70 hover:opacity-100 hover:bg-accent-50"
               onClick={toggleMobileNav}
-              role="navigation"
               aria-label="Main menu"
               aria-expanded={showMobileNavMenu ? 'true' : 'false'}
             >

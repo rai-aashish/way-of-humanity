@@ -144,6 +144,35 @@
           "placeholder": "keyword1,keyword2,keyword3"
         }
       }
+    },
+    "Form state messages": {
+      "successMessage": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Success Message",
+          "placeholder": "message for successful submission",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading5,heading6,strong,em"
+        }
+      },
+      "errorMessage": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Error Message",
+          "placeholder": "message for error in submission",
+          "allowTargetBlank": true,
+          "multi": "heading5,heading6,strong,paragraph,em"
+        }
+      },
+      "waitingMessage": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Waiting Message",
+          "placeholder": "Message for waiting state",
+          "allowTargetBlank": true,
+          "multi": "heading5,heading6,strong,em,paragraph"
+        }
+      }
     }
   }
 }

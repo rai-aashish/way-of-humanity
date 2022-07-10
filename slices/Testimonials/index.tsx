@@ -61,7 +61,7 @@ const TestimonailCard: React.FC<TestimonialCardProps> = ({ personImage, personNa
         <div className="text-left">
           <PrismicRichText field={statement} />
         </div>
-        <h6 className="mt-7 text-gray-500 text-right">- {personName}</h6>
+        <span className="mt-7 block text-h6 text-backdrop-black-60 text-right">- {personName}</span>
 
         <svg
           className="absolute -top-5 left-1/2 -translate-x-1/2 sm:translate-x-0 md:top-1/2 md:-translate-y-1/2 md:-left-6 fill-gray-200 z-0"

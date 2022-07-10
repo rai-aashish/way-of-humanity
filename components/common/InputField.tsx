@@ -21,10 +21,6 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
   value,
   onChange,
 }) => {
-  //handlers
-  const onChangeHandler: React.ChangeEventHandler<HTMLInputElement> = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (onChange) onChange(e);
-  };
   return (
     <div>
       {label && (
@@ -35,10 +31,10 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
       <input
         className={`w-full border border-stroke-default rounded px-4 py-3 ${
           isError ? 'border-error-base' : ''
-        } outline-none focus:bg-accent-light-blue focus:border-accent-800 hover:border-accent-600`}
+        } outline-none focus:bg-accent-light-blue focus:border-accent-800 hover:border-accent-600 focus:shadow-xl`}
         name={name}
         id={name}
-        onChange={onChangeHandler}
+        onChange={onChange}
         value={value}
         type={type}
       />
