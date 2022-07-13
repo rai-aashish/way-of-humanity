@@ -1,0 +1,11 @@
+.carousel:hover.carousel-slider .control-arrow {
+  background-color: rgba(128, 128, 128, 0.706) !important;
+  border-radius: 0.2rem;
+}
+
+@media (max-width: 640px) {
+  .carousel.carousel-slider .control-arrow {
+    background-color: rgba(128, 128, 128, 0.706) !important;
+    border-radius: 0.2rem;
+  }
+}

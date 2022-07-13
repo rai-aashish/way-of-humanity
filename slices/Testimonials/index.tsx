@@ -18,7 +18,6 @@ const Testimonials: React.FC<TestimonialsProps> = ({ slice }) => (
       <div className="col-span-full mb-8 md:mb-15 text-center">
         <PrismicRichText field={slice.primary.title} />
       </div>
-
       <Carousel
         className="col-span-full lg:col-start-2 lg:col-span-10"
         ariaLabel="testimonials"
