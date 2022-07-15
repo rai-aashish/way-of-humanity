@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
   useEffect(() => {
     const resizeListener = () => {
       const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      if (width < 768) setShowMobileNavMenu(false);
+      if (width > 768) setShowMobileNavMenu(false);
     };
     // set resize listener
     window.addEventListener('resize', resizeListener);
