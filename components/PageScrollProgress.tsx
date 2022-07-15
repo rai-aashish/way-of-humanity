@@ -29,7 +29,7 @@ const PageScrollProgress: React.FunctionComponent<PageScrollProgressProps> = (pr
         style={{
           transform: `translateX(-${progress}%)`,
         }}
-        className="h-[0.313rem]  backdrop-blur-xl bg-opacity-60 duration-75 ease-in bg-gradient-to-r from-accent-50 to-accent-700 rounded-r-xl "
+        className="h-[0.313rem]  backdrop-blur-xl bg-opacity-60 duration-100 ease bg-gradient-to-r from-accent-50 to-accent-700 rounded-r-xl "
       ></div>
     </div>
   );
