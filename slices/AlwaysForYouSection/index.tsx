@@ -5,6 +5,7 @@ import { KeyTextField, RichTextField, ImageField } from '@prismicio/types';
 import { PrismicRichText } from '@prismicio/react';
 import { CheckIcon } from '@heroicons/react/solid';
 import Backdrop from '../../components/common/Backdrop';
+import DecorateHeading from '../../components/DecorateHeading';
 
 interface AlwaysForYouSectioProps {
   slice: {
@@ -27,12 +28,14 @@ const AlwaysForYouSection: React.FC<AlwaysForYouSectioProps> = ({ slice }) => (
             components={{
               heading2: ({ children }) => (
                 <h2 className="py-1 text-h3 md:text-h2">
-                  <span className="relative inline-block after:absolute after:w-[80%] after:height-[0.15rem] after:bg-accent-800 after:top-full after:-left-1/2 after:translate-x-1/2">
-                    {children}
-                  </span>
+                  <DecorateHeading start="left">{children}</DecorateHeading>
                 </h2>
               ),
-              heading3: ({ children }) => <h3>{children}</h3>,
+              heading3: ({ children }) => (
+                <h3>
+                  <DecorateHeading start="left">{children}</DecorateHeading>
+                </h3>
+              ),
             }}
           />
           <div className="mt-5 mb-8">

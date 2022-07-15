@@ -8,18 +8,21 @@ export const repositoryName = prismic.getRepositoryName(endpoint);
 // Update the Link Resolver to match your project's route structure
 export function linkResolver(doc) {
   switch (doc.type) {
+    case 'about-us-page':
+      return `/about-us`;
+    case 'blog-post':
+      return `/blog/${doc.uid}`;
+    case 'contact-page':
+      return `/contact`;
+    case 'disibality-care-ndis-page': //? :/ spelling mistake while content modeling
+      return `/disability-care-ndis`;
     case 'home-page':
       return '/';
     case 'contact-us-page':
       return '/contact-us';
     case 'team-page':
       return `/team`;
-    case '/about-page':
-      return `/about`;
-    case 'contact-page':
-      return `/contact`;
-    case 'blog-post':
-      return `/blog/${doc.uid}`;
+
     default:
       return '#';
   }

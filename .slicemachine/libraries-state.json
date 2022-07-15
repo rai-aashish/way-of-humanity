@@ -1,6 +1,82 @@
 {
   "slices": {
     "components": {
+      "about_us_description": {
+        "library": "slices",
+        "id": "about_us_description",
+        "name": "AboutUsDescription",
+        "description": "AboutUsDescription",
+        "model": {
+          "id": "about_us_description",
+          "type": "SharedSlice",
+          "name": "AboutUsDescription",
+          "description": "AboutUsDescription",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AboutUsDescription",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "about_us_description",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Revolutionize integrated action-items",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Non deserunt voluptate excepteur esse enim ea quis in id consequat ex occaecat. Ut culpa aliqua eiusmod anim exercitation nisi eu nulla exercitation veniam aute. Aliquip ad qui Lorem elit aliqua incididunt pariatur incididunt proident ullamco dolor enim.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/AboutUsDescription/default/preview.png",
+            "width": 800,
+            "height": 224
+          }
+        }
+      },
       "always_for_you_section": {
         "library": "slices",
         "id": "always_for_you_section",
@@ -187,7 +263,13 @@
           "fileName": "index",
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/slices/BriefDescriptionSection/default/preview.png",
+            "width": 2650,
+            "height": 1040
+          }
+        }
       },
       "contact_us": {
         "library": "slices",
@@ -290,9 +372,126 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/ContactUs/default/preview.png",
-            "width": 800,
-            "height": 26
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/slices/ContactUs/default/preview.png",
+            "width": 2602,
+            "height": 994
+          }
+        }
+      },
+      "disability_care_ndis_hero": {
+        "library": "slices",
+        "id": "disability_care_ndis_hero",
+        "name": "DisabilityCareNdisHero",
+        "description": "DisabilityCareNdisHero",
+        "model": {
+          "id": "disability_care_ndis_hero",
+          "type": "SharedSlice",
+          "name": "DisabilityCareNdisHero",
+          "description": "DisabilityCareNdisHero",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "DisabilityCareNdisHero",
+              "primary": {
+                "heroImage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Hero Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "heading5,strong,em,list-item"
+                  }
+                }
+              },
+              "items": {
+                "featureTitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "FeatureTitle",
+                    "placeholder": "feature title",
+                    "allowTargetBlank": true,
+                    "single": "heading3,heading4,heading5"
+                  }
+                },
+                "featureDescription": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Feature Description",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "disability_care_ndis_hero",
+            "items": [
+              {
+                "featureTitle": [
+                  {
+                    "type": "heading3",
+                    "text": "Reintermediate next-generation action-items",
+                    "spans": []
+                  }
+                ],
+                "featureDescription": "disintermediate back-end e-business"
+              },
+              {
+                "featureTitle": [
+                  {
+                    "type": "heading3",
+                    "text": "Deploy cutting-edge e-services",
+                    "spans": []
+                  }
+                ],
+                "featureDescription": "orchestrate e-business bandwidth"
+              }
+            ],
+            "primary": {
+              "heroImage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=900&h=500&fit=crop"
+              },
+              "description": [
+                {
+                  "type": "heading5",
+                  "text": "Synergize viral metrics",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "tsx"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/slices/DisabilityCareNdisHero/default/preview.png",
+            "width": 2328,
+            "height": 1098
           }
         }
       },
@@ -458,6 +657,355 @@
           }
         }
       },
+      "image_w_ith_paragraph": {
+        "library": "slices",
+        "id": "image_w_ith_paragraph",
+        "name": "ImageWIthParagraph",
+        "description": "ImageWIthParagraph",
+        "model": {
+          "id": "image_w_ith_paragraph",
+          "type": "SharedSlice",
+          "name": "ImageWIthParagraph",
+          "description": "ImageWIthParagraph",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ImageWIthParagraph",
+              "primary": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "Title for description",
+                    "allowTargetBlank": true,
+                    "single": "heading3,heading4,heading5,strong,em"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "A nice description",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "descriptionVerticalAlignCenter": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Description Vertical Align Center",
+                    "placeholder_false": "on for vertical align center description",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "imageRight",
+              "name": "ImageRight",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ImageWIthParagraph",
+              "primary": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "Title for description",
+                    "allowTargetBlank": true,
+                    "single": "heading3,heading4,strong,em"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "A nice description",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "descriptionVerticalAlignCenter": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Description Vertical Align Center",
+                    "placeholder_false": "on for vertical align center description",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "image_w_ith_paragraph",
+            "items": [],
+            "primary": {
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
+              },
+              "title": [
+                {
+                  "type": "heading3",
+                  "text": "Deploy virtual web services",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Consequat do ad sit amet ut qui dolor nisi ipsum consectetur nisi. Duis ipsum eiusmod incididunt aute incididunt aliquip excepteur nostrud.",
+                  "spans": []
+                }
+              ],
+              "descriptionVerticalAlignCenter": true
+            }
+          },
+          "imageRight": {
+            "variation": "imageRight",
+            "name": "ImageRight",
+            "slice_type": "image_w_ith_paragraph",
+            "items": [],
+            "primary": {
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"
+              },
+              "title": [
+                {
+                  "type": "heading3",
+                  "text": "Harness magnetic ROI",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Laboris Lorem eiusmod tempor aliquip sunt amet.",
+                  "spans": []
+                }
+              ],
+              "descriptionVerticalAlignCenter": false
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "tsx"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/ImageWIthParagraph/default/preview.png",
+            "width": 800,
+            "height": 160
+          },
+          "imageRight": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/ImageWIthParagraph/imageRight/preview.png",
+            "width": 800,
+            "height": 160
+          }
+        }
+      },
+      "mega_description": {
+        "library": "slices",
+        "id": "mega_description",
+        "name": "MegaDescription",
+        "description": "MegaDescription",
+        "model": {
+          "id": "mega_description",
+          "type": "SharedSlice",
+          "name": "MegaDescription",
+          "description": "MegaDescription",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "MegaDescription",
+              "primary": {
+                "content": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Content",
+                    "placeholder": "type content",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,list-item,o-list-item"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "mega_description",
+            "items": [],
+            "primary": {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Elit veniam irure elit mollit fugiat tempor officia et officia aliquip excepteur. Consectetur eu occaecat anim ex esse eu reprehenderit commodo occaecat magna adipisicing in enim sit.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "tsx"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/slices/MegaDescription/default/preview.png",
+            "width": 2526,
+            "height": 1094
+          }
+        }
+      },
+      "ndis_requirements": {
+        "library": "slices",
+        "id": "ndis_requirements",
+        "name": "NdisRequirements",
+        "description": "NdisRequirements",
+        "model": {
+          "id": "ndis_requirements",
+          "type": "SharedSlice",
+          "name": "NdisRequirements",
+          "description": "NdisRequirements",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "NdisRequirements",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2,heading3,strong,em"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature",
+                    "allowTargetBlank": true,
+                    "single": "strong,em"
+                  }
+                }
+              },
+              "items": {
+                "requirement": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Requirement",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "ndis_requirements",
+            "items": [
+              {
+                "requirement": "enhance frictionless architectures"
+              },
+              {
+                "requirement": "enable magnetic infomediaries"
+              },
+              {
+                "requirement": "embrace revolutionary schemas"
+              },
+              {
+                "requirement": "iterate bricks-and-clicks architectures"
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Optimize web-enabled vortals",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Culpa Lorem officia exercitation commodo sit sunt. Deserunt non duis mollit ut sint amet nisi elit reprehenderit adipisicing officia quis nostrud adipisicing.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "tsx"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/slices/NdisRequirements/default/preview.png",
+            "width": 2500,
+            "height": 700
+          }
+        }
+      },
       "our_speciality": {
         "library": "slices",
         "id": "our_speciality",
@@ -558,9 +1106,9 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/OurSpeciality/default/preview.png",
-            "width": 800,
-            "height": 109
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/slices/OurSpeciality/default/preview.png",
+            "width": 2492,
+            "height": 830
           }
         }
       },
@@ -758,7 +1306,13 @@
           "fileName": "index",
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/slices/ServicesSection/default/preview.png",
+            "width": 2450,
+            "height": 1122
+          }
+        }
       },
       "team_cards": {
         "library": "slices",
@@ -889,9 +1443,9 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/TeamCards/default/preview.png",
-            "width": 800,
-            "height": 591
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/slices/TeamCards/default/preview.png",
+            "width": 2298,
+            "height": 1140
           }
         }
       },
@@ -1015,9 +1569,9 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/aashishrai/Web Development/my company/way of humanity/.slicemachine/assets/slices/Testimonials/default/preview.png",
-            "width": 800,
-            "height": 79
+            "path": "/Users/aashishrai/Web Development/my company/way of humanity/slices/Testimonials/default/preview.png",
+            "width": 2132,
+            "height": 966
           }
         }
       }

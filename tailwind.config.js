@@ -39,9 +39,9 @@ module.exports = {
           },
         },
         content: {
-          heading: '#003E75',
+          heading: '#043763',
           subtitle: '#2F4C78',
-          body: '#2A385E',
+          body: '#242424',
           placeholder: '#767E92',
           disabled: '#B0B0BA',
         },

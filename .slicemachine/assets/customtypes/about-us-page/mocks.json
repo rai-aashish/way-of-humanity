@@ -1,18 +1,25 @@
 {
-  "id": "d2d4151a-ad87-438c-8374-71f3b5cb40ab",
-  "uid": "cupiditate-id-eveniet",
+  "id": "d89a4df3-969d-4b89-90f3-4345210c6678",
+  "uid": "ut-et-porro",
   "type": "about-us-page",
   "data": {
     "mainHeading": [
       {
         "type": "heading2",
-        "text": "Utilize innovative relationships",
+        "text": "Harness B2C relationships",
         "spans": []
       }
     ],
-    "metaTitle": "harness open-source bandwidth",
-    "metaDescription": "enable world-class deliverables",
-    "keywords": "grow rich experiences",
-    "revisitAfter": 8927
+    "mainDescription": [
+      {
+        "type": "paragraph",
+        "text": "Voluptate nisi reprehenderit dolor proident laborum ullamco et enim deserunt nulla. Ipsum quis anim deserunt reprehenderit nisi cupidatat in. Aliquip incididunt non pariatur aliqua aliqua fugiat cillum exercitation commodo.",
+        "spans": []
+      }
+    ],
+    "metaTitle": "optimize back-end infrastructures",
+    "metaDescription": "syndicate e-business communities",
+    "keywords": "engage sexy synergies",
+    "revisitAfter": 1540
   }
 }

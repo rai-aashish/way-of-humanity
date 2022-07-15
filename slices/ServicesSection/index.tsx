@@ -3,6 +3,7 @@ import { PrismicRichText } from '@prismicio/react';
 import { RichTextField, KeyTextField, ImageField } from '@prismicio/types';
 import Container from 'components/common/Container';
 import ServiceCard from '../../components/cards/ServiceCard';
+import DecorateHeading from 'components/DecorateHeading';
 
 interface ServicesSectionProps {
   slice: {
@@ -21,16 +22,12 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ slice }) => (
           components={{
             heading2: ({ children }) => (
               <h2>
-                <span className="inline-block relative after:absolute after:w-[80%] after:h-[3px] after:bg-accent-800 after:opacity-80 after:-bottom-3 after:-translate-x-1/2 after:left-1/2">
-                  {children}
-                </span>
+                <DecorateHeading>{children}</DecorateHeading>
               </h2>
             ),
             heading3: ({ children }) => (
               <h3>
-                <span className="inline-block relative after:absolute after:w-[80%] after:h-[3px] after:bg-accent-900 after:-bottom-3 after:-translate-x-1/2 after:left-1/2">
-                  {children}
-                </span>
+                <DecorateHeading>{children}</DecorateHeading>
               </h3>
             ),
           }}
