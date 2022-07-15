@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/AboutUsDescription';
+
+export default {
+  title: 'slices/AboutUsDescription'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"about_us_description","items":[],"primary":{"title":[{"type":"heading1","text":"Revolutionize integrated action-items","spans":[]}],"description":[{"type":"paragraph","text":"Non deserunt voluptate excepteur esse enim ea quis in id consequat ex occaecat. Ut culpa aliqua eiusmod anim exercitation nisi eu nulla exercitation veniam aute. Aliquip ad qui Lorem elit aliqua incididunt pariatur incididunt proident ullamco dolor enim.","spans":[]}]},"id":"_Default"}} />
+_Default.storyName = 'Default'

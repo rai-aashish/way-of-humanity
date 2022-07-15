@@ -1,0 +1,100 @@
+{
+  "id": "image_w_ith_paragraph",
+  "type": "SharedSlice",
+  "name": "ImageWIthParagraph",
+  "description": "ImageWIthParagraph",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ImageWIthParagraph",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "Title for description",
+            "allowTargetBlank": true,
+            "single": "heading3,heading4,heading5,strong,em"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "descriptionVerticalAlignCenter": {
+          "type": "Boolean",
+          "config": {
+            "label": "Description Vertical Align Center",
+            "placeholder_false": "on for vertical align center description",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "imageRight",
+      "name": "ImageRight",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ImageWIthParagraph",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "Title for description",
+            "allowTargetBlank": true,
+            "single": "heading3,heading4,strong,em"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "descriptionVerticalAlignCenter": {
+          "type": "Boolean",
+          "config": {
+            "label": "Description Vertical Align Center",
+            "placeholder_false": "on for vertical align center description",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

@@ -13,6 +13,29 @@
           "allowTargetBlank": true,
           "single": "heading2,heading3,heading4,strong,em"
         }
+      },
+      "mainDescription": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Main Description",
+          "placeholder": "Main description ",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading3,heading4,heading5,heading6,strong,em,image,o-list-item,hyperlink,list-item"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "mega_description": {
+              "type": "SharedSlice"
+            },
+            "image_w_ith_paragraph": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     },
     "SEO": {

@@ -4,6 +4,7 @@ import { KeyTextField, ImageField, RichTextField } from '@prismicio/types';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import Container from 'components/common/Container';
+import DecorateHeading from 'components/DecorateHeading';
 import Image from 'next/image';
 
 interface TestimonialsProps {
@@ -16,9 +17,22 @@ const Testimonials: React.FC<TestimonialsProps> = ({ slice }) => (
   <section className="my-17 md:my-20 lg:my-22">
     <Container grid>
       <div className="col-span-full mb-8 md:mb-15 text-center">
-        <PrismicRichText field={slice.primary.title} />
+        <PrismicRichText
+          field={slice.primary.title}
+          components={{
+            heading2: ({ children }) => (
+              <h2 className="text-h3 md:text-h2">
+                <DecorateHeading>{children}</DecorateHeading>
+              </h2>
+            ),
+            heading3: ({ children }) => (
+              <h3>
+                <DecorateHeading>{children}</DecorateHeading>
+              </h3>
+            ),
+          }}
+        />
       </div>
-
       <Carousel
         className="col-span-full lg:col-start-2 lg:col-span-10"
         ariaLabel="testimonials"

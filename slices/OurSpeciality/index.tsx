@@ -3,6 +3,7 @@ import { PrismicRichText } from '@prismicio/react';
 import { KeyTextField, ImageField, RichTextField } from '@prismicio/types';
 import Container from 'components/common/Container';
 import FeatureCard from '../../components/cards/FeatureCard';
+import DecorateHeading from '../../components/DecorateHeading';
 
 interface OurSpecialityProps {
   slice: {
@@ -18,7 +19,16 @@ const OurSpeciality: React.FC<OurSpecialityProps> = ({ slice }) => (
       <PrismicRichText
         field={slice.primary.title}
         components={{
-          heading2: ({ children }) => <h2 className="text-h3 md:text-h2">{children}</h2>,
+          heading2: ({ children }) => (
+            <h2 className="text-h3 md:text-h2">
+              <DecorateHeading>{children}</DecorateHeading>
+            </h2>
+          ),
+          heading3: ({ children }) => (
+            <h3>
+              <DecorateHeading>{children}</DecorateHeading>
+            </h3>
+          ),
         }}
       />
     </div>

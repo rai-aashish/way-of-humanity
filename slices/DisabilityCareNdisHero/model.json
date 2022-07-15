@@ -1,0 +1,53 @@
+{
+  "id": "disability_care_ndis_hero",
+  "type": "SharedSlice",
+  "name": "DisabilityCareNdisHero",
+  "description": "DisabilityCareNdisHero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "DisabilityCareNdisHero",
+      "primary": {
+        "heroImage": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading5,strong,em,list-item"
+          }
+        }
+      },
+      "items": {
+        "featureTitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "FeatureTitle",
+            "placeholder": "feature title",
+            "allowTargetBlank": true,
+            "single": "heading3,heading4,heading5"
+          }
+        },
+        "featureDescription": {
+          "type": "Text",
+          "config": {
+            "label": "Feature Description",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

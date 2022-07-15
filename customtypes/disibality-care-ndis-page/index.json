@@ -1,0 +1,63 @@
+{
+  "id": "disibality-care-ndis-page",
+  "label": "Disibality Care NDIS Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "disability_care_ndis_hero": {
+              "type": "SharedSlice"
+            },
+            "mega_description": {
+              "type": "SharedSlice"
+            },
+            "image_w_ith_paragraph": {
+              "type": "SharedSlice"
+            },
+            "ndis_requirements": {
+              "type": "SharedSlice"
+            },
+            "contact_us": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": "title for page"
+        }
+      },
+      "metaDescription": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": ""
+        }
+      },
+      "keywords": {
+        "type": "Text",
+        "config": {
+          "label": "Keywords",
+          "placeholder": "keyords1,keywords2,keywords3"
+        }
+      },
+      "revisitAfter": {
+        "type": "Number",
+        "config": {
+          "label": "Revisit After",
+          "placeholder": "revisit after"
+        }
+      }
+    }
+  }
+}
