@@ -10,7 +10,7 @@ const GoogleAnalytics: React.FunctionComponent<GoogleAnalyticsProps> = (props) =
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID}`}
         strategy="afterInteractive"
       />
-      <Script>{`
+      <Script strategy="afterInteractive">{`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
