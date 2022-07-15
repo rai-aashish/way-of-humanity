@@ -101,7 +101,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
                 } w-8 h-[4px] rounded bg-icon-default`}
               ></div>
               <div
-                className={`w-8 h-[8px] rounded bg-icon-default  duration-300 ease-out  ${
+                className={`w-8 h-[4px] rounded bg-icon-default  duration-300 ease-out  ${
                   showMobileNavMenu ? '-rotate-[45deg] -translate-y-[10px]' : ''
                 } `}
               ></div>
