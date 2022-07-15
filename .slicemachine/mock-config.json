@@ -143,7 +143,10 @@
     "group-coaching-page": {},
     "home-page": {},
     "header": {
-      "socialNetwork": {}
+      "socialNetwork": {},
+      "scrollProgressBar": {
+        "content": true
+      }
     },
     "team-page": {},
     "contact-us-page": {

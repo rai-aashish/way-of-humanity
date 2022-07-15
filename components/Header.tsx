@@ -9,6 +9,7 @@ import * as prismicH from '@prismicio/helpers';
 import { linkResolver } from 'prismicio';
 import { useRouter } from 'next/router';
 import MobileNavMenu from './MobileNavMenu';
+import PageScrollProgress from './PageScrollProgress';
 
 type HeaderProps = {
   header: PrismicDocument;
@@ -100,7 +101,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
                 } w-8 h-[4px] rounded bg-icon-default`}
               ></div>
               <div
-                className={`w-8 h-[4px] rounded bg-icon-default  duration-300 ease-out  ${
+                className={`w-8 h-[8px] rounded bg-icon-default  duration-300 ease-out  ${
                   showMobileNavMenu ? '-rotate-[45deg] -translate-y-[10px]' : ''
                 } `}
               ></div>
@@ -115,6 +116,8 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
           ctaLinkLabel={header.data?.ctaLabel}
           ctaLinkUrl={prismicH.asLink(header.data?.ctaLinkTo, linkResolver) as string}
         />
+        {/* //? page scroll bar */}
+        {header.data.scrollProgressBar && <PageScrollProgress />}
       </header>
     </>
   );
