@@ -35,7 +35,7 @@ const MobileNavMenu: React.FunctionComponent<MobileNavMenuProps> = ({ show, navL
         leave="transition duration-500 ease-out"
         enterFrom="translate-x-full opacity-0"
         leaveTo="translate-x-full opacity-0"
-        className="w-full md:max-w-[30rem] rounded-bl-xl  p-10 absolute top-0 right-0  bg-backdrop-white-100 backdrop-blur-xlshadow-sm "
+        className="w-full md:max-w-[30rem] overflow-clip rounded-b-xl  p-10 absolute top-0 right-0  bg-backdrop-white-100 backdrop-blur-xl shadow-sm "
       >
         <nav className="flex flex-col gap-y-6 items-center justify-between" aria-label="primary" role="navigation">
           {navLinks.map(({ linkTo, linkLabel }, index) => {
