@@ -1,6 +1,6 @@
 {
-  "id": "5debac69-d79c-48da-92cc-c05ba27205a9",
-  "uid": "nostrum-ipsam-id",
+  "id": "bbb0028e-4dba-4c94-a657-88df5ea86e3c",
+  "uid": "deleniti-iusto-minus",
   "type": "header",
   "data": {
     "brandLogo": {
@@ -10,61 +10,47 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
     },
     "ctaLinkTo": {
       "link_type": "Web",
-      "url": "https://slicemachine.dev"
+      "url": "http://google.com"
     },
-    "ctaLabel": "extend out-of-the-box platforms",
+    "ctaLabel": "synergize cutting-edge infomediaries",
     "navLinks": [
       {
         "linkTo": {
           "link_type": "Web",
           "url": "http://google.com"
         },
-        "linkLabel": "whiteboard intuitive solutions"
+        "linkLabel": "envisioneer open-source ROI"
       },
-      {
-        "linkTo": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "linkLabel": "enable frictionless e-tailers"
-      },
-      {
-        "linkTo": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
-        },
-        "linkLabel": "incentivize user-centric eyeballs"
-      },
-      {
-        "linkTo": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "linkLabel": "embrace leading-edge niches"
-      }
-    ],
-    "contactNumber": {
-      "link_type": "Web",
-      "url": "http://google.com"
-    },
-    "contactLabel": "streamline intuitive deliverables",
-    "mapAddressLink": {
-      "link_type": "Web",
-      "url": "http://twitter.com"
-    },
-    "mapAddressLabel": "innovate frictionless networks",
-    "emailAddress": "empower sexy e-commerce",
-    "socialNetwork": [
       {
         "linkTo": {
           "link_type": "Web",
           "url": "https://slicemachine.dev"
         },
-        "linkLabel": "exploit real-time methodologies",
+        "linkLabel": "integrate plug-and-play communities"
+      }
+    ],
+    "contactNumber": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    },
+    "contactLabel": "incentivize proactive platforms",
+    "mapAddressLink": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    },
+    "mapAddressLabel": "recontextualize dynamic action-items",
+    "emailAddress": "cultivate one-to-one eyeballs",
+    "socialNetwork": [
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "linkLabel": "incentivize magnetic users",
         "linkIcon": {
           "dimensions": {
             "width": 60,
@@ -72,7 +58,23 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=60&h=60&fit=crop"
+          "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=60&h=60&fit=crop"
+        }
+      },
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "linkLabel": "mesh killer initiatives",
+        "linkIcon": {
+          "dimensions": {
+            "width": 60,
+            "height": 60
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=60&h=60&fit=crop"
         }
       },
       {
@@ -80,7 +82,7 @@
           "link_type": "Web",
           "url": "http://google.com"
         },
-        "linkLabel": "benchmark revolutionary models",
+        "linkLabel": "engineer dynamic infrastructures",
         "linkIcon": {
           "dimensions": {
             "width": 60,
@@ -88,41 +90,10 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=60&h=60&fit=crop"
-        }
-      },
-      {
-        "linkTo": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "linkLabel": "brand open-source networks",
-        "linkIcon": {
-          "dimensions": {
-            "width": 60,
-            "height": 60
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=60&h=60&fit=crop"
-        }
-      },
-      {
-        "linkTo": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
-        },
-        "linkLabel": "whiteboard integrated systems",
-        "linkIcon": {
-          "dimensions": {
-            "width": 60,
-            "height": 60
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=60&h=60&fit=crop"
+          "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=60&h=60&fit=crop"
         }
       }
-    ]
+    ],
+    "scrollProgressBar": true
   }
 }

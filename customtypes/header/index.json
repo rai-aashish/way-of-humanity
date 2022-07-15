@@ -131,6 +131,17 @@
           }
         }
       }
+    },
+    "preferences": {
+      "scrollProgressBar": {
+        "type": "Boolean",
+        "config": {
+          "label": "Scroll Progress Bar",
+          "placeholder_false": "false",
+          "placeholder_true": "true",
+          "default_value": true
+        }
+      }
     }
   }
 }
