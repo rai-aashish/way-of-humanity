@@ -72,6 +72,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
   };
 
   const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
+  const [isError, setIsError] = useState<boolean>(false);
   const [formData, setFormData] = useState<FormData>(INITIAL_FORM_STATE);
   const [formError, setFormError] = useState({
     _for: '',
@@ -94,7 +95,8 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
     const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
     setIsFormSubmitted(true);
 
-    if (!validateForm()) return;
+    if (!validateForm()) return setIsError(() => true);
+    setIsError(() => false);
 
     // ? verify reCaptcha
     const token = reCaptchaRef.current.getValue();
@@ -394,6 +396,13 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
                 onChange={handleInputChange}
               />
             </FormField>
+
+            {/* //? form error message */}
+            {isError && (
+              <div className="col-span-full md:col-start-3 md:col-span-8 p-4 border-l-4 border-l-error-base text-error-dark bg-error-light">
+                <strong> Error:</strong> some fields are missing or are invalid !!
+              </div>
+            )}
 
             {/* //? submit */}
             <div className="col-span-full md:col-start-5 md:col-span-4 grid place-items-center gap-7">
