@@ -38,7 +38,6 @@ const TeamMemberCard: React.FunctionComponent<TeamMemberCardProps> = ({
           }}
         />
         <h6 className="my-3 text-b2 text-backdrop-black-60">{memberDesignation}</h6>
-        <p className="text-b2 text-backdrop-black-60">{breifDescription}</p>
       </div>
     </div>
   );
