@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Container from './common/Container';
 import Image from 'components/Image';
 import Link from 'next/link';
-import { PhoneIcon, LocationMarkerIcon } from '@heroicons/react/solid';
+import { PhoneIcon, LocationMarkerIcon, DeviceMobileIcon } from '@heroicons/react/solid';
 import { PrismicDocument, KeyTextField, LinkField } from '@prismicio/types';
 import { PrismicLink } from '@prismicio/react';
 import * as prismicH from '@prismicio/helpers';
@@ -43,12 +43,21 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
       <div className="bg-[#ffebdb] text-[#782200] text-b1 py-3 border-b border-b-[rgba(133,60,0,0.3)]">
         <Container className="flex justify-between gap-x-10 gap-y-3 flex-wrap">
           {/* //? contact us */}
-          <PrismicLink field={header.data.contactNumber}>
-            <span className="flex gap-x-2 items-center">
-              <PhoneIcon className="w-5 h-5" />
-              {header.data.contactLabel}
-            </span>
-          </PrismicLink>
+          <div className="flex justify-between gap-x-10 gap-y-2 flex-wrap">
+            <PrismicLink field={header.data.contactNumber}>
+              <span className="flex gap-x-2 items-center">
+                <DeviceMobileIcon className="w-5 h-5" />
+                {header.data.contactLabel}
+              </span>
+            </PrismicLink>
+
+            <PrismicLink field={header.data.landlineNumber}>
+              <span className="flex gap-x-2 items-center">
+                <PhoneIcon className="w-5 h-5" />
+                {header.data.landLineNumberLabel}
+              </span>
+            </PrismicLink>
+          </div>
 
           {/* //? address map */}
           <PrismicLink field={header.data.mapAddressLink}>

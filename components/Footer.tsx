@@ -46,8 +46,23 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
                 </Link>
               </li>
               <li>
+                <Link href={PrismicH.asLink(header.data.landlineNumber, linkResolver) as string}>
+                  <a className="inline-block py-2 mb-2 hover:text-accent-600"> {header.data.landLineNumberLabel}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href={`mailto:${header.data.emailAddress2}`}>
+                  <a className="inline-block py-2 mb-2 hover:text-accent-600"> {header.data.emailAddress2}</a>
+                </Link>
+              </li>
+              <li>
                 <Link href={`mailto:${header.data.emailAddress}`}>
                   <a className="inline-block py-2 mb-2 hover:text-accent-600"> {header.data.emailAddress}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href={`mailto:${header.data.emailAddress3}`}>
+                  <a className="inline-block py-2 mb-2 hover:text-accent-600"> {header.data.emailAddress3}</a>
                 </Link>
               </li>
             </ul>
@@ -73,7 +88,7 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
           </div>
 
           {/* //? map */}
-          <div className="col-span-4 md:col-start-2 md:col-span-7 lg:col-span-4">
+          <div className="col-span-4 md:ml-3 md:col-start-2 md:col-span-7 lg:col-span-4">
             <div className="text-backdrop-white-60 mb-4 pb-1 border-b-2 border-b-backdrop-white-40">
               {footer.data.mapLabel ?? 'Map'}
             </div>

@@ -75,6 +75,21 @@
           "placeholder": "label for contact us"
         }
       },
+      "landLineNumberLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Land Line Number Label",
+          "placeholder": ""
+        }
+      },
+      "landlineNumber": {
+        "type": "Link",
+        "config": {
+          "label": "Landline Number",
+          "placeholder": "",
+          "select": null
+        }
+      },
       "mapAddressLink": {
         "type": "Link",
         "config": {
@@ -90,10 +105,24 @@
           "placeholder": "label for map address"
         }
       },
+      "emailAddress2": {
+        "type": "Text",
+        "config": {
+          "label": "Email Address2",
+          "placeholder": ""
+        }
+      },
       "emailAddress": {
         "type": "Text",
         "config": {
           "label": "Email Address",
+          "placeholder": ""
+        }
+      },
+      "emailAddress3": {
+        "type": "Text",
+        "config": {
+          "label": "Email Address3",
           "placeholder": ""
         }
       },

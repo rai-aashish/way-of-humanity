@@ -1,6 +1,6 @@
 {
-  "id": "bbb0028e-4dba-4c94-a657-88df5ea86e3c",
-  "uid": "deleniti-iusto-minus",
+  "id": "d60a0da7-dadb-4741-b2c4-d8d26b3e2637",
+  "uid": "veniam-aut-nihil",
   "type": "header",
   "data": {
     "brandLogo": {
@@ -10,47 +10,61 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&h=500&fit=crop"
     },
     "ctaLinkTo": {
       "link_type": "Web",
-      "url": "http://google.com"
+      "url": "http://twitter.com"
     },
-    "ctaLabel": "synergize cutting-edge infomediaries",
+    "ctaLabel": "redefine clicks-and-mortar web services",
     "navLinks": [
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "linkLabel": "integrate best-of-breed solutions"
+      },
       {
         "linkTo": {
           "link_type": "Web",
           "url": "http://google.com"
         },
-        "linkLabel": "envisioneer open-source ROI"
+        "linkLabel": "streamline 24/365 markets"
       },
       {
         "linkTo": {
           "link_type": "Web",
           "url": "https://slicemachine.dev"
         },
-        "linkLabel": "integrate plug-and-play communities"
+        "linkLabel": "transform 24/365 partnerships"
       }
     ],
     "contactNumber": {
       "link_type": "Web",
-      "url": "https://slicemachine.dev"
+      "url": "http://twitter.com"
     },
-    "contactLabel": "incentivize proactive platforms",
+    "contactLabel": "productize clicks-and-mortar channels",
+    "landLineNumberLabel": "scale magnetic portals",
+    "landlineNumber": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
+    },
     "mapAddressLink": {
       "link_type": "Web",
-      "url": "https://slicemachine.dev"
+      "url": "http://twitter.com"
     },
-    "mapAddressLabel": "recontextualize dynamic action-items",
-    "emailAddress": "cultivate one-to-one eyeballs",
+    "mapAddressLabel": "recontextualize web-enabled methodologies",
+    "emailAddress2": "reinvent 24/365 applications",
+    "emailAddress": "incentivize leading-edge e-services",
+    "emailAddress3": "deliver killer synergies",
     "socialNetwork": [
       {
         "linkTo": {
           "link_type": "Web",
           "url": "https://prismic.io"
         },
-        "linkLabel": "incentivize magnetic users",
+        "linkLabel": "implement mission-critical e-tailers",
         "linkIcon": {
           "dimensions": {
             "width": 60,
@@ -58,15 +72,15 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=60&h=60&fit=crop"
+          "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=60&h=60&fit=crop"
         }
       },
       {
         "linkTo": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "https://prismic.io"
         },
-        "linkLabel": "mesh killer initiatives",
+        "linkLabel": "leverage 24/7 partnerships",
         "linkIcon": {
           "dimensions": {
             "width": 60,
@@ -74,7 +88,7 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=60&h=60&fit=crop"
+          "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=60&h=60&fit=crop"
         }
       },
       {
@@ -82,7 +96,7 @@
           "link_type": "Web",
           "url": "http://google.com"
         },
-        "linkLabel": "engineer dynamic infrastructures",
+        "linkLabel": "reintermediate impactful communities",
         "linkIcon": {
           "dimensions": {
             "width": 60,
@@ -90,7 +104,23 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=60&h=60&fit=crop"
+          "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=60&h=60&fit=crop"
+        }
+      },
+      {
+        "linkTo": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "linkLabel": "synergize ubiquitous deliverables",
+        "linkIcon": {
+          "dimensions": {
+            "width": 60,
+            "height": 60
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=60&h=60&fit=crop"
         }
       }
     ],
