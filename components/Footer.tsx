@@ -55,7 +55,11 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
               {header.data.socialNetwork.map((socialLink: any, index: any) => (
                 <span key={index} className="inline-block cursor-pointer">
                   <Link href={PrismicH.asLink(socialLink.linkTo, linkResolver) as string}>
-                    <a className="inline-block relative w-12 h-12  grayscale duration-200 ease hover:grayscale-0">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-block relative w-12 h-12  grayscale duration-200 ease hover:grayscale-0"
+                    >
                       <Image
                         layout="fill"
                         src={socialLink.linkIcon.url as string}
