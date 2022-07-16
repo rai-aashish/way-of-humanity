@@ -64,7 +64,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
         <Container className="py-3 flex items-center justify-between">
           <div>
             <Link href="/" passHref>
-              <a className="relative w-28 h-18">
+              <a className="inline-block relative w-28 h-18">
                 <Image
                   src={header.data?.brandLogo?.url as string}
                   alt={header.data?.brandLogo?.alt as string}
