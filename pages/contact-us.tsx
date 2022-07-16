@@ -407,7 +407,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
             {/* //? submit */}
             <div className="col-span-full md:col-start-5 md:col-span-4 grid place-items-center gap-7">
               <Recaptcha sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} ref={reCaptchaRef} />
-              <Button variant="solid" size="large" className="w-full">
+              <Button variant="solid" size="large" className="w-full" disabled={formState !== 'initial'}>
                 {contactUsPage.data.submitButtonLabel}
               </Button>
             </div>
