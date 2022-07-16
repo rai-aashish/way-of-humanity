@@ -1,11 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 import { PrismicRichText } from '@prismicio/react';
 import Container from 'components/common/Container';
 import { ImageField, RichTextField, KeyTextField, LinkField } from '@prismicio/types';
 import * as PrismicH from '@prismicio/helpers';
 import { linkResolver } from 'prismicio';
 import Button from '../../components/common/Button';
+import Image from 'components/Image';
 
 interface HomePageLandingProps {
   slice: {

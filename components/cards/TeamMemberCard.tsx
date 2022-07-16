@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'components/Image';
 import { RichTextField, KeyTextField, ImageField } from '@prismicio/types';
 import { PrismicRichText } from '@prismicio/react';
 

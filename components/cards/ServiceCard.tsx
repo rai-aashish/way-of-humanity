@@ -1,7 +1,7 @@
 import { PrismicRichText } from '@prismicio/react';
 import * as React from 'react';
 import { RichTextField, KeyTextField, ImageField } from '@prismicio/types';
-import Image from 'next/image';
+import Image from 'components/Image';
 
 interface ServiceCardProps {
   className?: string;
@@ -21,7 +21,13 @@ const ServiceCard: React.FunctionComponent<ServiceCardProps> = ({
       {/* //? thumbnail */}
       <div className="relative w-full h-66  overflow-hidden ">
         <div className="relative w-full h-full duration-300 group-hover:scale-[1.1] ease-in-out">
-          <Image src={thumbnail.url as string} alt={thumbnail.alt as string} layout="fill" objectFit="cover" />
+          <Image
+            src={thumbnail.url as string}
+            alt={thumbnail.alt as string}
+            layout="fill"
+            objectFit="cover"
+            placeholder="blur"
+          />
         </div>
       </div>
       {/* //? body */}

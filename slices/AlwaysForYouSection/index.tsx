@@ -1,6 +1,6 @@
 import Container from 'components/common/Container';
 import React from 'react';
-import Image from 'next/image';
+import Image from 'components/Image';
 import { KeyTextField, RichTextField, ImageField } from '@prismicio/types';
 import { PrismicRichText } from '@prismicio/react';
 import { CheckIcon } from '@heroicons/react/solid';

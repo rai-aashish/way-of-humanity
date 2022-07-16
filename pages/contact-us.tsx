@@ -58,7 +58,6 @@ export interface FormData {
 }
 
 const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) => {
-  console.log(contactUsPage);
   const reCaptchaRef = useRef<any>(null);
   const INITIAL_FORM_STATE: FormData = {
     _for: contactUsPage.data.forWhom[0].relation as string,
@@ -92,21 +91,23 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
   const handleSubmitForm: React.FormEventHandler<HTMLFormElement> = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log(formData);
+    const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
     setIsFormSubmitted(true);
 
     if (!validateForm()) return;
 
     // ? verify reCaptcha
     const token = reCaptchaRef.current.getValue();
-    const reCaptchaResponse = await axios.post('/api/reCaptcha/verify', { token });
+    const reCaptchaResponse = await axios.post(`${BACKEND_URL ?? ''}/api/reCaptcha/verify`, { token });
 
     if (!reCaptchaResponse.data?.human) return;
 
     // ? start submitting form
     setFormState(() => 'submitting');
-    let response = await axios.post('/api/contact-us', formData);
-    if (response.statusText === 'OK') {
+
+    let response = await axios.post(`${BACKEND_URL ?? ''}/api/contact-us`, formData);
+
+    if (response.status === 200) {
       resetForm();
       setFormState(() => 'success');
     } else {
@@ -240,16 +241,6 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
 
   //? handlers
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
-    setFormData((pre) => {
-      return { ...pre, [event.target.name]: event.target.value };
-    });
-  };
-
-  const handleRecaptcha = (value: any) => {
-    console.log('here:', value);
-  };
-
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setFormData((pre) => {
       return { ...pre, [event.target.name]: event.target.value };
     });
@@ -406,11 +397,7 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
 
             {/* //? submit */}
             <div className="col-span-full md:col-start-5 md:col-span-4 grid place-items-center gap-7">
-              <Recaptcha
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                onChange={handleRecaptcha}
-                ref={reCaptchaRef}
-              />
+              <Recaptcha sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} ref={reCaptchaRef} />
               <Button variant="solid" size="large" className="w-full">
                 {contactUsPage.data.submitButtonLabel}
               </Button>

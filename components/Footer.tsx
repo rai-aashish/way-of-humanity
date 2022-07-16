@@ -4,7 +4,7 @@ import { PrismicDocument, KeyTextField, LinkField } from '@prismicio/types';
 import * as PrismicH from '@prismicio/helpers';
 import { linkResolver } from 'prismicio';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'components/Image';
 import { PrismicRichText } from '@prismicio/react';
 
 interface FooterProps {

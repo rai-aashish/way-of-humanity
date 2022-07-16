@@ -6,7 +6,7 @@ import Button from 'components/common/Button';
 import * as PrismicH from '@prismicio/helpers';
 import { linkResolver } from 'prismicio';
 import { Parallax } from 'react-parallax';
-import Image from 'next/image';
+import Image from 'components/Image';
 interface ContactUsProps {
   slice: {
     primary: {

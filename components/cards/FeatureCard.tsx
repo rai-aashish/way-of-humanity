@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { KeyTextField, ImageField } from '@prismicio/types';
-import Image from 'next/image';
+import Image from 'components/Image';
 
 interface FeatureCardProps {
   featureTitle: KeyTextField;

@@ -10,7 +10,8 @@
     "slicemachine": "start-slicemachine",
     "check-types": "tsc --pretty --noEmit",
     "check-format": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "export": "next build && next export && next-image-export-optimizer"
   },
   "dependencies": {
     "@headlessui/react": "^1.5.0",
@@ -24,6 +25,8 @@
     "mailgun-js": "^0.22.0",
     "next": "12.1.0",
     "next-absolute-url": "^1.2.2",
+    "next-image-export-optimizer": "^0.11.0",
+    "next-optimized-images": "^2.6.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-google-recaptcha": "^2.1.0",

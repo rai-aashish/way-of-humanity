@@ -5,7 +5,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import Container from 'components/common/Container';
 import DecorateHeading from 'components/DecorateHeading';
-import Image from 'next/image';
+import Image from 'components/Image';
 
 interface TestimonialsProps {
   slice: {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Container from './common/Container';
-import Image from 'next/image';
+import Image from 'components/Image';
 import Link from 'next/link';
 import { PhoneIcon, LocationMarkerIcon } from '@heroicons/react/solid';
 import { PrismicDocument, KeyTextField, LinkField } from '@prismicio/types';

@@ -2,7 +2,7 @@ import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
 import { ImageField, RichTextField } from '@prismicio/types';
 import Container from '../../components/common/Container';
-import Image from 'next/image';
+import Image from 'components/Image';
 
 interface ImageWIthParagraphProps {
   slice: {
