@@ -12,7 +12,13 @@ const FeatureCard: React.FunctionComponent<FeatureCardProps> = ({ featureTitle, 
   return (
     <div className={`flex gap-x-5 items-center  px-4 py-5 shadow-all-md rounded-md ${className}`}>
       <div className="relative w-17 h-17">
-        <Image src={featureIcon.url as string} alt={featureIcon.alt as string} layout="fill" objectFit="cover" />
+        <Image
+          src={featureIcon.url as string}
+          placeholder="blur"
+          alt={featureIcon.alt as string}
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
       <span>{featureTitle}</span>
     </div>

@@ -21,7 +21,13 @@ const TeamMemberCard: React.FunctionComponent<TeamMemberCardProps> = ({
   return (
     <div className={`overflow-clip rounded-2xl shadow-xl ${className}`}>
       <div className="relative w-full aspect-4/3">
-        <Image src={displayPicture.url as string} alt={displayPicture.alt as string} objectFit="cover" layout="fill" />
+        <Image
+          src={displayPicture.url as string}
+          alt={displayPicture.alt as string}
+          objectFit="cover"
+          layout="fill"
+          placeholder="blur"
+        />
       </div>
       <div className="p-6 text-center">
         <PrismicRichText

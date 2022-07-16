@@ -62,13 +62,14 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
       {/* //? main header */}
       <header className="sticky z-50 top-0 bg-backdrop-white-100 backdrop-blur-xl bg-opacity-80 overflow-x-clip">
         <Container className="py-3 flex items-center justify-between">
-          <div className="relative w-28 h-18">
+          <div>
             <Link href="/" passHref>
-              <a>
+              <a className="relative w-28 h-18">
                 <Image
                   src={header.data?.brandLogo?.url as string}
                   alt={header.data?.brandLogo?.alt as string}
                   layout="fill"
+                  priority={true}
                 />
               </a>
             </Link>
