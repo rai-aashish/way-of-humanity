@@ -11,7 +11,7 @@
     "check-types": "tsc --pretty --noEmit",
     "check-format": "prettier --check .",
     "format": "prettier --write .",
-    "export": "next build && next export && next-image-export-optimizer"
+    "export": "next build && next export"
   },
   "dependencies": {
     "@headlessui/react": "^1.5.0",
