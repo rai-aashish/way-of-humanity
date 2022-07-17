@@ -95,6 +95,7 @@ const AllOptions: React.FC<{
             return (
               <li key={index}>
                 <button
+                  type="button"
                   className={`w-full flex  hover:bg-success-light hover:text-success-dark focus:bg-success-light focus:text-success-dark gap-5 justify-between items-center last:border-none border-b border-stroke-divider px-4 py-3 cursor-pointer ${
                     selectedOption === relation ? 'bg-success-light text-success-dark' : 'bg-backdrop-white-100'
                   }`}
