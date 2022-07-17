@@ -1,6 +1,7 @@
 import { Transition, FocusTrap } from '@headlessui/react';
 import { ChevronDownIcon, MinusCircleIcon, PlusCircleIcon } from '@heroicons/react/solid';
-import React, { useState } from 'react';
+import useOnClickOutside from 'hooks/useOnclickOutside';
+import React, { useState, useRef } from 'react';
 
 interface MultiSelectProps {
   isError?: boolean;
@@ -42,12 +43,13 @@ const MultiSelect: React.FunctionComponent<MultiSelectProps> = ({
       )}
 
       <button
+        type="button"
         className={`w-full group flex gap-x-4 justify-between items-center relative border ${
           showSelectedServices ? 'shadow-xl' : ''
         } border-stroke-default hover:border-accent-700 py-3 px-4 rounded  ${isError ? 'border-error-base' : ''}`}
         onClick={toggleShowSelectedServices}
       >
-        <div className="">
+        <div role="presentation">
           {values?.length === 0 ? (
             <span className="text-content-placeholder">no {itemsName} selected</span>
           ) : values?.length === 1 ? (
@@ -66,7 +68,7 @@ const MultiSelect: React.FunctionComponent<MultiSelectProps> = ({
       )}
 
       {/* //? All services section */}
-      <AllSeceltedItems
+      <AllSelectedItems
         show={showSelectedServices}
         itemsName={itemsName}
         options={options}
@@ -78,7 +80,7 @@ const MultiSelect: React.FunctionComponent<MultiSelectProps> = ({
   );
 };
 
-const AllSeceltedItems: React.FC<{
+const AllSelectedItems: React.FC<{
   values: string[];
   show: boolean;
   itemsName: string;
@@ -86,6 +88,10 @@ const AllSeceltedItems: React.FC<{
   toggleShow: () => void;
   serviceSelectHandler: (value: string) => void;
 }> = ({ values, show, options, itemsName, serviceSelectHandler, toggleShow }) => {
+  const allSelectedItemsRef = useRef(null);
+
+  useOnClickOutside(allSelectedItemsRef, toggleShow);
+
   return (
     <Transition
       show={show}
@@ -97,6 +103,7 @@ const AllSeceltedItems: React.FC<{
       leaveTo="opacity-0"
     >
       <Transition.Child
+        ref={allSelectedItemsRef}
         as="div"
         enterFrom="opacity-0 translate-y-20"
         enter="delay-300 duration-300 ease"
@@ -132,12 +139,12 @@ const AllSeceltedItems: React.FC<{
                   >
                     <span className="block">{value}</span>
                     {isServiceSelected ? (
-                      <button onClick={() => serviceSelectHandler(value)}>
-                        <MinusCircleIcon className="w-8 h-8 fill-error-base" />
+                      <button type="button" onClick={() => serviceSelectHandler(value)}>
+                        <MinusCircleIcon role="presentation" className="w-8 h-8 fill-error-base" />
                       </button>
                     ) : (
-                      <button onClick={() => serviceSelectHandler(value)}>
-                        <PlusCircleIcon className="w-8 h-8 fill-success-base" />
+                      <button type="button" onClick={() => serviceSelectHandler(value)}>
+                        <PlusCircleIcon role="presentation" className="w-8 h-8 fill-success-base" />
                       </button>
                     )}
                   </li>

@@ -1,6 +1,7 @@
 import { Transition, FocusTrap } from '@headlessui/react';
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/solid';
-import React, { useState } from 'react';
+import useOnClickOutside from 'hooks/useOnclickOutside';
+import React, { useState, useRef } from 'react';
 
 interface SelectProps {
   isError?: boolean;
@@ -24,6 +25,7 @@ const Select: React.FunctionComponent<SelectProps> = ({
   value,
   onOptionSelect,
 }) => {
+  const selectRef = useRef(null);
   const [showSelectedServices, setShowSelectedServices] = useState<boolean>(false);
 
   const toggleShowSelectedServices = () => setShowSelectedServices((pre) => !pre);
@@ -31,6 +33,9 @@ const Select: React.FunctionComponent<SelectProps> = ({
     if (onOptionSelect) onOptionSelect(value);
     setShowSelectedServices(() => false);
   };
+
+  useOnClickOutside(selectRef, () => setShowSelectedServices(() => false));
+
   return (
     <div>
       {label && (
@@ -38,26 +43,25 @@ const Select: React.FunctionComponent<SelectProps> = ({
           {label} {required && <span className="text-error-base font-bold">*</span>}:
         </label>
       )}
-      <span className="block relative cursor-pointer">
-        <div>
-          <button
-            className={`w-full group flex gap-x-4 justify-between items-center relative border ${
-              showSelectedServices ? 'shadow-xl' : ''
-            } border-stroke-default hover:border-accent-700 py-3 px-4 rounded  ${isError ? 'border-error-base' : ''}`}
-            onClick={toggleShowSelectedServices}
-          >
-            {value}
-            <ChevronDownIcon className="w-6 h-6 fill-icon-default opacity-50 group-hover:opacity-100" />
-          </button>
-          {/* //? All services section */}
-          <AllOptions
-            show={showSelectedServices}
-            options={options}
-            serviceSelectHandler={serviceSelectHandler}
-            toggleShow={toggleShowSelectedServices}
-            selectedOption={value as string}
-          />
-        </div>
+      <span className="block relative cursor-pointer" ref={selectRef}>
+        <button
+          type="button"
+          className={`w-full group flex gap-x-4 justify-between items-center relative border ${
+            showSelectedServices ? 'shadow-xl' : ''
+          } border-stroke-default hover:border-accent-700 py-3 px-4 rounded  ${isError ? 'border-error-base' : ''}`}
+          onClick={toggleShowSelectedServices}
+        >
+          {value}
+          <ChevronDownIcon className="w-6 h-6 fill-icon-default opacity-50 group-hover:opacity-100" />
+        </button>
+        {/* //? All services section */}
+        <AllOptions
+          show={showSelectedServices}
+          options={options}
+          serviceSelectHandler={serviceSelectHandler}
+          toggleShow={toggleShowSelectedServices}
+          selectedOption={value as string}
+        />
 
         {helperText && helperText !== '' && (
           <small className={`block ${isError ? 'text-error-base' : 'text-content-placeholder'}`}>{helperText}</small>
