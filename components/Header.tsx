@@ -121,6 +121,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
 
         {/* //? mobile navigation */}
         <MobileNavMenu
+          toggleMobileNav={toggleMobileNav}
           show={showMobileNavMenu}
           navLinks={header.data?.navLinks}
           ctaLinkLabel={header.data?.ctaLabel}

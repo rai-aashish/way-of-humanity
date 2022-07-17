@@ -4,9 +4,10 @@ import { KeyTextField, LinkField } from '@prismicio/types';
 import * as prismicH from '@prismicio/helpers';
 import { useRouter } from 'next/router';
 import { linkResolver } from 'prismicio';
-import { Transition } from '@headlessui/react';
+import { FocusTrap, Transition } from '@headlessui/react';
 
 interface MobileNavMenuProps {
+  toggleMobileNav: () => void;
   navLinks: {
     linkLabel: KeyTextField;
     linkTo: LinkField;
@@ -16,7 +17,13 @@ interface MobileNavMenuProps {
   show: boolean;
 }
 
-const MobileNavMenu: React.FunctionComponent<MobileNavMenuProps> = ({ show, navLinks, ctaLinkUrl, ctaLinkLabel }) => {
+const MobileNavMenu: React.FunctionComponent<MobileNavMenuProps> = ({
+  toggleMobileNav,
+  show,
+  navLinks,
+  ctaLinkUrl,
+  ctaLinkLabel,
+}) => {
   const router = useRouter();
 
   return (
@@ -37,7 +44,12 @@ const MobileNavMenu: React.FunctionComponent<MobileNavMenuProps> = ({ show, navL
         leaveTo="translate-x-full opacity-0"
         className="w-full md:max-w-[30rem] overflow-clip rounded-b-xl  p-10 absolute top-0 right-0  bg-backdrop-white-100 backdrop-blur-xl shadow-sm "
       >
-        <nav className="flex flex-col gap-y-6 items-center justify-between" aria-label="primary" role="navigation">
+        <FocusTrap
+          as="nav"
+          className="flex flex-col gap-y-6 items-center justify-between"
+          aria-label="primary"
+          role="navigation"
+        >
           {navLinks.map(({ linkTo, linkLabel }, index) => {
             const href = prismicH.asLink(linkTo, linkResolver);
             return (
@@ -55,11 +67,19 @@ const MobileNavMenu: React.FunctionComponent<MobileNavMenuProps> = ({ show, navL
 
           {/* //?cta link */}
           <Link href={ctaLinkUrl || '#'}>
-            <a className="md:hidden rounded-2xl bg-accent-600 text-backdrop-white-100 px-4 py-2 duration-300 ease-in-out hover:bg-accent-800">
+            <a className="md:hidden rounded-2xl bg-accent-600 text-backdrop-white-100 px-4 py-2 duration-300 ease-in-out hover:bg-accent-800 focus:bg-accent-100 focus:text-accent-900">
               {ctaLinkLabel}
             </a>
           </Link>
-        </nav>
+
+          <button
+            onClick={toggleMobileNav}
+            type="button"
+            className="p-1 text-gray-600 absolute opacity-0 pointer-events-none focus:relative focus:opacity-100 "
+          >
+            close navigation
+          </button>
+        </FocusTrap>
       </Transition.Child>
 
       {/* //? styles */}
