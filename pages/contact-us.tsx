@@ -98,8 +98,11 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
     const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
     setIsFormSubmitted(true);
 
-    if (!validateForm()) return setIsError(() => true);
-    setIsError(() => false);
+    if (!validateForm()) {
+      setIsError(() => true);
+      setFormState(() => 'initial');
+      return;
+    } else setIsError(() => false);
 
     // ? verify reCaptcha
     const token = reCaptchaRef.current.getValue();
