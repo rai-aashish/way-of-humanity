@@ -106,7 +106,7 @@ const AllSelectedItems: React.FC<{
         ref={allSelectedItemsRef}
         as="div"
         enterFrom="opacity-0 translate-y-20"
-        enter="delay-300 duration-300 ease"
+        enter="duration-300 ease"
         leave="duration-300 ease"
         leaveTo="opacity-0 -translate-y-20"
         className="relative  w-full max-w-[500px] max-h-screen rounded-xl overflow-hidden bg-backdrop-white-100 pb-5"
