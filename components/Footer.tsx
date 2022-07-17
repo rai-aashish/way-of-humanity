@@ -26,7 +26,9 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
               {header.data.navLinks.map((navLink: { linkLabel: KeyTextField; linkTo: LinkField }, index: number) => (
                 <li key={index}>
                   <Link href={(PrismicH.asLink(navLink.linkTo, linkResolver) as string) || '#'}>
-                    <a className="inline-block py-2  mb-2 hover:text-accent-600">{navLink.linkLabel}</a>
+                    <a className="inline-block py-2  mb-2 hover:text-accent-600 focus:text-accent-600">
+                      {navLink.linkLabel}
+                    </a>
                   </Link>
                 </li>
               ))}
@@ -42,27 +44,42 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
             <ul className="ml-3">
               <li>
                 <Link href={PrismicH.asLink(header.data.contactNumber, linkResolver) as string}>
-                  <a className="inline-block py-2 mb-2 hover:text-accent-600"> {header.data.contactLabel}</a>
+                  <a className="inline-block py-2 mb-2 hover:text-accent-600 focus:text-accent-600">
+                    {' '}
+                    {header.data.contactLabel}
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href={PrismicH.asLink(header.data.landlineNumber, linkResolver) as string}>
-                  <a className="inline-block py-2 mb-2 hover:text-accent-600"> {header.data.landLineNumberLabel}</a>
+                  <a className="inline-block py-2 mb-2 hover:text-accent-600 focus:text-accent-600">
+                    {' '}
+                    {header.data.landLineNumberLabel}
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href={`mailto:${header.data.emailAddress2}`}>
-                  <a className="inline-block py-2 mb-2 hover:text-accent-600"> {header.data.emailAddress2}</a>
+                  <a className="inline-block py-2 mb-2 hover:text-accent-600 focus:text-accent-600">
+                    {' '}
+                    {header.data.emailAddress2}
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href={`mailto:${header.data.emailAddress}`}>
-                  <a className="inline-block py-2 mb-2 hover:text-accent-600"> {header.data.emailAddress}</a>
+                  <a className="inline-block py-2 mb-2 hover:text-accent-600 focus:text-accent-600">
+                    {' '}
+                    {header.data.emailAddress}
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href={`mailto:${header.data.emailAddress3}`}>
-                  <a className="inline-block py-2 mb-2 hover:text-accent-600"> {header.data.emailAddress3}</a>
+                  <a className="inline-block py-2 mb-2 hover:text-accent-600 focus:text-accent-600">
+                    {' '}
+                    {header.data.emailAddress3}
+                  </a>
                 </Link>
               </li>
             </ul>
@@ -73,7 +90,7 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-block relative w-12 h-12  grayscale duration-200 ease hover:grayscale-0"
+                      className="inline-block relative w-12 h-12  grayscale duration-200 ease hover:grayscale-0 focus:grayscale-0"
                     >
                       <Image
                         layout="fill"
@@ -93,14 +110,18 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
               {footer.data.mapLabel ?? 'Map'}
             </div>
             <Link href={PrismicH.asLink(header.data.mapAddressLink, linkResolver) as string}>
-              <a className="inline-block py-2 mb-2  hover:text-accent-600" target="_blank" rel="noreferrer">
+              <a
+                className="inline-block py-2 mb-2  hover:text-accent-600 focus:text-accent-600"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {header.data.mapAddressLabel}
               </a>
             </Link>
-            <div className="rounded-xl overflow-hidden opacity-70 hover:opacity-90">
+            <div className="rounded-xl overflow-hidden">
               <iframe
                 title="google map for Way of Humanity"
-                className="w-full aspect-16/9"
+                className="w-full aspect-16/9 opacity-70 hover:opacity-90 focus:opacity-90"
                 src={footer.data.iframeMapUrl}
                 frameBorder={0}
                 scrolling="no"
@@ -112,7 +133,7 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
 
           {/* //? love fpr NDIS */}
           <div className="col-span-4 md:col-span-4 lg:col-span-3 flex items-center justify-center md:justify-end">
-            <div className="relative opacity-90 hover:opacity-100 max-w-[212px] w-full aspect-square">
+            <div className="relative opacity-90 hover:opacity-100 focus:opacity-100 max-w-[212px] w-full aspect-square">
               <Image
                 src={footer.data.ndisImage.url as string}
                 alt={footer.data.ndisImage.alt as string}
@@ -131,7 +152,9 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
               field={footer.data.developerCredit}
               components={{
                 hyperlink: ({ children }) => (
-                  <a className="text-accent-800 hover:text-accent-100 cursor-pointer">{children}</a>
+                  <a className="text-accent-800 hover:text-accent-100 focus:text-accent-100 cursor-pointer">
+                    {children}
+                  </a>
                 ),
               }}
             />
