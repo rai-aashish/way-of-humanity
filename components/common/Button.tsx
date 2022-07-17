@@ -53,7 +53,7 @@ const Button: React.FC<ButtonProps> = ({
             ? 'bg-accent-100 text-content-disabled cursor-not-allowed'
             : isButtonPressed
             ? 'border-accent-900 bg-accent-100 text-accent-900'
-            : '' + 'bg-accent-50 text-accent-900 hover:bg-accent-100',
+            : '' + 'bg-accent-50 text-accent-900 hover:bg-accent-100 focus:bg-accent-100',
         );
         break;
       case 'solid':
@@ -62,7 +62,7 @@ const Button: React.FC<ButtonProps> = ({
             ? 'bg-backdrop-disabled text-content-disabled cursor-not-allowed'
             : isButtonPressed
             ? 'bg-accent-900 text-backdrop-white-100 border-accent-900'
-            : 'bg-accent-700 text-backdrop-white-100 hover:bg-accent-800',
+            : 'bg-accent-700 text-backdrop-white-100 hover:bg-accent-800 focus:bg-accent-800',
         );
         break;
       case 'outline':
@@ -71,7 +71,7 @@ const Button: React.FC<ButtonProps> = ({
             ? 'border-backdrop-disabled text-content-disabled cursor-not-allowed'
             : isButtonPressed
             ? 'text-accent-900 border-accent-900'
-            : 'bg-transparent border-stroke-default text-accent-900 hover:border-accent-600',
+            : 'bg-transparent border-stroke-default text-accent-900 hover:border-accent-600 focus:border-accent-600',
         );
         break;
       case 'outline-dark':
@@ -80,7 +80,7 @@ const Button: React.FC<ButtonProps> = ({
             ? 'border-backdrop-white-60 text-backdrop-white-60 cursor-not-allowed'
             : isButtonPressed
             ? 'text-accent-900 bg-backdrop-light'
-            : 'bg-transparent border-backdrop-white-100 text-backdrop-white-100 hover:bg-backdrop-white-100 hover:text-accent-900',
+            : 'bg-transparent border-backdrop-white-100 text-backdrop-white-100 hover:bg-backdrop-white-100 focus:bg-backdrop-white-100 hover:text-accent-900 focus:text-accent-900',
         );
         break;
     }

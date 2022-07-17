@@ -1,4 +1,4 @@
-import { Transition } from '@headlessui/react';
+import { Transition, FocusTrap } from '@headlessui/react';
 import { ChevronDownIcon, MinusCircleIcon, PlusCircleIcon } from '@heroicons/react/solid';
 import React, { useState } from 'react';
 
@@ -41,8 +41,8 @@ const MultiSelect: React.FunctionComponent<MultiSelectProps> = ({
         </label>
       )}
 
-      <div
-        className={`group flex gap-x-4 justify-between items-center relative border ${
+      <button
+        className={`w-full group flex gap-x-4 justify-between items-center relative border ${
           showSelectedServices ? 'shadow-xl' : ''
         } border-stroke-default hover:border-accent-700 py-3 px-4 rounded  ${isError ? 'border-error-base' : ''}`}
         onClick={toggleShowSelectedServices}
@@ -60,7 +60,7 @@ const MultiSelect: React.FunctionComponent<MultiSelectProps> = ({
         </div>
 
         <ChevronDownIcon className="w-6 h-6 fill-icon-default opacity-50 group-hover:opacity-100" />
-      </div>
+      </button>
       {helperText && helperText !== '' && (
         <small className={`block ${isError ? 'text-error-base' : 'text-content-placeholder'}`}>{helperText}</small>
       )}
@@ -102,50 +102,50 @@ const AllSeceltedItems: React.FC<{
         enter="delay-300 duration-300 ease"
         leave="duration-300 ease"
         leaveTo="opacity-0 -translate-y-20"
-        className="relative  w-full max-w-[500px] max-h-screen rounded-xl overflow-hidden bg-backdrop-white-100 pb-6"
+        className="relative  w-full max-w-[500px] max-h-screen rounded-xl overflow-hidden bg-backdrop-white-100 pb-5"
       >
-        {/* //? status menu */}
-        <div className="bg-backdrop-white-100 flex items-center gap-x-10 justify-between p-4 border-b border-stroke-divider">
-          <span className="flex-grow text-center">
-            <strong className="text-lg">{values.length}</strong> {itemsName} selected
-          </span>
-          <button
-            type="button"
-            className="text-content-placeholder duration-300 hover:bg-success-base cursor-pointer rounded hover:text-white px-3 py-2"
-            onClick={toggleShow}
-          >
-            DONE
-          </button>
-        </div>
-        <div className="h-full max-h-[500px] overflow-auto">
-          <ul>
-            {options.map(({ value }, index) => {
-              const isServiceSelected = values.includes(value);
-              return (
-                <li
-                  className={`flex hover:text-accent-800 gap-5 justify-between items-center border-b border-stroke-divider px-4 py-3 cursor-pointer ${
-                    isServiceSelected ? 'bg-success-light' : 'bg-backdrop-white-100'
-                  }`}
-                  key={index}
-                  onClick={() => serviceSelectHandler(value)}
-                >
-                  <span className="block">{value}</span>
-                  {isServiceSelected ? (
-                    <MinusCircleIcon
-                      className="cursor-pointer w-8 h-8 fill-error-base"
-                      onClick={() => serviceSelectHandler(value)}
-                    />
-                  ) : (
-                    <PlusCircleIcon
-                      className="cursor-pointer w-8 h-8 fill-success-base"
-                      onClick={() => serviceSelectHandler(value)}
-                    />
-                  )}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <FocusTrap>
+          {/* //? status menu */}
+          <div className="bg-backdrop-white-100 flex items-center gap-x-10 justify-between p-4 border-b border-stroke-divider">
+            <span className="flex-grow text-center">
+              <strong className="text-lg">{values.length}</strong> {itemsName} selected
+            </span>
+            <button
+              type="button"
+              className="text-content-placeholder duration-300 hover:bg-success-base  focus:bg-success-base cursor-pointer rounded hover:text-white focus:text-white px-3 py-2"
+              onClick={toggleShow}
+            >
+              DONE
+            </button>
+          </div>
+          <div className="h-full max-h-[500px] overflow-auto">
+            <ul>
+              {options.map(({ value }, index) => {
+                const isServiceSelected = values.includes(value);
+                return (
+                  <li
+                    className={`flex hover:text-accent-800 gap-5 justify-between items-center border-b border-stroke-divider px-4 py-3 cursor-pointer ${
+                      isServiceSelected ? 'bg-success-light' : 'bg-backdrop-white-100'
+                    }`}
+                    key={index}
+                    onClick={() => serviceSelectHandler(value)}
+                  >
+                    <span className="block">{value}</span>
+                    {isServiceSelected ? (
+                      <button onClick={() => serviceSelectHandler(value)}>
+                        <MinusCircleIcon className="w-8 h-8 fill-error-base" />
+                      </button>
+                    ) : (
+                      <button onClick={() => serviceSelectHandler(value)}>
+                        <PlusCircleIcon className="w-8 h-8 fill-success-base" />
+                      </button>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </FocusTrap>
       </Transition.Child>
     </Transition>
   );

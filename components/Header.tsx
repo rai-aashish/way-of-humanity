@@ -88,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({ header }) => {
           <NavBar navLinks={header.data?.navLinks} className={'hidden lg:flex'} />
           <div className="flex gap-x-6 items-center">
             <Link href={(prismicH.asLink(header.data?.ctaLinkTo, linkResolver) as string) || '#'}>
-              <a className="hidden md:inline-block rounded-2xl bg-accent-600 text-backdrop-white-100 px-4 py-2 duration-300 ease-in-out hover:bg-accent-800">
+              <a className="hidden md:inline-block rounded-2xl bg-accent-600 text-backdrop-white-100 px-4 py-2 duration-300 ease-in-out hover:bg-accent-800 focus:bg-accent-100 focus:text-accent-900">
                 {header.data?.ctaLabel}
               </a>
             </Link>
