@@ -36,7 +36,7 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
           </div>
 
           {/* //?Contact Info */}
-          <div className="col-span-4 md:col-start-7 md:col-span-5 lg:col-span-3">
+          <div className="col-span-4 md:col-start-7 md:col-span-5 lg:col-span-4">
             <div className="text-backdrop-white-60 mb-4 pb-1 border-b-2 border-b-backdrop-white-40">
               {footer.data.contactLabel ?? 'Contact info'}
             </div>
@@ -83,7 +83,7 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
                 </Link>
               </li>
             </ul>
-            <div className="flex gap-5 mt-4 ml-3">
+            <div className="flex gap-5 mt-4 ml-3 ">
               {header.data.socialNetwork.map((socialLink: any, index: any) => (
                 <span key={index} className="inline-block cursor-pointer">
                   <Link href={PrismicH.asLink(socialLink.linkTo, linkResolver) as string}>
@@ -105,7 +105,7 @@ const Footer: React.FunctionComponent<FooterProps> = ({ header, footer }) => {
           </div>
 
           {/* //? map */}
-          <div className="col-span-4 md:ml-3 md:col-start-2 md:col-span-7 lg:col-span-4">
+          <div className="col-span-4 md:ml-3 md:col-start-2 md:col-span-7 lg:col-span-3">
             <div className="text-backdrop-white-60 mb-4 pb-1 border-b-2 border-b-backdrop-white-40">
               {footer.data.mapLabel ?? 'Map'}
             </div>
