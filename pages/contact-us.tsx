@@ -92,6 +92,9 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
   const handleSubmitForm: React.FormEventHandler<HTMLFormElement> = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // ? start submitting form
+    setFormState(() => 'submitting');
+
     const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
     setIsFormSubmitted(true);
 
@@ -103,9 +106,6 @@ const ContactUs: NextPage<ContactUsProps> = ({ contactUsPage, footer, header }) 
     const reCaptchaResponse = await axios.post(`${BACKEND_URL ?? ''}/api/reCaptcha/verify`, { token });
 
     if (!reCaptchaResponse.data?.human) return;
-
-    // ? start submitting form
-    setFormState(() => 'submitting');
 
     let response = await axios.post(`${BACKEND_URL ?? ''}/api/contact-us`, formData);
 
