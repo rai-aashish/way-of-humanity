@@ -150,7 +150,9 @@ const NavBar: React.FC<NavBarProps> = ({ navLinks, className }) => {
   return (
     <nav className={`gap-x-6 items-center justify-between ${className}`} role="navigation" aria-label="primary">
       {navLinks.map(({ linkTo, linkLabel }, index) => {
-        const href = prismicH.asLink(linkTo, linkResolver);
+        let href = prismicH.asLink(linkTo, linkResolver);
+        //? to match trailing slash of route
+        if (href?.slice(-1) !== '/') href = href + '/';
         return (
           <Link key={index} href={href || '#'}>
             <a

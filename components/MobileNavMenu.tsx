@@ -1,10 +1,11 @@
-import * as React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import { KeyTextField, LinkField } from '@prismicio/types';
 import * as prismicH from '@prismicio/helpers';
 import { useRouter } from 'next/router';
 import { linkResolver } from 'prismicio';
 import { FocusTrap, Transition } from '@headlessui/react';
+import useOnClickOutside from 'hooks/useOnclickOutside';
 
 interface MobileNavMenuProps {
   toggleMobileNav: () => void;
@@ -25,6 +26,8 @@ const MobileNavMenu: React.FunctionComponent<MobileNavMenuProps> = ({
   ctaLinkLabel,
 }) => {
   const router = useRouter();
+  const mobileNavRef = useRef(null);
+  useOnClickOutside(mobileNavRef, toggleMobileNav);
 
   return (
     <Transition
@@ -37,6 +40,7 @@ const MobileNavMenu: React.FunctionComponent<MobileNavMenuProps> = ({
       className="overflow-hidden` absolute z-50 top-full w-screen h-screen bg-backdrop-black-60 bg-opacity-60 backdrop-blur-xl"
     >
       <Transition.Child
+        ref={mobileNavRef}
         as="div"
         enter="transition duration-500 ease-out"
         leave="transition duration-500 ease-out"
@@ -51,7 +55,9 @@ const MobileNavMenu: React.FunctionComponent<MobileNavMenuProps> = ({
           role="navigation"
         >
           {navLinks.map(({ linkTo, linkLabel }, index) => {
-            const href = prismicH.asLink(linkTo, linkResolver);
+            let href = prismicH.asLink(linkTo, linkResolver);
+            //? to match trailing slash of route
+            if (href?.slice(-1) !== '/') href = href + '/';
             return (
               <Link key={index} href={href || '#'}>
                 <a
