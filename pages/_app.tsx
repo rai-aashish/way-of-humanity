@@ -1,30 +1,36 @@
 import 'styles/globals.css';
 import 'styles/modifier.css';
-import type { AppProps } from 'next/app';
 import Link from 'next/link';
-import { PrismicProvider } from '@prismicio/react';
+import type { AppProps } from 'next/app';
 import { PrismicPreview } from '@prismicio/next';
-import { linkResolver, repositoryName } from '../prismicio';
+import { PrismicProvider } from '@prismicio/react';
 import MessengerChat from 'components/MessengerChat';
-import GoogleAnalytics from 'components/Analytics/GoogleAnalytics';
+import CookieConsent from 'components/CookieConsent';
+import { linkResolver, repositoryName } from '../prismicio';
+
+import { CookiesProvider } from 'react-cookie';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <PrismicProvider
-      // @ts-ignore
-      linkResolver={linkResolver}
-      internalLinkComponent={({ href, children, ...props }) => (
-        <Link href={href}>
-          <a {...props}>{children}</a>
-        </Link>
-      )}
-    >
-      <PrismicPreview repositoryName={repositoryName}>
-        <Component {...pageProps} />
-        <MessengerChat />
-        <GoogleAnalytics />
-      </PrismicPreview>
-    </PrismicProvider>
+    <CookiesProvider>
+      <PrismicProvider
+        // @ts-ignore
+        linkResolver={linkResolver}
+        internalLinkComponent={({ href, children, ...props }) => (
+          <Link href={href}>
+            <a {...props}>{children}</a>
+          </Link>
+        )}
+      >
+        <PrismicPreview repositoryName={repositoryName}>
+          {/* @ts-ignore */}
+          <Component {...pageProps} />
+          <MessengerChat />
+          {/* cookies and analytics */}
+          <CookieConsent />
+        </PrismicPreview>
+      </PrismicProvider>
+    </CookiesProvider>
   );
 }
 
